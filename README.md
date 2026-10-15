@@ -62,7 +62,7 @@ or artifact, where one exists.
 
 1. [`scripts/update.py`](scripts/update.py) pulls accepted-paper lists from DBLP (through
    [csconf-papers](https://github.com/RealZST/csconf-papers) and the DBLP SPARQL endpoint), reads official accepted-paper pages
-   listed under `official` in `config.yaml` (currently [SIGMOD's](https://2027.sigmod.org/sigmod_papers.shtml) the [SC program](https://sc26.conference-program.com/) and the [MICRO program](https://www.microarch.org/micro59/program/)), and searches
+   listed under `official` in `config.yaml` (currently [SIGMOD's](https://2027.sigmod.org/sigmod_papers.shtml), the [SC program](https://sc26.conference-program.com/) and the [MICRO program](https://www.microarch.org/micro59/program/)), and searches
    arXiv for preprints whose comments say they were accepted to one of the venues.
    - Papers already listed get missing links filled in. A paper marked *accepted* gets its official link once DBLP has it, and loses the mark.
    - New papers whose titles clearly match (`keywords.strong` in `config.yaml`) are added with a guessed sub-topic and marked *auto-added*.

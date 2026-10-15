@@ -47,7 +47,7 @@ def entry(p, show_venue=True):
     links = []
     if p.get("url"):
         links.append(f"[[paper]]({p['url']})")
-    if p.get("pdf"):
+    if p.get("pdf") and p["pdf"] != p.get("url"):
         links.append(f"[[pdf]]({p['pdf']})")
     if p.get("arxiv"):
         links.append(f"[[arXiv]]({p['arxiv']})")

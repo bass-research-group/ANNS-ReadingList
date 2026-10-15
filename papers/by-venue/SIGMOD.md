@@ -2,6 +2,24 @@
 
 ANNS / vector search papers at SIGMOD, from 2025 on. Generated from [`data/papers.yaml`](../../data/papers.yaml); edit that file, not this one.
 
+## SIGMOD 2027
+
+### Algorithms
+
+- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, et al. `privacy`
+- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (<a href="https://aidas.snu.ac.kr/news/2026-06-13-1-paper-has-been-accepted-to-sigmod-2027/">lab news</a>).</sub>
+- **Fast Label-Filtering Approximate Nearest Neighbor Search via Progressive Label Set Stratification** *(accepted, to appear)*<br>Ziqi Wang, Jingzhe Zhang, Shuo Shen, et al. [[arXiv]](https://arxiv.org/abs/2609.15058) `filtered`
+- **Metric Algebra: Embedding-Independence in Vector Databases** *(accepted, to appear)*<br>University of Edinburgh authors (to be filled in) `embedding-models`<br><sub>Listed in the SIGMOD 2027 round 1 accepted papers.</sub>
+- **Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging** *(accepted, to appear)*<br>Liuchang Jing, Mingyu Yang, Lei Li, et al. [[arXiv]](https://arxiv.org/abs/2602.17099) `graph` `merging`<br><sub>arXiv v1 title: "Multiple Index Merge for Approximate Nearest Neighbor Search".</sub>
+
+### Systems
+
+- **Catching Inconsistencies in Vector Similarity Retrieval** *(accepted, to appear)*<br>Zixiao Huang, Ruochun Jin, Haotian Wang, et al. `testing` `vector-db`<br><sub>SIGMOD 2027 round 2, per the author's publication page.</sub>
+
+### Accelerators
+
+- **All-in-One Graph-Based Indexing for Hybrid Search on GPUs** *(accepted, to appear)*<br>Zhonggen Li, Yougen Li, Yifan Zhu, et al. [[arXiv]](https://arxiv.org/abs/2511.00855) `gpu` `graph` `hybrid`
+
 ## SIGMOD 2026
 
 ### Algorithms

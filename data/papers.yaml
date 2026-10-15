@@ -1213,6 +1213,7 @@
   tags: [filtered]
   url: https://www.vldb.org/pvldb/vol19/p2059-chen.pdf
   pdf: https://www.vldb.org/pvldb/vol19/p2059-chen.pdf
+  note: The BigFANN paper.
   source: dblp
 - title: An Experimental Evaluation of Hybrid Querying on Vectors
   authors: [Jiaxu Zhu, Jiayu Yuan, Kaiwen Yang, Xiaobao Chen, Shihuan Yu, Hongchang Lv, Yan Li, Bolong Zheng]
@@ -1418,3 +1419,134 @@
   status: accepted
   note: Listed in the MICRO 2026 program (Session 9B).
   source: program
+- title: 'Towards Robustness: A Critique of Current Vector Database Assessments'
+  authors: [Zikai Wang, Qianxi Zhang, Baotong Lu, et al.]
+  venue: VLDB
+  year: 2026
+  subtopic: algorithms
+  tags: [benchmark, robustness]
+  arxiv: https://arxiv.org/abs/2507.00379
+  code: https://github.com/khaiwang/ANN-Robustness-Submission
+  status: accepted
+  note: VLDB 2026 per the artifact README; not yet in DBLP.
+  source: preprint
+- title: 'Disk-Resident Graph ANN Search: An Experimental Evaluation'
+  authors: [Xiaoyu Chen, Jinxiu Qu, Yitong Song, et al.]
+  venue: VLDB
+  year: 2026
+  subtopic: systems
+  tags: [disk, graph, benchmark]
+  arxiv: https://arxiv.org/abs/2603.01779
+  code: https://github.com/hkbudb/disk-vss-survey
+  status: accepted
+  note: PVLDB 2026 per the code README; not yet in DBLP.
+  source: preprint
+- title: Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning
+  authors: [Geon Choi, Hoeun Lee, Jaeyoung Do]
+  venue: SIGMOD
+  year: 2027
+  subtopic: algorithms
+  tags: [graph, tuning]
+  arxiv: https://arxiv.org/abs/2607.04630
+  code: https://github.com/AIDASLab/CHAT
+  status: accepted
+  note: 'SIGMOD 2027 round 1 (<a href="https://aidas.snu.ac.kr/news/2026-06-13-1-paper-has-been-accepted-to-sigmod-2027/">lab news</a>).'
+  source: preprint
+- title: 'Metric Algebra: Embedding-Independence in Vector Databases'
+  authors: [University of Edinburgh authors (to be filled in)]
+  venue: SIGMOD
+  year: 2027
+  subtopic: algorithms
+  tags: [embedding-models]
+  status: accepted
+  note: Listed in the SIGMOD 2027 round 1 accepted papers.
+  source: program
+- title: Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging
+  authors: [Liuchang Jing, Mingyu Yang, Lei Li, et al.]
+  venue: SIGMOD
+  year: 2027
+  subtopic: algorithms
+  tags: [graph, merging]
+  arxiv: https://arxiv.org/abs/2602.17099
+  status: accepted
+  note: 'arXiv v1 title: "Multiple Index Merge for Approximate Nearest Neighbor Search".'
+  source: preprint
+- title: Fast Label-Filtering Approximate Nearest Neighbor Search via Progressive Label Set Stratification
+  authors: [Ziqi Wang, Jingzhe Zhang, Shuo Shen, et al.]
+  venue: SIGMOD
+  year: 2027
+  subtopic: algorithms
+  tags: [filtered]
+  arxiv: https://arxiv.org/abs/2609.15058
+  status: accepted
+  source: preprint
+- title: All-in-One Graph-Based Indexing for Hybrid Search on GPUs
+  authors: [Zhonggen Li, Yougen Li, Yifan Zhu, et al.]
+  venue: SIGMOD
+  year: 2027
+  subtopic: accelerators
+  tags: [gpu, graph, hybrid]
+  arxiv: https://arxiv.org/abs/2511.00855
+  status: accepted
+  source: preprint
+- title: Catching Inconsistencies in Vector Similarity Retrieval
+  authors: [Zixiao Huang, Ruochun Jin, Haotian Wang, et al.]
+  venue: SIGMOD
+  year: 2027
+  subtopic: systems
+  tags: [testing, vector-db]
+  status: accepted
+  note: SIGMOD 2027 round 2, per the author's publication page.
+  source: preprint
+- title: 'Amora: Communication-Efficient Private Approximate Nearest Neighbors Search'
+  authors: [Qiuhao Wang, Zuowei Chen, Xu Yang, et al.]
+  venue: SIGMOD
+  year: 2027
+  subtopic: algorithms
+  tags: [privacy]
+  status: accepted
+  source: preprint
+- title: 'VectorMaton: Efficient Vector Search with Pattern Constraints via an Enhanced Suffix Automaton'
+  authors: [Haoxuan Xie, Siqiang Luo]
+  venue: VLDB
+  year: 2027
+  subtopic: algorithms
+  tags: [filtered]
+  arxiv: https://arxiv.org/abs/2603.01525
+  status: accepted
+  source: preprint
+- title: 'DiskVecLab: A Deployment-Realistic Evaluation Framework for Disk-Based Vector Search'
+  authors: [Yuxiang Wang, Yongxin Tong, Shuyuan Li, et al.]
+  venue: VLDB
+  year: 2027
+  subtopic: systems
+  tags: [disk, benchmark]
+  code: https://github.com/alibaba/DiskVecLab
+  status: accepted
+  source: preprint
+- title: 'CORAL: Cross-modal Vector Retrieval via Incremental Graph Construction at Scale'
+  authors: [Shixin Wan, Guoyu Hu, Yifan Wu, et al.]
+  venue: VLDB
+  year: 2027
+  subtopic: algorithms
+  tags: [graph, cross-modal, dynamic]
+  arxiv: https://arxiv.org/abs/2610.11230
+  status: accepted
+  source: preprint
+- title: 'Can You Trust the Vectors in Your Vector Database? Black-Hole Attack from Embedding Space Defects'
+  authors: [Hanxi Li, Jiale Lao, Zhengmao Ye, et al.]
+  venue: VLDB
+  year: 2027
+  subtopic: algorithms
+  tags: [security, hubness]
+  arxiv: https://arxiv.org/abs/2604.05480
+  status: accepted
+  source: preprint
+- title: 'HNSecW: A Logarithmic-Time MPC Protocol for Approximate Nearest Neighbor Search'
+  authors: [Fahong Zhang, Weijie Jin, Lixu Wang, et al.]
+  venue: VLDB
+  year: 2027
+  subtopic: algorithms
+  tags: [privacy, mpc, graph]
+  status: accepted
+  source: preprint

@@ -13,11 +13,13 @@ readme_years: 2
 #           for multi-volume proceedings. SIGMOD (PACMMOD) has no fixed year-to-issue mapping, so it
 #           relies on csconf-papers.
 #   arxiv:  spellings searched for in arXiv comments ("accepted to <spelling> <year>").
+#   official: accepted-paper pages on the conference site ("{year}" is substituted). Titles there that match
+#           the `strong` keywords are added as accepted papers before DBLP indexes them.
 venues:
   SOSP:   {csconf: SOSP,   dblp: ["conf/sosp/sosp{year}"],         arxiv: [SOSP]}
   OSDI:   {csconf: OSDI,   dblp: ["conf/osdi/osdi{year}"],         arxiv: [OSDI]}
   ASPLOS: {csconf: ASPLOS, dblp: ["conf/asplos/asplos{year}-{vol}"], arxiv: [ASPLOS]}
-  SIGMOD: {csconf: SIGMOD, arxiv: [SIGMOD]}
+  SIGMOD: {csconf: SIGMOD, arxiv: [SIGMOD], official: ["https://{year}.sigmod.org/sigmod_papers.shtml"]}
   VLDB:   {csconf: VLDB,   dblp: ["journals/pvldb/pvldb{year-2007}"], arxiv: [VLDB, PVLDB]}
   MLSys:  {csconf: MLSys,  dblp: ["conf/mlsys/mlsys{year}"],       arxiv: [MLSys]}
   ISCA:   {dblp: ["conf/isca/isca{year}"],   arxiv: [ISCA]}

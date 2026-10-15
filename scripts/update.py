@@ -6,6 +6,7 @@ Sources:
   2. The DBLP SPARQL endpoint, for venues or years csconf-papers does not have
      (dblp.org's website and search API sit behind bot protection since 2026-09).
   3. The arXiv API, for preprints whose comments say they were accepted to a venue.
+  4. Official accepted-paper pages (`official` in config.yaml), e.g. SIGMOD's per-round list.
 
 What it changes, all additive:
   - known papers: fills in url/pdf/arXiv links; once a paper marked `status: accepted`
@@ -150,6 +151,35 @@ def accepted_venue_year(comment, spellings, year):
     return False
 
 
+def parse_official_page(html, venue, year, cfg):
+    """Accepted papers from a conference's own accepted-papers page.
+
+    Pages differ in markup, so this works on visible text lines: a line matching the
+    `strong` title keywords is taken as a title, and the next line as its author list
+    when it looks like one (commas, no keywords). Affiliations in parentheses are dropped.
+    """
+    from readinglist import relevance
+    html = re.sub(r"(?is)<(script|style).*?</\1>", " ", html)
+    html = re.sub(r"(?i)<br\s*/?>|</(p|li|div|tr|td|h\d|strong|b|em|i|span)>", "\n", html)
+    text = re.sub(r"<[^>]+>", " ", html)
+    text = re.sub(r"&amp;", "&", re.sub(r"&nbsp;|&#160;", " ", text))
+    lines = [re.sub(r"\s+", " ", l).strip() for l in text.splitlines()]
+    lines = [l for l in lines if l]
+    out = []
+    for i, line in enumerate(lines):
+        if not (15 <= len(line) <= 300) or relevance(line, cfg) != "strong":
+            continue
+        nxt = lines[i + 1] if i + 1 < len(lines) else ""
+        authors = []
+        if "," in nxt and relevance(nxt, cfg) is None:
+            nxt = re.sub(r"\([^)]*\)", "", nxt)
+            authors = [a.strip() for a in re.split(r",|;|\band\b", nxt) if a.strip()]
+        out.append({"title": clean_title(line), "authors": authors or ["(see program)"],
+                    "venue": venue, "year": year, "status": "accepted", "source": "program",
+                    "note": f"Listed on the official {venue} {year} accepted-papers page."})
+    return out
+
+
 def find_code(entry):
     for text in (entry["comment"], entry["summary"]):
         m = CODE_URL.search(text)
@@ -181,6 +211,20 @@ def collect(cfg, years, fetcher, skip, log):
                             log(f"dblp {k}: {e}")
             log(f"{venue} {year}: {len(got)} papers indexed")
             records += got
+    if "official" not in skip:
+        for venue, src in cfg["venues"].items():
+            for url_t in src.get("official", []):
+                for year in years:
+                    if year < current_year():
+                        continue
+                    url = url_t.replace("{year}", str(year))
+                    try:
+                        html = fetcher.get(url, missing_ok=True)
+                        got = parse_official_page(html, venue, year, cfg) if html else []
+                        log(f"official {venue} {year}: {len(got)} matching titles")
+                        records += got
+                    except Exception as e:
+                        log(f"official {url}: {e}")
     if "arxiv" not in skip:
         topic = '(abs:"nearest neighbor" OR abs:"vector search" OR abs:"vector database" OR abs:"similarity search")'
         for venue, src in cfg["venues"].items():
@@ -207,7 +251,7 @@ def collect(cfg, years, fetcher, skip, log):
 
 def is_placeholder(authors):
     return not authors or any(a.strip().lower() in ("et al.", "et al") or "to be filled" in a
-                              for a in authors)
+                              or "see program" in a for a in authors)
 
 
 def merge(papers, records, cfg, log):
@@ -246,7 +290,7 @@ def enrich(p, r, log):
         p["venue"], p["year"] = r["venue"], r["year"]
         if p.get("note", "").startswith(("Listed in", "arXiv comment", "Acceptance")):
             p.pop("note")
-    if r.get("authors") and (is_placeholder(p.get("authors")) or r["source"] == "dblp") \
+    if not is_placeholder(r.get("authors")) and (is_placeholder(p.get("authors")) or r["source"] == "dblp") \
             and len(r["authors"]) >= len([a for a in p.get("authors", []) if "et al" not in a]):
         p["authors"] = r["authors"]
     for k in ("url", "pdf", "arxiv", "code"):
@@ -287,7 +331,7 @@ def write_candidates(candidates, years):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--skip", default="", help="comma-separated: csconf,dblp,arxiv,code")
+    ap.add_argument("--skip", default="", help="comma-separated: csconf,dblp,official,arxiv,code")
     args = ap.parse_args()
     skip = set(filter(None, args.skip.split(",")))
     cfg = load_config()
@@ -313,7 +357,7 @@ def main():
     if summary:
         with open(summary, "a") as f:
             f.write("## Reading list update\n\n```\n" + "\n".join(log_lines) + "\n```\n")
-    if not records and not ({"csconf", "dblp", "arxiv"} <= skip):
+    if not records and not ({"csconf", "dblp", "official", "arxiv"} <= skip):
         sys.exit("no records fetched from any source")
 
 

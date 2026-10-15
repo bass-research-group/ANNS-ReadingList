@@ -95,3 +95,23 @@ def test_listing_renders_every_category():
     text = build.listing(load_papers(), CFG)
     for cat in CFG["categories"].values():
         assert cat["description"] in text
+
+
+def test_official_page_parser():
+    html = """<html><body><h2>Round 1</h2><ul>
+    <li><strong>Metric Algebra: Embedding-Independence in Vector Databases</strong><br>
+    Alice Smith (University of Edinburgh), Bob Jones (University of Edinburgh)</li>
+    <li><strong>Efficient Transaction Processing on CXL</strong><br>Carol White (MIT)</li>
+    <li><b>Fast Graph-Based Approximate Nearest Neighbor Search on SSDs</b></li>
+    </ul></body></html>"""
+    recs = update.parse_official_page(html, "SIGMOD", 2027, CFG)
+    assert [r["title"] for r in recs] == ["Metric Algebra: Embedding-Independence in Vector Databases",
+                                         "Fast Graph-Based Approximate Nearest Neighbor Search on SSDs"]
+    assert recs[0]["authors"] == ["Alice Smith", "Bob Jones"]
+    assert recs[1]["authors"] == ["(see program)"]
+    # a placeholder author list in the data gets replaced by the program's names
+    papers = [{"title": recs[0]["title"], "authors": ["University of Edinburgh authors (to be filled in)"],
+               "venue": "SIGMOD", "year": 2027, "category": "indexing-algorithm", "status": "accepted"}]
+    update.merge(papers, recs, CFG, log=lambda m: None)
+    assert papers[0]["authors"] == ["Alice Smith", "Bob Jones"]
+    assert papers[0]["status"] == "accepted"

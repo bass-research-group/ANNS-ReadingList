@@ -51,7 +51,9 @@ or artifact, where one exists.
 
 - **Checked against DBLP**: SOSP, OSDI, ASPLOS, SIGMOD, VLDB, MLSys 2025–2026; HPCA 2025–2026; SC 2025; PPoPP 2025–2026.
 - **Checked from the official programs**: ISCA 2025–2026, MICRO 2025, MICRO 2026 (to appear; some author lists are partial).
-- **Partial**: SC 2026, SIGMOD 2027 and VLDB 2027 (from authors' announcements), late PVLDB vol 19 issues.
+- **Partial**: SC 2026, SIGMOD 2027 and VLDB 2027 (from authors' announcements), late PVLDB vol 19 issues. The official
+  [SIGMOD 2027 accepted-papers page](https://2027.sigmod.org/sigmod_papers.shtml) could not be read from the environment
+  this list was built in; the monthly updater reads it.
 - **Not decided yet**: ASPLOS 2027 (no vector-search paper among early acceptances), HPCA 2027, PPoPP 2027, MLSys 2027.
 - SOSP 2025–2026 and ASPLOS 2026 have no paper whose core is vector search.
 
@@ -60,8 +62,9 @@ or artifact, where one exists.
 [`.github/workflows/update.yml`](.github/workflows/update.yml) runs on the 2nd of every month (and on demand from the Actions tab):
 
 1. [`scripts/update.py`](scripts/update.py) pulls accepted-paper lists from DBLP (through
-   [csconf-papers](https://github.com/RealZST/csconf-papers) and the DBLP SPARQL endpoint) and searches arXiv for preprints whose
-   comments say they were accepted to one of the venues.
+   [csconf-papers](https://github.com/RealZST/csconf-papers) and the DBLP SPARQL endpoint), reads official accepted-paper pages
+   listed under `official` in `config.yaml` (currently [SIGMOD's](https://2027.sigmod.org/sigmod_papers.shtml)), and searches
+   arXiv for preprints whose comments say they were accepted to one of the venues.
    - Papers already listed get missing links filled in. A paper marked *accepted* gets its official link once DBLP has it, and loses the mark.
    - New papers whose titles clearly match (`keywords.strong` in `config.yaml`) are added with a guessed sub-topic and marked *auto-added*.
    - Weaker matches go to [`data/candidates.md`](data/candidates.md) for a person to accept or dismiss.

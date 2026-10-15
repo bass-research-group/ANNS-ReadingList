@@ -46,6 +46,8 @@ keywords:
     - multi-vector (search|retrieval)
     - similarity search
     - dense retrieval
+    - hybrid (vector )?search
+    - graph-based (ANN )?index
   weak:
     - retrieval-augmented
     - \bRAG\b

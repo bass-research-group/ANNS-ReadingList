@@ -66,3 +66,16 @@ Table Overlap Estimation through Graph Embeddings
 Effective and Efficient Attributed Hypergraph Embedding on Nodes and Hyperedges
 Efficient Graph Embedding Generation and Update for Large-Scale Temporal Graph
 GeoBloom: Revisiting Lightweight Models for Geographic Information Retrieval
+SCOUT: Coupling-Free Bounds for Trillion-Scale Top-k Retrieval in Sparse Tensor Factorization
+When RAG Meets Query Planning: Logical Query Trees for Exploratory Reasoning Problems
+Efficient Swing Computation for Retrieval in Large-Scale Recommender Systems
+Cost-Efficient RAG for Entity Matching with LLMs: A Blocking-based Batch Processing Framework
+DynaGraph: Holistic Optimization for Latency-Critical GraphRAG Serving via Bidirectional Feedback
+AGRL: An Agentic GraphRAG Framework with Reinforcement Learning for Database Configuration Debugging
+Efficient K-generalizable Learned Search
+Effective Structurally Similar Community Search in Large Temporal Graphs
+Joining Large String Collections with Jaro-Winkler Similarity
+Buoy: Efficient and Effective Cache Replacement for Prefix Caching
+CatKV: Accelerating Position-Independent Caching with Context-Adaptive KV Cache Compression
+DARIC: A Position-Independent KV Cache Reuse System with Distribution-Aware Recomputation
+Adaptive Ensemble Indexing for Temporal Information Retrieval via Learned Cost Models

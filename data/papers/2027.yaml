@@ -1,32 +1,44 @@
 - title: All-in-One Graph-Based Indexing for Hybrid Search on GPUs
-  authors: [Zhonggen Li, Yougen Li, Yifan Zhu, et al.]
+  authors: [Zhonggen Li, Yougen Li, Yifan Zhu, Congcong Ge, Guoteng Xu, Yunjun Gao]
   venue: SIGMOD
   year: 2027
   category: gpu-system
   tags: [graph, hybrid]
   arxiv: https://arxiv.org/abs/2511.00855
   status: accepted
+  note: SIGMOD 2027 round 2 (official accepted-papers page).
   source: preprint
 
 - title: 'Amora: Communication-Efficient Private Approximate Nearest Neighbors Search'
-  authors: [Qiuhao Wang, Zuowei Chen, Xu Yang, et al.]
+  authors: [Qiuhao Wang, Zuowei Chen, Xu Yang, Saiyu Qi, Yong Qi]
   venue: SIGMOD
   year: 2027
   category: indexing-algorithm
   tags: [privacy]
   code: https://github.com/meander-wqh/Amora
   status: accepted
+  note: SIGMOD 2027 round 2 (official accepted-papers page).
   source: preprint
 
 - title: Catching Inconsistencies in Vector Similarity Retrieval
-  authors: [Zixiao Huang, Ruochun Jin, Haotian Wang, et al.]
+  authors: [Zixiao Huang, Ruochun Jin, Haotian Wang, Meng Zhang, Yuhua Tang]
   venue: SIGMOD
   year: 2027
   category: other-system
   tags: [testing, vector-db]
   status: accepted
-  note: SIGMOD 2027 round 2, per the author's publication page.
+  note: SIGMOD 2027 round 2 (official accepted-papers page).
   source: preprint
+
+- title: Dynamic Graph Indexing for Label-Filtered Approximate Nearest Neighbor Search
+  authors: [Mengxu Jiang, Zhi Yang, Fangyuan Zhang, Yin Yang, Sibo Wang]
+  venue: SIGMOD
+  year: 2027
+  category: filtered-algorithm
+  tags: [dynamic, graph]
+  status: accepted
+  note: SIGMOD 2027 round 2 (official accepted-papers page).
+  source: program
 
 - title: Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning
   authors: [Geon Choi, Hoeun Lee, Jaeyoung Do]
@@ -37,30 +49,61 @@
   arxiv: https://arxiv.org/abs/2607.04630
   code: https://github.com/AIDASLab/CHAT
   status: accepted
-  note: SIGMOD 2027 round 1 (<a href="https://aidas.snu.ac.kr/news/2026-06-13-1-paper-has-been-accepted-to-sigmod-2027/">lab news</a>).
+  note: SIGMOD 2027 round 1 (official accepted-papers page).
   source: preprint
 
 - title: Fast Label-Filtering Approximate Nearest Neighbor Search via Progressive Label Set Stratification
-  authors: [Ziqi Wang, Jingzhe Zhang, Shuo Shen, et al.]
+  authors: [Ziqi Wang, Jingzhe Zhang, Shuo Shen, Wei Hu]
   venue: SIGMOD
   year: 2027
   category: filtered-algorithm
   arxiv: https://arxiv.org/abs/2609.15058
   status: accepted
+  note: SIGMOD 2027 round 2 (official accepted-papers page).
   source: preprint
 
+- title: Hardware-Optimized Quantized Graphs for Fast Similarity Search
+  authors: [Xiao Luo, John Paparrizos]
+  venue: SIGMOD
+  year: 2027
+  category: indexing-algorithm
+  tags: [graph, quantization]
+  status: accepted
+  note: SIGMOD 2027 round 2 (official accepted-papers page).
+  source: program
+
 - title: 'Metric Algebra: Embedding-Independence in Vector Databases'
-  authors: [University of Edinburgh authors (to be filled in)]
+  authors: [Tianjian Yang, Yang Cao, Beining Yang, Ziying Chen, Tiejun Ma]
   venue: SIGMOD
   year: 2027
   category: other-system
   tags: [embedding-models]
   status: accepted
-  note: Listed in the SIGMOD 2027 round 1 accepted papers.
+  note: SIGMOD 2027 round 1 (official accepted-papers page).
+  source: program
+
+- title: 'Phantom Neighbors: Information Leakage and Its Prevention in Access-Controlled Vector Databases'
+  authors: [Yizheng Zhao]
+  venue: SIGMOD
+  year: 2027
+  category: other-system
+  tags: [privacy, access-control]
+  status: accepted
+  note: SIGMOD 2027 round 2 (official accepted-papers page).
+  source: program
+
+- title: 'RaP: A Redirect-and-Patch Framework for Efficient Dynamic Updates in Graph-Based ANN Indexes'
+  authors: [Zhoujin Tian, Xi Zhao, Yao Tian, Zhengjun Huang, Xiaofang Zhou]
+  venue: SIGMOD
+  year: 2027
+  category: indexing-algorithm
+  tags: [graph, dynamic]
+  status: accepted
+  note: SIGMOD 2027 round 2 (official accepted-papers page).
   source: program
 
 - title: Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging
-  authors: [Liuchang Jing, Mingyu Yang, Lei Li, et al.]
+  authors: [Liuchang Jing, Mingyu Yang, Lei Li, Jianbin Qin, Wei Wang]
   venue: SIGMOD
   year: 2027
   category: indexing-algorithm
@@ -68,8 +111,17 @@
   arxiv: https://arxiv.org/abs/2602.17099
   code: https://github.com/JingLiuchang/hnsw-merge
   status: accepted
-  note: 'arXiv v1 title: "Multiple Index Merge for Approximate Nearest Neighbor Search".'
+  note: SIGMOD 2027 round 2 (official accepted-papers page).
   source: preprint
+
+- title: 'TITAN: A High-Throughput Distributed System for Approximate Nearest Neighbor Search on Large-scale Datasets'
+  authors: [Ziyi Li, Angjun Lin, Yuhao Lin, Quanqing Xu, Ruixuan Zhang, Yuanyuan Zhu, Jiawei Jiang, Xiao Yan]
+  venue: SIGMOD
+  year: 2027
+  category: distributed-system
+  status: accepted
+  note: SIGMOD 2027 round 2 (official accepted-papers page).
+  source: program
 
 - title: Can You Trust the Vectors in Your Vector Database? Black-Hole Attack from Embedding Space Defects
   authors: [Hanxi Li, Jiale Lao, Zhengmao Ye, et al.]

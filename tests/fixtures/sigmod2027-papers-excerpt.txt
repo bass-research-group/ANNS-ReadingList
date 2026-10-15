@@ -1,0 +1,36 @@
+Accepted Papers for SIGMOD
+Round 1
+
+* When RAG Meets Query Planning: Logical Query Trees for Exploratory Reasoning Problems
+Ganlin Xu (Fudan University); Linghao Zhang (Fudan University); Zhitao Yin (Fudan University); Hongda Xi (Fudan University); Chen Yang (Fudan University); Jiaqing Liang (Fudan University); Weijia Lu (United Automotive Electronic Systems); Sihang Jiang (Fudan University); Yanghua Xiao (Fudan University); Deqing Yang (Fudan University)*
+* Metric Algebra: Embedding-Independence in Vector Databases
+Tianjian Yang (University of Edinburgh); Yang Cao (University of Edinburgh)*; Beining Yang (University of Edinburgh); Ziying Chen (University of Edinburgh); Tiejun Ma (University of Edinburgh)
+* Effective Structurally Similar Community Search in Large Temporal Graphs
+Yue Zhang (The Chinese University of Hong Kong, Shenzhen)*; Yingli Zhou (The Chinese University of Hong Kong, Shenzhen); Fangyuan Zhang (Huawei Hong Kong Research Center); Xiaolin Han (The Northwestern Polytechnical University); Chenhao Ma (The Chinese University of Hong Kong, Shenzhen)
+* Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning
+Geon Choi (Seoul National University)*; Hoeun Lee (Seoul National University); Jaeyoung Do (Seoul National University)
+
+Round 2
+
+* Fast Label-Filtering Approximate Nearest Neighbor Search via Progressive Label Set Stratification
+Ziqi Wang (Nanjing University); Jingzhe Zhang (Nanjing University); Shuo Shen (Nanjing University); Wei Hu (Nanjing University)*
+* Phantom Neighbors: Information Leakage and Its Prevention in Access-Controlled Vector Databases
+Yizheng Zhao (Nanjing University)*
+* Hardware-Optimized Quantized Graphs for Fast Similarity Search
+Xiao Luo (Ohio State University); John Paparrizos (Ohio State University)*
+* Catching Inconsistencies in Vector Similarity Retrieval
+Zixiao Huang (National University of Defense Technology); Ruochun Jin (National University of Defense Technology)*; Haotian Wang (National University of Defense Technology); Meng Zhang (National University of Defense Technology); Yuhua Tang (National University of Defense Technology)
+* Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging
+Liuchang JING (The Hong Kong University of Science and Technology (Guangzhou)); Mingyu YANG (HKUST(GZ) & HKUST)*; Lei LI (HKUST(GZ) & HKUST); Jianbin QIN (Shenzhen University); Wei WANG (HKUST(GZ) & HKUST)
+* TITAN: A High-Throughput Distributed System for Approximate Nearest Neighbor Search on Large-scale Datasets
+Ziyi Li (Wuhan university)*; Angjun Lin (Wuhan University); Yuhao Lin (Wuhan University); Quanqing Xu (Ant Group); Ruixuan Zhang (Wuhan University); Yuanyuan Zhu (Wuhan University); Jiawei Jiang (Wuhan University); Xiao Yan (Wuhan University)
+* All-in-one Graph-based Indexing for Hybrid Search on GPUs
+Zhonggen Li (Zhejiang University); Yougen Li (Zhejiang University); Yifan Zhu (Zhejiang University); Congcong Ge (Zhejiang University); Guoteng Xu (Guizhou University); Yunjun Gao (Zhejiang University)*
+* Dynamic Graph Indexing for Label-Filtered Approximate Nearest Neighbor Search
+Mengxu Jiang (The Chinese University of Hong Kong); Zhi Yang (The Chinese University of Hong Kong); Fangyuan Zhang (Harbin Institute of Technology); Yin Yang (Hamad Bin Khalifa University); Sibo Wang (The Chinese University of Hong Kong)*
+* Joining Large String Collections with Jaro-Winkler Similarity
+Manuel Lankes (University of Salzburg)*; Daniel Kocher (University of Salzburg); Daniel Ulrich Schmitt (University of Salzburg); Willi Mann (Celonis); Samy Thomas Dafir (Salzburger Festspielfonds); Bin Shen (Celonis); Yujian Xu (Nikeonis Inc.); Nikolaus Augsten (University of Salzburg)
+* RaP: A Redirect-and-Patch Framework for Efficient Dynamic Updates in Graph-Based ANN Indexes
+Zhoujin Tian (HKUST)*; Xi Zhao (HKUST); Yao Tian (HKUST); Zhengjun Huang (HKUST); Xiaofang Zhou (HKUST)
+* Amora: Communication-Efficient Private Approximate Nearest Neighbors Search
+Qiuhao Wang (Xi'an Jiaotong University)*; Zuowei Chen (Xi'an Jiaotong University); Xu Yang (Xi'an Jiaotong University); Saiyu Qi (Xi'an Jiaotong University); Yong Qi (Xi'an Jiaotong University)

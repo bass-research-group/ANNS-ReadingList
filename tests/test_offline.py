@@ -115,3 +115,14 @@ def test_official_page_parser():
     update.merge(papers, recs, CFG, log=lambda m: None)
     assert papers[0]["authors"] == ["Alice Smith", "Bob Jones"]
     assert papers[0]["status"] == "accepted"
+
+
+def test_official_page_real_excerpt():
+    """Excerpt of https://2027.sigmod.org/sigmod_papers.shtml as text (bulleted, affiliations in parentheses)."""
+    recs = update.parse_official_page((FIX / "sigmod2027-papers-excerpt.txt").read_text(), "SIGMOD", 2027, CFG)
+    titles = [r["title"] for r in recs]
+    assert len(titles) == 12
+    assert "All-in-one Graph-based Indexing for Hybrid Search on GPUs" in titles
+    assert not any("Jaro-Winkler" in t or "Community Search" in t for t in titles)
+    jing = next(r for r in recs if r["title"].startswith("Reverse Neighbor"))
+    assert jing["authors"][0] == "Liuchang JING" and len(jing["authors"]) == 5  # nested parentheses removed

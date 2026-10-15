@@ -163,7 +163,7 @@ def parse_official_page(html, venue, year, cfg):
     html = re.sub(r"(?i)<br\s*/?>|</(p|li|div|tr|td|h\d|strong|b|em|i|span)>", "\n", html)
     text = re.sub(r"<[^>]+>", " ", html)
     text = re.sub(r"&amp;", "&", re.sub(r"&nbsp;|&#160;", " ", text))
-    lines = [re.sub(r"\s+", " ", l).strip() for l in text.splitlines()]
+    lines = [re.sub(r"^[*\u2022\-]\s+", "", re.sub(r"\s+", " ", l).strip()) for l in text.splitlines()]
     lines = [l for l in lines if l]
     out = []
     for i, line in enumerate(lines):
@@ -171,9 +171,12 @@ def parse_official_page(html, venue, year, cfg):
             continue
         nxt = lines[i + 1] if i + 1 < len(lines) else ""
         authors = []
-        if "," in nxt and relevance(nxt, cfg) is None:
-            nxt = re.sub(r"\([^)]*\)", "", nxt)
-            authors = [a.strip() for a in re.split(r",|;|\band\b", nxt) if a.strip()]
+        if re.search(r"[,;]", nxt) or re.search(r"\(.+\)\*?$", nxt):
+            if relevance(nxt, cfg) is None:
+                while re.search(r"\([^()]*\)", nxt):  # affiliations, possibly nested
+                    nxt = re.sub(r"\([^()]*\)", "", nxt)
+                parts = re.split(r";", nxt) if ";" in nxt else re.split(r",|\band\b", nxt)
+                authors = [a.strip(" *") for a in parts if a.strip(" *")]
         out.append({"title": clean_title(line), "authors": authors or ["(see program)"],
                     "venue": venue, "year": year, "status": "accepted", "source": "program",
                     "note": f"Listed on the official {venue} {year} accepted-papers page."})

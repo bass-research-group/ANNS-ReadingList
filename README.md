@@ -91,14 +91,14 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 ## Paper list
 
 <!-- BEGIN GENERATED -->
-**160** papers from 2025 on.
+**165** papers from 2025 on.
 
 | Venue | 2025 | 2026 | 2027 | Total |
 |---|---|---|---|---|
 | [SOSP](papers/by-venue/SOSP.md) | — | — | — | 0 |
 | [OSDI](papers/by-venue/OSDI.md) | 3 | 2 | — | 5 |
 | [ASPLOS](papers/by-venue/ASPLOS.md) | 1 | — | — | 1 |
-| [SIGMOD](papers/by-venue/SIGMOD.md) | 16 | 43 | 7 | 66 |
+| [SIGMOD](papers/by-venue/SIGMOD.md) | 16 | 43 | 12 | 71 |
 | [VLDB](papers/by-venue/VLDB.md) | 26 | 33 | 5 | 64 |
 | [MLSys](papers/by-venue/MLSys.md) | — | 3 | — | 3 |
 | [ISCA](papers/by-venue/ISCA.md) | 7 | 1 | — | 8 |
@@ -109,13 +109,13 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 
 | Sub-topic | 2025 | 2026 | 2027 | Total |
 |---|---|---|---|---|
-| [Algorithms: ANNS Indexing Algorithms](#anns-indexing-algorithms) | 15 | 28 | 4 | 47 |
-| [Algorithms: Filtered ANNS Algorithms](#filtered-anns-algorithms) | 8 | 10 | 2 | 20 |
+| [Algorithms: ANNS Indexing Algorithms](#anns-indexing-algorithms) | 15 | 28 | 6 | 49 |
+| [Algorithms: Filtered ANNS Algorithms](#filtered-anns-algorithms) | 8 | 10 | 3 | 21 |
 | [Algorithms: Hybrid Search Algorithms](#hybrid-search-algorithms) | 1 | 1 | 1 | 3 |
 | [Systems: GPU-Accelerated ANNS Systems](#gpu-accelerated-anns-systems) | 0 | 12 | 1 | 13 |
 | [Systems: Out-of-Core ANNS Systems](#out-of-core-anns-systems) | 3 | 4 | 0 | 7 |
-| [Systems: Distributed ANNS Systems](#distributed-anns-systems) | 4 | 4 | 0 | 8 |
-| [Systems: Vector Databases & Other Systems](#vector-databases--other-systems) | 12 | 9 | 3 | 24 |
+| [Systems: Distributed ANNS Systems](#distributed-anns-systems) | 4 | 4 | 1 | 9 |
+| [Systems: Vector Databases & Other Systems](#vector-databases--other-systems) | 12 | 9 | 4 | 25 |
 | [Architecture: FPGA & In-storage Acceleration](#fpga--in-storage-acceleration) | 4 | 3 | 0 | 7 |
 | [Architecture: Domain-specific Accelerators](#domain-specific-accelerators) | 9 | 3 | 0 | 12 |
 | [Experiments & Analysis: Benchmarks](#benchmarks) | 2 | 9 | 1 | 12 |
@@ -131,9 +131,11 @@ _Graph, IVF/clustering, tree and hashing indexes; quantization; search, early te
 
 **SIGMOD 2027**
 
-- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, et al. [[code]](https://github.com/meander-wqh/Amora) `privacy`
-- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (<a href="https://aidas.snu.ac.kr/news/2026-06-13-1-paper-has-been-accepted-to-sigmod-2027/">lab news</a>).</sub>
-- **Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging** *(accepted, to appear)*<br>Liuchang Jing, Mingyu Yang, Lei Li, et al. [[arXiv]](https://arxiv.org/abs/2602.17099) [[code]](https://github.com/JingLiuchang/hnsw-merge) `graph` `merging`<br><sub>arXiv v1 title: "Multiple Index Merge for Approximate Nearest Neighbor Search".</sub>
+- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, Saiyu Qi, Yong Qi [[code]](https://github.com/meander-wqh/Amora) `privacy`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
+- **Hardware-Optimized Quantized Graphs for Fast Similarity Search** *(accepted, to appear)*<br>Xiao Luo, John Paparrizos `graph` `quantization`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **RaP: A Redirect-and-Patch Framework for Efficient Dynamic Updates in Graph-Based ANN Indexes** *(accepted, to appear)*<br>Zhoujin Tian, Xi Zhao, Yao Tian, Zhengjun Huang, Xiaofang Zhou `graph` `dynamic`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging** *(accepted, to appear)*<br>Liuchang Jing, Mingyu Yang, Lei Li, Jianbin Qin, Wei Wang [[arXiv]](https://arxiv.org/abs/2602.17099) [[code]](https://github.com/JingLiuchang/hnsw-merge) `graph` `merging`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 **VLDB 2027**
 
@@ -207,7 +209,8 @@ _Vector search under attribute, label, range or other structured predicates._
 
 **SIGMOD 2027**
 
-- **Fast Label-Filtering Approximate Nearest Neighbor Search via Progressive Label Set Stratification** *(accepted, to appear)*<br>Ziqi Wang, Jingzhe Zhang, Shuo Shen, et al. [[arXiv]](https://arxiv.org/abs/2609.15058)
+- **Dynamic Graph Indexing for Label-Filtered Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Mengxu Jiang, Zhi Yang, Fangyuan Zhang, Yin Yang, Sibo Wang `dynamic` `graph`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Fast Label-Filtering Approximate Nearest Neighbor Search via Progressive Label Set Stratification** *(accepted, to appear)*<br>Ziqi Wang, Jingzhe Zhang, Shuo Shen, Wei Hu [[arXiv]](https://arxiv.org/abs/2609.15058)<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 **VLDB 2027**
 
@@ -269,7 +272,7 @@ _Vector search systems built on GPUs, including CPU-GPU co-processing._
 
 **SIGMOD 2027**
 
-- **All-in-One Graph-Based Indexing for Hybrid Search on GPUs** *(accepted, to appear)*<br>Zhonggen Li, Yougen Li, Yifan Zhu, et al. [[arXiv]](https://arxiv.org/abs/2511.00855) `graph` `hybrid`
+- **All-in-One Graph-Based Indexing for Hybrid Search on GPUs** *(accepted, to appear)*<br>Zhonggen Li, Yougen Li, Yifan Zhu, Congcong Ge, Guoteng Xu, Yunjun Gao [[arXiv]](https://arxiv.org/abs/2511.00855) `graph` `hybrid`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 **OSDI 2026**
 
@@ -327,6 +330,10 @@ _Indexes larger than DRAM, kept on SSD or disk, or spread across tiered or disag
 _Multi-node, RDMA, federated and scale-out vector search._
 
 
+**SIGMOD 2027**
+
+- **TITAN: A High-Throughput Distributed System for Approximate Nearest Neighbor Search on Large-scale Datasets** *(accepted, to appear)*<br>Ziyi Li, Angjun Lin, Yuhao Lin, Quanqing Xu, Ruixuan Zhang, Yuanyuan Zhu, et al.<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+
 **SIGMOD 2026**
 
 - **CoTra: Towards Efficient and Scalable Distributed Vector Search with RDMA**<br>Xiangyu Zhi, Meng Chen, Xiao Yan, Baotong Lu, Hui Li, Qianxi Zhang, et al. [[paper]](https://doi.org/10.1145/3786634) [[arXiv]](https://arxiv.org/abs/2507.06653) [[code]](https://github.com/xiangyuzhi/CoTra) `rdma`
@@ -354,8 +361,9 @@ _Vector databases and DBMS integration, CPU-efficient engines, privacy and secur
 
 **SIGMOD 2027**
 
-- **Catching Inconsistencies in Vector Similarity Retrieval** *(accepted, to appear)*<br>Zixiao Huang, Ruochun Jin, Haotian Wang, et al. `testing` `vector-db`<br><sub>SIGMOD 2027 round 2, per the author's publication page.</sub>
-- **Metric Algebra: Embedding-Independence in Vector Databases** *(accepted, to appear)*<br>University of Edinburgh authors (to be filled in) `embedding-models`<br><sub>Listed in the SIGMOD 2027 round 1 accepted papers.</sub>
+- **Catching Inconsistencies in Vector Similarity Retrieval** *(accepted, to appear)*<br>Zixiao Huang, Ruochun Jin, Haotian Wang, Meng Zhang, Yuhua Tang `testing` `vector-db`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Metric Algebra: Embedding-Independence in Vector Databases** *(accepted, to appear)*<br>Tianjian Yang, Yang Cao, Beining Yang, Ziying Chen, Tiejun Ma `embedding-models`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
+- **Phantom Neighbors: Information Leakage and Its Prevention in Access-Controlled Vector Databases** *(accepted, to appear)*<br>Yizheng Zhao `privacy` `access-control`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 **VLDB 2027**
 

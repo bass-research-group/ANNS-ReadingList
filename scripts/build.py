@@ -1,41 +1,28 @@
 #!/usr/bin/env python3
-"""Render README.md and papers/by-venue/*.md from data/papers.yaml.
+"""Render README.md, papers/by-venue/*.md and archive/<year>.md from data/papers/*.yaml.
 
-Usage: python3 scripts/build.py
+The README lists the most recent `readme_years` years (config.yaml). Older years are
+moved to archive/<year>.md automatically, so the README stays short as the list grows.
+
+Usage: python3 scripts/build.py [--year YYYY]   (--year overrides "now", for testing)
 """
+import argparse
 import collections
-import pathlib
 
-import yaml
+from readinglist import ROOT, current_year, load_config, load_papers
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-VENUES = ["SOSP", "OSDI", "ASPLOS", "SIGMOD", "VLDB", "MLSys",
-          "ISCA", "MICRO", "HPCA", "SC", "PPoPP"]
-SUBTOPICS = {
-    "algorithms": ("Algorithms",
-                   "Index structures (graph, IVF, trees), quantization, filtered/hybrid search, "
-                   "early termination, theory, and algorithmic benchmarks."),
-    "systems": ("Systems",
-                "Vector databases, disk/SSD-resident and distributed search, updates, "
-                "DBMS integration, privacy, and retrieval for RAG / KV cache."),
-    "accelerators": ("Accelerators",
-                     "GPU, FPGA, ASIC, processing-in/near-memory, in-storage, and CXL-based "
-                     "vector search."),
-}
 START = "<!-- BEGIN GENERATED -->"
 END = "<!-- END GENERATED -->"
 
 
-def load():
-    papers = yaml.safe_load((ROOT / "data/papers.yaml").read_text())
+def check(papers, cfg):
+    seen = set()
     for p in papers:
-        assert p["venue"] in VENUES, p
-        assert p["subtopic"] in SUBTOPICS, p
-    return papers
-
-
-def sort_key(p):
-    return (-p["year"], VENUES.index(p["venue"]), p["title"].lower())
+        assert p["venue"] in cfg["venues"], f"unknown venue in {p['title']}: {p['venue']}"
+        assert p["category"] in cfg["categories"], f"unknown category in {p['title']}: {p['category']}"
+        key = p["title"].lower()
+        assert key not in seen, f"duplicate paper: {p['title']}"
+        seen.add(key)
 
 
 def authors(p):
@@ -43,21 +30,18 @@ def authors(p):
     return ", ".join(a[:6]) + (", et al." if len(a) > 6 else "")
 
 
-def entry(p, show_venue=True):
+def entry(p, show_venue):
     links = []
-    if p.get("url"):
-        links.append(f"[[paper]]({p['url']})")
-    if p.get("pdf") and p["pdf"] != p.get("url"):
-        links.append(f"[[pdf]]({p['pdf']})")
-    if p.get("arxiv"):
-        links.append(f"[[arXiv]]({p['arxiv']})")
-    if p.get("code"):
-        links.append(f"[[code]]({p['code']})")
+    for key, label in (("url", "paper"), ("pdf", "pdf"), ("arxiv", "arXiv"), ("code", "code")):
+        if p.get(key) and not (key == "pdf" and p["pdf"] == p.get("url")):
+            links.append(f"[[{label}]]({p[key]})")
     line = f"- **{p['title']}**"
     if show_venue:
         line += f" [{p['venue']} {p['year']}]"
     if p.get("status") == "accepted":
         line += " *(accepted, to appear)*"
+    if p.get("auto"):
+        line += " *(auto-added, not yet reviewed)*"
     line += f"<br>{authors(p)}"
     if links:
         line += " " + " ".join(links)
@@ -68,71 +52,113 @@ def entry(p, show_venue=True):
     return line
 
 
-def overview(papers):
-    years = sorted({p["year"] for p in papers})
-    count = collections.Counter((p["venue"], p["year"]) for p in papers)
-    rows = ["| Venue | " + " | ".join(map(str, years)) + " | Total |",
-            "|---" * (len(years) + 2) + "|"]
-    for v in VENUES:
-        cells = [str(count[(v, y)]) if count[(v, y)] else "—" for y in years]
-        total = sum(count[(v, y)] for y in years)
-        rows.append(f"| [{v}](papers/by-venue/{v}.md) | " + " | ".join(cells) + f" | {total} |")
-    sub = collections.Counter((p["subtopic"], p["year"]) for p in papers)
-    rows += ["", "| Sub-topic | " + " | ".join(map(str, years)) + " | Total |",
-             "|---" * (len(years) + 2) + "|"]
-    for s, (name, _) in SUBTOPICS.items():
-        cells = [str(sub[(s, y)]) for y in years]
-        rows.append(f"| [{name}](#{name.lower()}) | " + " | ".join(cells)
-                    + f" | {sum(sub[(s, y)] for y in years)} |")
-    return "\n".join(rows)
+def groups(cfg):
+    out = collections.OrderedDict()
+    for key, cat in cfg["categories"].items():
+        out.setdefault(cat["group"], []).append(key)
+    return out
 
 
-def by_subtopic(papers):
+def anchor(text):
+    return "".join(c for c in text.lower().replace(" ", "-") if c.isalnum() or c in "-_")
+
+
+def listing(papers, cfg, heading="##"):
+    """Papers grouped by group > category > (year, venue)."""
+    venues = list(cfg["venues"])
     out = []
-    for s, (name, desc) in SUBTOPICS.items():
-        group = sorted((p for p in papers if p["subtopic"] == s), key=sort_key)
-        out += [f"### {name}", "", f"_{desc}_", ""]
-        for (y, v), ps in _groups(group):
-            out += [f"#### {v} {y}", ""] + [entry(p, show_venue=False) for p in ps] + [""]
+    for group, keys in groups(cfg).items():
+        out += [f"{heading} {group}", ""]
+        for key in keys:
+            cat = cfg["categories"][key]
+            ps = sorted((p for p in papers if p["category"] == key),
+                        key=lambda p: (-p["year"], venues.index(p["venue"]), p["title"].lower()))
+            if len(keys) > 1:
+                out += [f"{heading}# {cat['name']}", ""]
+            out += [f"_{cat['description']}_", ""]
+            if not ps:
+                out += ["_None yet._", ""]
+            last = None
+            for p in ps:
+                if (p["year"], p["venue"]) != last:
+                    last = (p["year"], p["venue"])
+                    out += ["", f"**{p['venue']} {p['year']}**", ""]
+                out.append(entry(p, show_venue=False))
+            out.append("")
     return "\n".join(out).rstrip()
 
 
-def _groups(ps):
-    groups = collections.OrderedDict()
-    for p in ps:
-        groups.setdefault((p["year"], p["venue"]), []).append(p)
-    return groups.items()
+def tables(papers, cfg, years, archived):
+    count = collections.Counter((p["venue"], p["year"]) for p in papers)
+    head = "| Venue | " + " | ".join(map(str, years)) + " | Total |"
+    rows = [head, "|---" * (len(years) + 2) + "|"]
+    for v in cfg["venues"]:
+        cells = [str(count[(v, y)]) if count[(v, y)] else "—" for y in years]
+        rows.append(f"| [{v}](papers/by-venue/{v}.md) | " + " | ".join(cells)
+                    + f" | {sum(count[(v, y)] for y in years)} |")
+    cat = collections.Counter((p["category"], p["year"]) for p in papers)
+    rows += ["", head.replace("Venue", "Sub-topic"), rows[1]]
+    for key, c in cfg["categories"].items():
+        title = c["name"] if c["name"] == c["group"] else f"{c['group']}: {c['name']}"
+        cells = [str(cat[(key, y)]) for y in years]
+        rows.append(f"| [{title}](#{anchor(c['name'])}) | " + " | ".join(cells)
+                    + f" | {sum(cat[(key, y)] for y in years)} |")
+    if archived:
+        rows += ["", "Archived years (not shown in this README): "
+                 + ", ".join(f"[{y}](archive/{y}.md)" for y in archived)]
+    return "\n".join(rows)
 
 
-def venue_pages(papers):
-    d = ROOT / "papers/by-venue"
+def venue_pages(papers, cfg):
+    d = ROOT / "papers" / "by-venue"
     d.mkdir(parents=True, exist_ok=True)
-    for v in VENUES:
-        ps = sorted((p for p in papers if p["venue"] == v), key=sort_key)
-        out = [f"# {v}", "", f"ANNS / vector search papers at {v}, from 2025 on. "
-               "Generated from [`data/papers.yaml`](../../data/papers.yaml); edit that file, "
-               "not this one.", ""]
+    for v in cfg["venues"]:
+        ps = [p for p in papers if p["venue"] == v]
+        out = [f"# {v}", "", f"{cfg['topic']} papers at {v}, all years. Generated from "
+               "[`data/papers/`](../../data/papers/); edit those files, not this one.", ""]
         if not ps:
             out.append("_No papers found yet._")
         for y in sorted({p["year"] for p in ps}, reverse=True):
             out += [f"## {v} {y}", ""]
-            for s, (name, _) in SUBTOPICS.items():
-                group = [p for p in ps if p["year"] == y and p["subtopic"] == s]
+            for key, c in cfg["categories"].items():
+                group = sorted((p for p in ps if p["year"] == y and p["category"] == key),
+                               key=lambda p: p["title"].lower())
                 if group:
-                    out += [f"### {name}", ""] + [entry(p, show_venue=False) for p in group] + [""]
+                    out += [f"### {c['name']}", ""] + [entry(p, False) for p in group] + [""]
         (d / f"{v}.md").write_text("\n".join(out).rstrip() + "\n")
 
 
+def archive_pages(papers, cfg, archived):
+    d = ROOT / "archive"
+    for y in archived:
+        d.mkdir(exist_ok=True)
+        ps = [p for p in papers if p["year"] == y]
+        out = [f"# {cfg['topic']} papers, {y} (archived)", "",
+               f"{len(ps)} papers. Generated from [`data/papers/{y}.yaml`](../data/papers/{y}.yaml).",
+               "", listing(ps, cfg)]
+        (d / f"{y}.md").write_text("\n".join(out).rstrip() + "\n")
+
+
 def main():
-    papers = load()
-    venue_pages(papers)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--year", type=int, default=current_year())
+    args = ap.parse_args()
+    cfg = load_config()
+    papers = load_papers()
+    check(papers, cfg)
+    first_shown = args.year - cfg["readme_years"] + 1
+    recent = [p for p in papers if p["year"] >= first_shown]
+    years = sorted({p["year"] for p in recent})
+    archived = sorted({p["year"] for p in papers if p["year"] < first_shown}, reverse=True)
+    venue_pages(papers, cfg)
+    archive_pages(papers, cfg, archived)
     readme = ROOT / "README.md"
     text = readme.read_text()
     body = "\n\n".join([
-        f"There are **{len(papers)}** papers so far.",
-        overview(papers),
-        "## Papers by sub-topic",
-        by_subtopic(papers),
+        f"**{len(recent)}** papers from {first_shown} on"
+        + (f" ({len(papers)} including the archive)." if archived else "."),
+        tables(recent, cfg, years, archived),
+        listing(recent, cfg, heading="###"),
     ])
     head, _, rest = text.partition(START)
     _, _, tail = rest.partition(END)

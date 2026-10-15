@@ -1,0 +1,910 @@
+- title: Disentangling Graph Dependencies for Efficient Billion-Scale GPU Vector Search
+  authors: [Haoru Zhao, Jingkai He, Jingyao Zeng, Mingkai Dong, Dong Du]
+  venue: OSDI
+  year: 2026
+  category: gpu-system
+  tags: [graph]
+  url: https://www.usenix.org/conference/osdi26/presentation/zhao
+  pdf: https://www.usenix.org/system/files/osdi26-zhao.pdf
+  source: dblp
+
+- title: 'The Clustering Strikes Back: Building Cost-Effective and High-Performance ANNS at Scale with Helmsman (Operational Systems)'
+  authors: [Yuchen Huang, Baiteng Ma, Yiping Sun, Yang Shi, Xiao Chen, Xiaocheng Zhong, Zhiyong Wang, Yao Hu, Erci Xu, Chuliang Weng]
+  venue: OSDI
+  year: 2026
+  category: out-of-core-system
+  tags: [partition, disk]
+  url: https://www.usenix.org/conference/osdi26/presentation/huang-yuchen
+  pdf: https://www.usenix.org/system/files/osdi26-huang-yuchen.pdf
+  code: https://github.com/Red-EAD/helmsman
+  source: dblp
+
+- title: Accelerating High-Dimensional ANN Search via Skipping Redundant Distance Computations
+  authors: [Ziwen Song, Bin Wang, Xiaochun Yang]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  url: https://doi.org/10.1145/3769753
+  source: dblp
+
+- title: 'An In-Depth Study of Filter-Agnostic Vector Search on a PostgreSQL Database System: [Experiments & Analysis]'
+  authors: [Duo Lu, Helena Caminal, Manos Chatzakis, Yannis Papakonstantinou, Yannis Chronis, Vaibhav Jain, Fatma Özcan]
+  venue: SIGMOD
+  year: 2026
+  category: benchmark
+  tags: [filtered, postgres]
+  url: https://doi.org/10.1145/3802011
+  arxiv: https://arxiv.org/abs/2603.23710
+  code: https://github.com/google-systems-research/fvs
+  source: dblp
+
+- title: 'Attribute Filtering in Approximate Nearest Neighbor Search: An In-depth Experimental Study'
+  authors: [Mocheng Li, Xiao Yan, Baotong Lu, Yue Zhang, James Cheng, Chenhao Ma]
+  venue: SIGMOD
+  year: 2026
+  category: benchmark
+  tags: [filtered]
+  url: https://doi.org/10.1145/3769763
+  arxiv: https://arxiv.org/abs/2508.16263
+  code: https://github.com/lmccccc/FANNBench
+  source: dblp
+
+- title: 'Beyond Vector Search: Querying With and Without Predicates'
+  authors: [Jiadong Xie, Jeffrey Xu Yu, Siyi Teng, Yingfan Liu]
+  venue: SIGMOD
+  year: 2026
+  category: filtered-algorithm
+  url: https://doi.org/10.1145/3769765
+  source: dblp
+
+- title: Building Stateless Serverless Vector DBs via Block-based Data Partitioning
+  authors: [Daniel Barcelona Pons, Raúl Gracia Tinedo, Albert Cañadilla-Domingo, Xavier Roca-Canals, Pedro García López]
+  venue: SIGMOD
+  year: 2026
+  category: benchmark
+  tags: [serverless]
+  url: https://doi.org/10.1145/3769769
+  code: https://github.com/neardata-eu/serverless-vdb
+  source: dblp
+
+- title: 'CANDOR-Bench: Benchmarking In-Memory Continuous ANNS under Dynamic Open-World Streams [Experiments & Analysis]'
+  authors: [Mingqi Wang, Junyao Dong, Zhuoyan Wu, Jun Liu, Ruicheng Zhang, Jianjun Zhao, Ruipeng Wan, Xinyan Lei, Shuhao Zhang, Bolong Zheng, Haikun Liu, Xiaofei Liao, Hai Jin]
+  venue: SIGMOD
+  year: 2026
+  category: benchmark
+  tags: [dynamic]
+  url: https://doi.org/10.1145/3786630
+  code: https://github.com/DataSysResearch/CANDOR-Bench
+  source: dblp
+
+- title: 'CMANNS: GPU-Accelerated Graph Index Construction for ANNS via Compute-Memory Disaggregation'
+  authors: [Chengying Huan, Renjie Yao, Shaonan Ma, Rong Gu, Zhengyi Yang, Lizheng Chen, Zhibin Wang, Mingxing Zhang, Fang Xi, Guihai Chen, Chen Tian]
+  venue: SIGMOD
+  year: 2026
+  category: gpu-system
+  tags: [graph]
+  url: https://doi.org/10.1145/3802027
+  source: dblp
+
+- title: 'CoTra: Towards Efficient and Scalable Distributed Vector Search with RDMA'
+  authors: [Xiangyu Zhi, Meng Chen, Xiao Yan, Baotong Lu, Hui Li, Qianxi Zhang, Qi Chen, James Cheng]
+  venue: SIGMOD
+  year: 2026
+  category: distributed-system
+  tags: [rdma]
+  url: https://doi.org/10.1145/3786634
+  arxiv: https://arxiv.org/abs/2507.06653
+  code: https://github.com/xiangyuzhi/CoTra
+  source: dblp
+
+- title: 'Curator: Efficient Vector Search with Low-Selectivity Filters'
+  authors: [Yicheng Jin, Yongji Wu, Wenjun Hu, Bruce M. Maggs, Jun Yang, Xiao Zhang, Danyang Zhuo]
+  venue: SIGMOD
+  year: 2026
+  category: filtered-algorithm
+  url: https://doi.org/10.1145/3786635
+  arxiv: https://arxiv.org/abs/2601.01291
+  code: https://github.com/hatsu3/curator-v2
+  source: dblp
+
+- title: 'DARTH: Declarative Recall Through Early Termination for Approximate Nearest Neighbor Search'
+  authors: [Manos Chatzakis, Yannis Papakonstantinou, Themis Palpanas]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [early-termination]
+  url: https://doi.org/10.1145/3749160
+  arxiv: https://arxiv.org/abs/2505.19001
+  code: https://github.com/MChatzakis/DARTH
+  source: dblp
+
+- title: 'DiskJoin: Large-scale Vector Similarity Join with SSD'
+  authors: [Yanqi Chen, Xiao Yan, Alexandra Meliou, Eric Lo]
+  venue: SIGMOD
+  year: 2026
+  category: out-of-core-system
+  tags: [disk, join]
+  url: https://doi.org/10.1145/3769780
+  arxiv: https://arxiv.org/abs/2508.18494
+  code: https://github.com/iidyc/DiskJoin
+  source: dblp
+
+- title: Distribution-Aware Exploration for Adaptive HNSW Search
+  authors: [Chao Zhang, Renée J. Miller]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph]
+  url: https://doi.org/10.1145/3786639
+  arxiv: https://arxiv.org/abs/2512.06636
+  code: https://github.com/chaozhang-cs/hnsw-ada-ef
+  source: dblp
+
+- title: Dynamically Detect and Fix Hardness for Efficient Approximate Nearest Neighbor Search
+  authors: [Zhiyuan Hua, Qiji Mo, Zebin Yao, Lixiao Cui, Xiaoguang Liu, Gang Wang, Zijing Wei, Xinyu Liu, Tianxiao Tang, Shaozhi Liu, Lin Qu]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph]
+  url: https://doi.org/10.1145/3769783
+  code: https://github.com/yuhuifishash/NGFix
+  source: dblp
+
+- title: Efficient and Robust Out-Of-Distribution Vector Similarity Search with Cross-Distribution Monotonic Graph
+  authors: [Qiang Yue, Mengzhao Wang, Xiaoliang Xu, Cheng Long, Yuxiang Wang, Jiahui Wang]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph, ood]
+  url: https://doi.org/10.1145/3786643
+  code: https://github.com/Lsyhprum/CDMG
+  source: dblp
+
+- title: Efficient Approximate Nearest Neighbor Search via Hemi-Sphere Centroids Graph
+  authors: [Runwen Qiu, Jing Tang]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph]
+  url: https://doi.org/10.1145/3769786
+  code: https://github.com/QiuRunwen/hscg
+  source: dblp
+
+- title: Efficient Index Layout and Search Strategy for Large-scale High-dimensional Vector Similarity Search
+  authors: [Weijian Chen, Haotian Liu, Yangshen Deng, Long Xiang, Liang Huang, Bo Tang]
+  venue: SIGMOD
+  year: 2026
+  category: out-of-core-system
+  tags: [disk]
+  url: https://doi.org/10.1145/3802045
+  code: https://github.com/AlayaDB-AI/AlayaLite
+  source: dblp
+
+- title: Efficient Vector Index Merging in Vector Databases
+  authors: [Chenzhe Jin, Yunan Zhang, Jiayi Liu, Jianguo Wang]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [merging]
+  url: https://doi.org/10.1145/3786645
+  source: dblp
+
+- title: Enhancing Graph-based Approximate Maximum Inner Product Search via Norm-Adaptive Partitioning
+  authors: [Xi Zhao, Zhoujin Tian, Kai Huang, Yao Tian, Xiaokui Xiao, Bolong Zheng, Xiaofang Zhou]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [mips, graph]
+  url: https://doi.org/10.1145/3802051
+  source: dblp
+
+- title: Fast-Convergent Proximity Graphs for Approximate Nearest Neighbor Search
+  authors: [Binhong Li, Xiao Yan, Shangqi Lu]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph]
+  url: https://doi.org/10.1145/3786650
+  arxiv: https://arxiv.org/abs/2510.05975
+  code: https://github.com/Binglbh/Fast-Convergent-Proximity-Graphs-for-Approximate-Nearest-Neighbor-Search
+  source: dblp
+
+- title: 'FAVOR: Efficient Filter-Agnostic Vector ANNS Based on Selectivity-Aware Exclusion Distances'
+  authors: [Junjie Song, Yu Liu, Guoyu Hu, Zhongle Xie, Ming Yang, Beng Chin Ooi, Ke Zhou]
+  venue: SIGMOD
+  year: 2026
+  category: filtered-algorithm
+  url: https://doi.org/10.1145/3802060
+  arxiv: https://arxiv.org/abs/2605.07770
+  source: dblp
+
+- title: 'FGIM: a Fast Graph-based Indexes Merging Framework for Approximate Nearest Neighbor Search'
+  authors: [Zekai Wu, Jiabao Jin, Peng Cheng, Xiaoyao Zhong, Lei Chen, Yongxin Tong, Zhitao Shen, Jingkuan Song, Heng Tao Shen, Xuemin Lin]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph, merging]
+  url: https://doi.org/10.1145/3786651
+  arxiv: https://arxiv.org/abs/2603.21710
+  source: dblp
+
+- title: 'FlashANNS: GPU-Driven Asynchronous I/O Pipelining for Eliminating Storage-Compute Bottlenecks in Billion-Scale Similarity Search'
+  authors: [Yang Xiao, Mo Sun, Ziyu Song, Bing Tian, Jie Sun, Jie Zhang, Zeke Wang, Zonghui Wang, Wenzhi Chen, Fei Wu]
+  venue: SIGMOD
+  year: 2026
+  category: gpu-system
+  tags: [disk]
+  url: https://doi.org/10.1145/3786652
+  code: https://github.com/Tinkerver/ann_search
+  source: dblp
+
+- title: 'GEM: A Native Graph-based Index for Multi-Vector Retrieval'
+  authors: [Yao Tian, Zhoujin Tian, Xi Zhao, Ruiyuan Zhang, Xiaofang Zhou]
+  venue: SIGMOD
+  year: 2026
+  category: hybrid-algorithm
+  tags: [multi-vector, graph]
+  url: https://doi.org/10.1145/3802065
+  arxiv: https://arxiv.org/abs/2603.20336
+  source: dblp
+
+- title: 'GPS: Revisiting the Data Layout for Disk-based High-Dimensional Vector Search'
+  authors: [Peiqi Yin, Xiao Yan, Qihui Zhou, Hui Li, Xiaolu Li, Meiling Wang, Lin Zhang, Xin Yao, James Cheng]
+  venue: SIGMOD
+  year: 2026
+  category: out-of-core-system
+  tags: [disk]
+  url: https://doi.org/10.1145/3802069
+  code: https://github.com/yinpeiqi/Gorgeous
+  source: dblp
+
+- title: 'HARMONY: A Scalable Distributed Vector Database for High-Throughput Approximate Nearest Neighbor Search'
+  authors: [Qian Xu, Feng Zhang, Chengxi Li, Lei Cao, Zheng Chen, Jidong Zhai, Xiaoyong Du]
+  venue: SIGMOD
+  year: 2026
+  category: distributed-system
+  url: https://doi.org/10.1145/3749167
+  arxiv: https://arxiv.org/abs/2506.14707
+  code: https://github.com/xuqianmamba/Harmony
+  source: dblp
+
+- title: High-Throughput, Cost-Effective Billion-Scale Vector Search with a Single GPU
+  authors: [Haodi Jiang, Hao Guo, Minhui Xie, Jiwu Shu, Youyou Lu]
+  venue: SIGMOD
+  year: 2026
+  category: gpu-system
+  tags: [billion-scale]
+  url: https://doi.org/10.1145/3769799
+  code: https://github.com/thustorage/GustANN
+  source: dblp
+
+- title: 'HONEYBEE: Efficient Role-based Access Control for Vector Databases via Dynamic Partitioning'
+  authors: [Hongbin Zhong, Matthew Lentz, Nina Narodytska, Adriana Szekeres, Kexin Rong]
+  venue: SIGMOD
+  year: 2026
+  category: other-system
+  tags: [privacy, access-control]
+  url: https://doi.org/10.1145/3786625
+  arxiv: https://arxiv.org/abs/2505.01538
+  code: https://github.com/rjzhb/VectorSearch-RBAC
+  source: dblp
+
+- title: Integrating Vector Databases across Embedding Models
+  authors: [Beining Yang, Yang Cao, Yang Ren]
+  venue: SIGMOD
+  year: 2026
+  category: other-system
+  tags: [embedding-models]
+  url: https://doi.org/10.1145/3769803
+  source: dblp
+
+- title: 'LM-Tree: A Hybrid Learned Index for Similarity Search in Metric Spaces'
+  authors: [Yaqi Wang, Bin Wang, Rui Zhu, Wenli Sun, Xiaochun Yang]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [metric-space, learned]
+  url: https://doi.org/10.1145/3786665
+  source: dblp
+
+- title: On Efficient Approximate Aggregate Nearest Neighbor Queries over Learned Representations
+  authors: [Carrie Wang, Sihem Amer-Yahia, Laks V. S. Lakshmanan, Reynold Cheng]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  url: https://doi.org/10.1145/3786672
+  arxiv: https://arxiv.org/abs/2502.18803
+  code: https://github.com/Carrieww/AQNNs
+  source: dblp
+
+- title: 'PathSeer: Adaptive Neighbor Handling for Efficient Filtered ANN Search'
+  authors: [Zhiyue Li, Guangyan Zhang, Ruochun Jin, Bojun Li, Xiaoguang Ren, Wenjing Yang]
+  venue: SIGMOD
+  year: 2026
+  category: filtered-algorithm
+  url: https://doi.org/10.1145/3802098
+  code: https://github.com/lizhiyuell/PathSeer
+  source: dblp
+
+- title: 'PGTuner: An Efficient Framework for Automatic and Transferable Configuration Tuning of Proximity Graphs'
+  authors: [Hao Duan, Yitong Song, Bin Yao, Anqi Liang]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph, tuning]
+  url: https://doi.org/10.1145/3749179
+  arxiv: https://arxiv.org/abs/2508.17886
+  code: https://github.com/hao-duan/PGTuner
+  source: dblp
+
+- title: 'RAIRS: Optimizing Redundant Assignment and List Layout for IVF-Based ANN Search'
+  authors: [Zehai Yang, Shimin Chen]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [ivf]
+  url: https://doi.org/10.1145/3786687
+  arxiv: https://arxiv.org/abs/2601.07183
+  code: https://github.com/schencoding/rairs
+  source: dblp
+
+- title: 'Reveal Hidden Pitfalls and Navigate Next Generation of Vector Similarity Search from Task-Centric Views: [Experiments & Analysis]'
+  authors: [Tingyang Chen, Cong Fu, Jiahua Wu, Haotian Wu, Hua Fan, Xiangyu Ke, Yunjun Gao, Yabo Ni, Anxiang Zeng]
+  venue: SIGMOD
+  year: 2026
+  category: benchmark
+  url: https://doi.org/10.1145/3786690
+  arxiv: https://arxiv.org/abs/2512.12980
+  code: https://github.com/ZJU-DAILY/Iceberg
+  source: dblp
+
+- title: 'SAQ: Pushing the Limits of Vector Quantization through Code Adjustment and Dimension Segmentation'
+  authors: [Hui Li, Shiyuan Deng, Xiao Yan, Xiangyu Zhi, James Cheng]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  tags: [quantization]
+  url: https://doi.org/10.1145/3769824
+  arxiv: https://arxiv.org/abs/2509.12086
+  code: https://github.com/howarlii/SAQ
+  source: dblp
+
+- title: Scalable Graph Indexing using GPUs for Approximate Nearest Neighbor Search
+  authors: [Zhonggen Li, Xiangyu Ke, Yifan Zhu, Bocheng Yu, Baihua Zheng, Yunjun Gao]
+  venue: SIGMOD
+  year: 2026
+  category: gpu-system
+  tags: [graph]
+  url: https://doi.org/10.1145/3769825
+  arxiv: https://arxiv.org/abs/2508.08744
+  code: https://github.com/ZJU-DAILY/Tagore
+  source: dblp
+
+- title: 'TaCo: Data-adaptive and Query-aware Subspace Collision for High-dimensional Approximate Nearest Neighbor Search'
+  authors: [Jiuqi Wei, Zhenyu Liao, Ruoyu Han, Quanqing Xu, Chuanhui Yang, Themis Palpanas]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  url: https://doi.org/10.1145/3802118
+  arxiv: https://arxiv.org/abs/2603.24919
+  code: https://github.com/WeiJiuQi/TaCo
+  source: dblp
+
+- title: 'Through the Lens of Hubness: A Revisit on Graph-Based Approximate Nearest Neighbor Search: [Experiments & Analysis]'
+  authors: [Xiaoliang Xu, Haonan Dai, Can Li, Mengzhao Wang, Qiang Yue]
+  venue: SIGMOD
+  year: 2026
+  category: benchmark
+  tags: [graph]
+  url: https://doi.org/10.1145/3802120
+  code: https://github.com/H40NaN/GraphANNS-Hubness
+  source: dblp
+
+- title: 'TRIM: Accelerating High-Dimensional Vector Similarity Search with Enhanced Triangle-Inequality-Based Pruning'
+  authors: [Yitong Song, Pengcheng Zhang, Chao Gao, Bin Yao, Kai Wang, Zongyuan Wu, Lin Qu]
+  venue: SIGMOD
+  year: 2026
+  category: indexing-algorithm
+  url: https://doi.org/10.1145/3769838
+  code: https://github.com/petrizhang/TRIM
+  source: dblp
+
+- title: 'VecBench: A Controllable Benchmark for Filtered Vector Search: [Experiments & Analysis]'
+  authors: [Xiang Zhang, Chao Zhang, Ju Fan, Guoliang Li, Xiaoyong Du]
+  venue: SIGMOD
+  year: 2026
+  category: benchmark
+  tags: [filtered]
+  url: https://doi.org/10.1145/3802125
+  code: https://github.com/ruc-datalab/VecBench
+  source: dblp
+
+- title: 'VecFlow-Chamfer: A GPU-based Data Management System for High-Performance Multi-Vector Search on Superchips'
+  authors: [Chenghao Mo, Ben Karsin, Philip Adams, Minjia Zhang]
+  venue: SIGMOD
+  year: 2026
+  category: gpu-system
+  tags: [multi-vector]
+  url: https://doi.org/10.1145/3786706
+  code: https://github.com/Supercomputing-System-AI-Lab/VecFlow
+  source: dblp
+
+- title: 'VecFlow: A High-Performance Vector Data Management System for Filtered-Search on GPUs'
+  authors: [Jingyi Xi, Chenghao Mo, Ben Karsin, Artem M. Chirkin, Mingqin Li, Minjia Zhang]
+  venue: SIGMOD
+  year: 2026
+  category: gpu-system
+  url: https://doi.org/10.1145/3749189
+  arxiv: https://arxiv.org/abs/2506.00812
+  code: https://github.com/Supercomputing-System-AI-Lab/VecFlow
+  source: dblp
+
+- title: 'WoW: A Window-to-Window Incremental Index for Range-Filtering Approximate Nearest Neighbor Search'
+  authors: [Ziqi Wang, Jingzhe Zhang, Wei Hu]
+  venue: SIGMOD
+  year: 2026
+  category: filtered-algorithm
+  url: https://doi.org/10.1145/3769843
+  arxiv: https://arxiv.org/abs/2508.18617
+  code: https://github.com/nju-websoft/WoW
+  source: dblp
+
+- title: A Topology-Aware Localized Update Strategy for Graph-Based ANN Index
+  authors: [Song Yu, Shengyuan Lin, Shufeng Gong, Yongqing Xie, Ruicheng Liu, Yijie Zhou, Ji Sun, Yanfeng Zhang, Guoliang Li, Ge Yu]
+  venue: VLDB
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph, dynamic]
+  url: https://www.vldb.org/pvldb/vol19/p495-yu.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p495-yu.pdf
+  code: https://github.com/iDC-NEU/Greator
+  source: dblp
+
+- title: Advances of Query Processing in Vector Databases
+  authors: [Jiadong Xie, Yingfan Liu, Jeffrey Xu Yu]
+  venue: VLDB
+  year: 2026
+  category: benchmark
+  tags: [survey]
+  url: https://www.vldb.org/pvldb/vol19/p4893-xie.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p4893-xie.pdf
+  source: dblp
+
+- title: 'Aker: Density-Aware Approximate Caching for Vector Search'
+  authors: [Sukjoon Oh, Minki Kang, Dohyun Kim, Baotong Lu, Jing Liu, Qianxi Zhang, Qi Chen, Youjip Won]
+  venue: VLDB
+  year: 2026
+  category: other-system
+  tags: [caching]
+  url: https://www.vldb.org/pvldb/vol19/p2727-oh.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p2727-oh.pdf
+  code: https://github.com/sjoon-oh/Aker
+  source: dblp
+
+- title: An Experimental Evaluation of Hybrid Querying on Vectors
+  authors: [Jiaxu Zhu, Jiayu Yuan, Kaiwen Yang, Xiaobao Chen, Shihuan Yu, Hongchang Lv, Yan Li, Bolong Zheng]
+  venue: VLDB
+  year: 2026
+  category: benchmark
+  tags: [filtered]
+  url: https://www.vldb.org/pvldb/vol19/p183-zheng.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p183-zheng.pdf
+  code: https://github.com/zhujx001/Hybrid-ANNS-Experiment
+  source: dblp
+
+- title: 'ANNiE: A Learned Query Cost Estimator for Graph-Based Approximate Nearest Neighbor Search'
+  authors: [Zeyu Wang, Manos Chatzakis, Qitong Wang, Themis Palpanas, Peng Wang, Wei Wang]
+  venue: VLDB
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph, cost-model]
+  url: https://www.vldb.org/pvldb/vol19/p3820-wang.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p3820-wang.pdf
+  code: https://github.com/CaucherWang/ANNiE
+  source: dblp
+
+- title: 'Balancing the Blend: An Experimental Analysis of Trade-offs in Hybrid Search'
+  authors: [Mengzhao Wang, Boyu Tan, Yunjun Gao, Hai Jin, Yingfeng Zhang, Xiangyu Ke, Xiaoliang Xu, Yifan Zhu]
+  venue: VLDB
+  year: 2026
+  category: benchmark
+  tags: [hybrid]
+  url: https://www.vldb.org/pvldb/vol19/p1715-gao.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p1715-gao.pdf
+  code: https://github.com/infiniflow/infinity
+  source: dblp
+
+- title: 'BBC: Improving Large-𝑘 Approximate Nearest Neighbor Search with a Bucket-based Result Collector'
+  authors: [Ziqi Yin, Gao Cong, Kai Zeng, Jinwei Zhu, Bin Cui]
+  venue: VLDB
+  year: 2026
+  category: indexing-algorithm
+  tags: [large-k]
+  url: https://www.vldb.org/pvldb/vol19/p3468-yin.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p3468-yin.pdf
+  code: https://github.com/Heisenberg-Yin/BBC
+  source: dblp
+
+- title: 'CGIF: Combining Proximity Graphs and Inverted Files for Efficient Filtered Vector Search over Arbitrary Predicates'
+  authors: [Jiarui Luo, Chaoji Zuo, Dong Deng]
+  venue: VLDB
+  year: 2026
+  category: filtered-algorithm
+  url: https://www.vldb.org/pvldb/vol19/p3663-luo.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p3663-luo.pdf
+  code: https://github.com/rutgers-db/CGIF
+  source: dblp
+
+- title: 'ConANN: Conformal Approximate Nearest Neighbor Search'
+  authors: [Sonia Horchidan, Fabian Zeiher, Henrik Boström, Paris Carbone]
+  venue: VLDB
+  year: 2026
+  category: indexing-algorithm
+  url: https://www.vldb.org/pvldb/vol19/p29-horchidan.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p29-horchidan.pdf
+  code: https://github.com/soniahorchidan/conann
+  source: dblp
+
+- title: 'CONDA: A Connectivity-Aware Dynamic Index for Approximate Nearest Neighbor Search over Evolving Data'
+  authors: [Darae Lee, Min-Soo Kim]
+  venue: VLDB
+  year: 2026
+  category: indexing-algorithm
+  tags: [dynamic, graph]
+  url: https://www.vldb.org/pvldb/vol19/p3357-lee.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p3357-lee.pdf
+  code: https://github.com/darae-lee/CONDA
+  source: dblp
+
+- title: 'Disk-Resident Graph ANN Search: An Experimental Evaluation'
+  authors: [Xiaoyu Chen, Jinxiu Qu, Yitong Song, et al.]
+  venue: VLDB
+  year: 2026
+  category: benchmark
+  tags: [disk, graph]
+  arxiv: https://arxiv.org/abs/2603.01779
+  code: https://github.com/hkbudb/disk-vss-survey
+  status: accepted
+  note: PVLDB 2026 per the code README; not yet in DBLP.
+  source: preprint
+
+- title: Elastic Index Selection for Label-Hybrid AKNN Search
+  authors: [Mingyu Yang, Wenxuan Xia, Wentao Li, Raymond Chi-Wing Wong, Wei Wang]
+  venue: VLDB
+  year: 2026
+  category: filtered-algorithm
+  url: https://www.vldb.org/pvldb/vol19/p617-yang.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p617-yang.pdf
+  code: https://github.com/mingyu-hkustgz/LabelANN
+  source: dblp
+
+- title: 'FedBridge: A Federated Query Engine over Embedding-Heterogeneous Vector Databases'
+  authors: [Yuxiang Wang, Ruixi Hu, Ziyuan He, Zhilin Liang, Xinyu Zhao, Yongxin Tong]
+  venue: VLDB
+  year: 2026
+  category: distributed-system
+  tags: [federated]
+  url: https://www.vldb.org/pvldb/vol19/p4498-tong.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p4498-tong.pdf
+  code: https://github.com/Roy-buaa/FedBridge
+  source: dblp
+
+- title: 'GAS: A Lightweight Framework for Filtered Search over Wide-table Vectors'
+  authors: [Ziyuan He, Yuxiang Wang, Yu Sun, Zijie Ma, Hui Li, Qian Tao, Yu Li, Yongxin Tong]
+  venue: VLDB
+  year: 2026
+  category: filtered-algorithm
+  url: https://www.vldb.org/pvldb/vol19/p3133-tong.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p3133-tong.pdf
+  source: dblp
+
+- title: 'GPU-Accelerated ANNS: Quantized for Speed, Built for Change'
+  authors: [Hunter McCoy, Zikun Wang, Prashant Pandey]
+  venue: VLDB
+  year: 2026
+  category: gpu-system
+  tags: [quantization, dynamic]
+  url: https://www.vldb.org/pvldb/vol19/p3413-pandey.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p3413-pandey.pdf
+  code: https://github.com/zikunw/jasper
+  source: dblp
+
+- title: 'GPU-Native Approximate Nearest Neighbor Search with IVF-RaBitQ: Fast Index Build and Search'
+  authors: [Jifan Shi, Jianyang Gao, James Xia, Tamas B. Fehér, Cheng Long]
+  venue: VLDB
+  year: 2026
+  category: gpu-system
+  tags: [quantization]
+  url: https://www.vldb.org/pvldb/vol19/p3454-shi.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p3454-shi.pdf
+  code: https://github.com/VectorDB-NTU/cuvs_rabitq
+  source: dblp
+
+- title: Harmonizing Efficiency and Accuracy in Filtered Vector Search
+  authors: [Zixiang Zhou, Xuhao Chen]
+  venue: VLDB
+  year: 2026
+  category: filtered-algorithm
+  url: https://www.vldb.org/pvldb/vol19/p2059-chen.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p2059-chen.pdf
+  code: https://github.com/zhouzixiang2004/BigFANN
+  note: The BigFANN paper.
+  source: dblp
+
+- title: 'HEXA: A Disjoint-Subgraph-Based Indexing Framework for Approximate Nearest Neighbor Search at Billion Scale'
+  authors: [Yifei Xu, Yanyan Shen, Youmin Chen, Linpeng Huang]
+  venue: VLDB
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph, billion-scale]
+  url: https://www.vldb.org/pvldb/vol19/p2922-shen.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p2922-shen.pdf
+  source: dblp
+
+- title: 'I/O Optimizations in Graph-Based Disk-Resident Approximate Nearest Neighbor Search: A Design Space Exploration'
+  authors: [Liang Li, Shufeng Gong, Yanan Yang, Yiduo Wang, Jie Wu]
+  venue: VLDB
+  year: 2026
+  category: benchmark
+  tags: [disk]
+  url: https://www.vldb.org/pvldb/vol19/p1484-li.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p1484-li.pdf
+  code: https://github.com/LeonLee666/IObench4DiskANN
+  source: dblp
+
+- title: 'JHQ: Johnson-Lindenstrauss Enhanced Hierarchical Quantization for High-Dimensional Approximate Nearest Neighbor Search'
+  authors: [Jiabao Han, Mengxuan Zhang, Goce Trajcevski]
+  venue: VLDB
+  year: 2026
+  category: indexing-algorithm
+  tags: [quantization]
+  url: https://www.vldb.org/pvldb/vol19/p1530-han.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p1530-han.pdf
+  code: https://github.com/ANU-DB-Mengxuan-Group/VLDB26-JHQ
+  source: dblp
+
+- title: 'Nova: A Multi-Purpose Vector Engine for Low-Latency, Multi-Tenant, and Cross-Table Hybrid Retrieval'
+  authors: [Dechuang Chen, Bing Chen, Jianwei Lu, Zhiwei Wu, Zeyu Yang, Qiang Gu, Fangyuan Zhang, Sibo Wang, Zeyuan Yu, Caihua Yin, Wenchao Zhou, Feifei Li]
+  venue: VLDB
+  year: 2026
+  category: other-system
+  tags: [hybrid, vector-db]
+  url: https://www.vldb.org/pvldb/vol19/p4453-zhou.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p4453-zhou.pdf
+  source: dblp
+
+- title: 'QBAT: Model-based Query Budget Autotuner for Clustering-based Approximate Nearest Neighbor Search'
+  authors: [Jonghyun Bae, Tae Jun Ham, Alan Li, Supawit Chockchowwat, Yannis Papakonstantinou]
+  venue: VLDB
+  year: 2026
+  category: indexing-algorithm
+  tags: [ivf, tuning]
+  url: https://www.vldb.org/pvldb/vol19/p3091-chockchowwat.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p3091-chockchowwat.pdf
+  source: dblp
+
+- title: 'Quantization Meets Projection: A Happy Marriage for Approximate k-Nearest Neighbor Search'
+  authors: [Mingyu Yang, Liuchang Jing, Wentao Li, Wei Wang]
+  venue: VLDB
+  year: 2026
+  category: indexing-algorithm
+  tags: [quantization]
+  url: https://www.vldb.org/pvldb/vol19/p1240-yang.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p1240-yang.pdf
+  code: https://github.com/mingyu-hkustgz/RESQ
+  source: dblp
+
+- title: 'RED-ANNS: A RDMA-Enabled Distributed Framework for Graph-Based Approximate Nearest Neighbor Search'
+  authors: [Yue Chen, Kai Zhang, Sipeng Chen, Shihai Xiao, Xiaomin Zou, Ren Ren, Yinan Jing, X. Sean Wang, Li Cao, Mingxiang Wan]
+  venue: VLDB
+  year: 2026
+  category: distributed-system
+  tags: [rdma, graph]
+  url: https://www.vldb.org/pvldb/vol19/p399-chen.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p399-chen.pdf
+  code: https://github.com/cheenyuee/RED-ANNS
+  source: dblp
+
+- title: 'RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference'
+  authors: [Yaoqi Chen, Jinkai Zhang, Baotong Lu, Qianxi Zhang, Chengruidong Zhang, Jing Liu, Jingjia Luo, Di Liu, Huiqiang Jiang, Qi Chen, Bailu Ding, Xiao Yan, Jiawei Jiang, Chen Chen, Mingxing Zhang, Cheng Li, Yuqing Yang, Fan Yang, Mao Yang]
+  venue: VLDB
+  year: 2026
+  category: other-system
+  tags: [kvcache]
+  url: https://www.vldb.org/pvldb/vol19/p1016-lu.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p1016-lu.pdf
+  code: https://github.com/microsoft/RetrievalAttention
+  source: dblp
+
+- title: 'Revisiting Filtered ANN Benchmarks: A Hardness-Controlled Benchmark Generator for Realistic Evaluation'
+  authors: [Mintaek Lim, Dogeun Kim, Minwoo Kim, Jaeyoung Do]
+  venue: VLDB
+  year: 2026
+  category: benchmark
+  tags: [filtered]
+  url: https://www.vldb.org/pvldb/vol19/p2763-lim.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p2763-lim.pdf
+  code: https://github.com/AIDAS-Lab/FANN_Benchmark
+  source: dblp
+
+- title: 'RNSG: A Range-Aware Graph Index for Efficient Range-Filtered Approximate Nearest Neighbor Search'
+  authors: [Zhiqiu Zou, Ziqi Yin, Rong-Hua Li, Hongchao Qin, Qiangqiang Dai, Guoren Wang]
+  venue: VLDB
+  year: 2026
+  category: filtered-algorithm
+  url: https://www.vldb.org/pvldb/vol19/p2839-zou.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p2839-zou.pdf
+  code: https://github.com/fallleaves01/R-NSG
+  source: dblp
+
+- title: 'Sparse Neighborhood Graph-Based Approximate Nearest Neighbor Search Revisited: Theoretical Analysis and Optimization'
+  authors: [Xinran Ma, Zhaoqi Zhou, Chuan Zhou, Zaijiu Shang, Guoliang Li, Zhiming Ma]
+  venue: VLDB
+  year: 2026
+  category: indexing-algorithm
+  tags: [graph, theory]
+  url: https://www.vldb.org/pvldb/vol19/p2817-zhou.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p2817-zhou.pdf
+  code: https://github.com/maxila320/OPT-SNG
+  source: dblp
+
+- title: SQL-Native Vector Search at Billion Scale in Presto
+  authors: [Zhichen Xu, Ge Gao, Ke Wang, Aakash Deep, Junjie Qi, Jort Gemmeke, Amit Dutta, Xiaoxuan Meng, Trang Nguyen, Jiayin Yan, Xiaoyong Du, Vivek Gaur, Kaushik Ravichandran, Vishal Gandhi]
+  venue: VLDB
+  year: 2026
+  category: other-system
+  tags: [vector-db]
+  url: https://www.vldb.org/pvldb/vol19/p4182-xu.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p4182-xu.pdf
+  source: dblp
+
+- title: 'SVFusion: A CPU-GPU Co-Processing Architecture for Large-Scale Real-Time Vector Search'
+  authors: [Yuchen Peng, Dingyu Yang, Zhongle Xie, Ji Sun, Lidan Shou, Ke Chen, Gang Chen]
+  venue: VLDB
+  year: 2026
+  category: gpu-system
+  tags: [dynamic]
+  url: https://www.vldb.org/pvldb/vol19/p1074-yang.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p1074-yang.pdf
+  code: https://github.com/zjuDBxAI/svfusion
+  source: dblp
+
+- title: 'TEngineDB-V: An OLAP-Native Vector Search System for Large-𝑘 Workloads at Tencent'
+  authors: [Xufei Wu, Pengcheng Zhang, Yitong Song, Xiaobo Zhang, Anqi Liang, Kai Wang, Jijun Du, Yidi Xiong, Guangxu Cheng, Zhe Chen, Peng Chen, Guoliang Li, Xuanhe Zhou, Fan Wu]
+  venue: VLDB
+  year: 2026
+  category: other-system
+  tags: [vector-db]
+  url: https://www.vldb.org/pvldb/vol19/p3955-zhou.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p3955-zhou.pdf
+  source: dblp
+
+- title: 'Towards Robustness: A Critique of Current Vector Database Assessments'
+  authors: [Zikai Wang, Qianxi Zhang, Baotong Lu, et al.]
+  venue: VLDB
+  year: 2026
+  category: benchmark
+  tags: [robustness]
+  arxiv: https://arxiv.org/abs/2507.00379
+  code: https://github.com/khaiwang/ANN-Robustness-Submission
+  status: accepted
+  note: VLDB 2026 per the artifact README; not yet in DBLP.
+  source: preprint
+
+- title: 'V3DB: Audit-on-Demand Zero-Knowledge Proofs for Verifiable Vector Search over Committed Snapshots'
+  authors: [Zipeng Qiu, Wenjie Qu, Jiaheng Zhang, Binhang Yuan]
+  venue: VLDB
+  year: 2026
+  category: other-system
+  tags: [zkp, verifiable]
+  url: https://www.vldb.org/pvldb/vol19/p2604-qiu.pdf
+  pdf: https://www.vldb.org/pvldb/vol19/p2604-qiu.pdf
+  code: https://github.com/TabibitoQZP/zk-IVF-PQ
+  source: dblp
+
+- title: 'LEANN: A Low-Storage Overhead Vector Index'
+  authors: [Yichuan Wang, Zhifei Li, Shu Liu, Yongji Wu, Ziming Mao, Yilong Zhao, Xiao Yan, Zhiying Xu, Yang Zhou, Ion Stoica, Sewon Min, Matei Zaharia, Joseph E. Gonzalez]
+  venue: MLSys
+  year: 2026
+  category: other-system
+  tags: [storage, graph]
+  url: https://proceedings.mlsys.org/paper_files/paper/2026/hash/e27ea0cd50b798ff8942caf9203f0992-Abstract-Conference.html
+  pdf: https://proceedings.mlsys.org/paper_files/paper/2026/file/e27ea0cd50b798ff8942caf9203f0992-Paper-Conference.pdf
+  code: https://github.com/yichuan-w/LEANN
+  source: dblp
+
+- title: 'TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval'
+  authors: [Chien-Yu Lin, Keisuke Kamahori, Yiyu Liu, Xiaoxiang Shi, Madhav Kashyap, Yile Gu, Rulin Shao, Zihao Ye, Kan Zhu, Rohan Kadekodi, Stephanie Wang, Arvind Krishnamurthy, Luis Ceze, Baris Kasikci]
+  venue: MLSys
+  year: 2026
+  category: gpu-system
+  tags: [rag]
+  url: https://proceedings.mlsys.org/paper_files/paper/2026/hash/7fd522b89ac21009b7bbe7560a9a5add-Abstract-Conference.html
+  pdf: https://proceedings.mlsys.org/paper_files/paper/2026/file/7fd522b89ac21009b7bbe7560a9a5add-Paper-Conference.pdf
+  code: https://github.com/uw-syfi/TeleRAG
+  source: dblp
+
+- title: 'When Enough is Enough: Rank-Aware Early Termination for Vector Search'
+  authors: [Jianan Lu, Asaf Cidon, Michael Freedman]
+  venue: MLSys
+  year: 2026
+  category: indexing-algorithm
+  tags: [early-termination]
+  url: https://proceedings.mlsys.org/paper_files/paper/2026/hash/78834433edc3291f4c6cbbd2759324db-Abstract-Conference.html
+  pdf: https://proceedings.mlsys.org/paper_files/paper/2026/file/78834433edc3291f4c6cbbd2759324db-Paper-Conference.pdf
+  source: dblp
+
+- title: 'NasZip: Software and Hardware Co-design to Accelerate Approximate Nearest Neighbor Search with DIMM-based Near-Data Processing'
+  authors: [Cheng Zou, S. Yang, C. Nie, et al.]
+  venue: ISCA
+  year: 2026
+  category: accelerator
+  tags: [near-memory, early-termination, graph]
+  url: https://doi.org/10.1109/ISCA66397.2026.00105
+  arxiv: https://arxiv.org/abs/2605.21952
+  code: https://github.com/Intelligent-Computing-Research-Group/NasZip
+  source: program
+
+- title: 'D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation'
+  authors: [Chang Eun Song, Sumukh Pinge, Tianqi Zhang, et al.]
+  venue: MICRO
+  year: 2026
+  category: accelerator
+  tags: [in-storage, in-flash, ivf, rag]
+  arxiv: https://arxiv.org/abs/2607.17538
+  status: accepted
+  note: Listed in the MICRO 2026 program (Session 9B).
+  source: program
+
+- title: 'MFNNS: A Multiplier-Free Near-Memory Accelerator for Graph-based ANNS'
+  authors: [Rui Meng, Yonghao Chen, Jiaxiang Zou, et al.]
+  venue: MICRO
+  year: 2026
+  category: accelerator
+  tags: [near-memory, graph]
+  status: accepted
+  note: Listed in the MICRO 2026 program (Session 9B).
+  source: program
+
+- title: 'NiF: Hybrid In-Flash and In-Storage Acceleration for Approximate Nearest Neighbor Search'
+  authors: [Myoungjun Chun, et al.]
+  venue: MICRO
+  year: 2026
+  category: accelerator
+  tags: [in-storage, in-flash]
+  status: accepted
+  note: Listed in the MICRO 2026 program (Session 4A).
+  source: program
+
+- title: 'WiFlash: Wordline-Parallel Approximate Nearest Neighbor Search Inside Flash Cell Array'
+  authors: [Hyunjin Kim, Juchan Lee, Inseong Choi, et al.]
+  venue: MICRO
+  year: 2026
+  category: accelerator
+  tags: [in-flash]
+  status: accepted
+  note: Listed in the MICRO 2026 program (Session 9B).
+  source: program
+
+- title: 'VectorLiteRAG: Latency-Aware and Fine-Grained Resource Partitioning for Efficient RAG'
+  authors: [Junkyum Kim, Divya Mahajan]
+  venue: HPCA
+  year: 2026
+  category: gpu-system
+  tags: [rag, ivf]
+  url: https://doi.org/10.1109/HPCA68181.2026.11408552
+  arxiv: https://arxiv.org/abs/2504.08930
+  code: https://github.com/sitar-lab/VectorLiteRAG-AE
+  source: dblp
+
+- title: 'PIMCQG: Co-Designing Billion-Scale Graph-Based Approximate Nearest Neighbor Search for Processing-in-Memory'
+  authors: [Sitian Chen, Yusen Li, Yao Chen, et al.]
+  venue: SC
+  year: 2026
+  category: accelerator
+  tags: [pim, graph, quantization, billion-scale]
+  arxiv: https://arxiv.org/abs/2605.25522
+  code: https://github.com/steam009/PIMCQG
+  status: accepted
+  note: Acceptance per the code README and <a href="https://amelieczhou.github.io/publications.html">author homepage</a>.
+  source: preprint

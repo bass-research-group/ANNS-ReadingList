@@ -1,0 +1,109 @@
+# Configuration for the reading list. scripts/update.py and scripts/build.py read this file.
+# To reuse this repo for another topic, change `topic`, `keywords` and `categories`.
+
+topic: ANNS and vector search
+start_year: 2025
+# The README lists the most recent `readme_years` years. Older years move to archive/<year>.md.
+readme_years: 2
+
+# Venues and where to find their accepted papers.
+#   csconf: name of the venue in https://github.com/RealZST/csconf-papers (DBLP-derived, refreshed monthly).
+#   dblp:   DBLP TOC keys (https://dblp.org/db/<key>), queried via the DBLP SPARQL endpoint.
+#           "{year}" is substituted ("{year-2007}" gives the PVLDB volume); "{vol}" is expanded to 1..4
+#           for multi-volume proceedings. SIGMOD (PACMMOD) has no fixed year-to-issue mapping, so it
+#           relies on csconf-papers.
+#   arxiv:  spellings searched for in arXiv comments ("accepted to <spelling> <year>").
+venues:
+  SOSP:   {csconf: SOSP,   dblp: ["conf/sosp/sosp{year}"],         arxiv: [SOSP]}
+  OSDI:   {csconf: OSDI,   dblp: ["conf/osdi/osdi{year}"],         arxiv: [OSDI]}
+  ASPLOS: {csconf: ASPLOS, dblp: ["conf/asplos/asplos{year}-{vol}"], arxiv: [ASPLOS]}
+  SIGMOD: {csconf: SIGMOD, arxiv: [SIGMOD]}
+  VLDB:   {csconf: VLDB,   dblp: ["journals/pvldb/pvldb{year-2007}"], arxiv: [VLDB, PVLDB]}
+  MLSys:  {csconf: MLSys,  dblp: ["conf/mlsys/mlsys{year}"],       arxiv: [MLSys]}
+  ISCA:   {dblp: ["conf/isca/isca{year}"],   arxiv: [ISCA]}
+  MICRO:  {dblp: ["conf/micro/micro{year}"], arxiv: [MICRO]}
+  HPCA:   {dblp: ["conf/hpca/hpca{year}"],   arxiv: [HPCA]}
+  SC:     {dblp: ["conf/sc/sc{year}"],       arxiv: [SC, Supercomputing]}
+  PPoPP:  {dblp: ["conf/ppopp/ppopp{year}"], arxiv: [PPoPP]}
+
+# Title keywords (case-insensitive regexes).
+#   strong: very likely on topic. Matching papers are added automatically and flagged `auto: true` for review.
+#   weak:   possibly on topic. Matching papers are listed in data/candidates.md for a human to decide.
+keywords:
+  strong:
+    - nearest neighbo
+    - \bA?k?-?NNS\b
+    - \bAKNN\b
+    - \bANN (search|index|query)
+    - vector (search|database|similarity|retrieval|index|quer|data management)
+    - \bvector DB
+    - \bHNSW\b
+    - DiskANN
+    - proximity graph
+    - maximum inner product
+    - multi-vector (search|retrieval)
+    - similarity search
+    - dense retrieval
+  weak:
+    - retrieval-augmented
+    - \bRAG\b
+    - embedding
+    - vector quantization
+    - product quantization
+    - similarity join
+    - semantic search
+    - \bretriev
+
+# Sub-topics. `group` is the top-level section; `rules` are title regexes that the auto-classifier
+# tries in order (first match wins; `venues` restricts a rule to some venues). Papers that match no
+# rule fall into `default_category`.
+default_category: indexing-algorithm
+categories:
+  indexing-algorithm:
+    group: Algorithms
+    name: ANNS Indexing Algorithms
+    description: Graph, IVF/clustering, tree and hashing indexes; quantization; search, early termination, updates, tuning and theory.
+  filtered-algorithm:
+    group: Algorithms
+    name: Filtered ANNS Algorithms
+    description: Vector search under attribute, label, range or other structured predicates.
+    rules: ['filter', '\blabel', 'range', 'attribute', 'predicate', 'constrain']
+  hybrid-algorithm:
+    group: Algorithms
+    name: Hybrid Search Algorithms
+    description: Search that combines vectors with other modalities or representations, such as multi-vector, dense + sparse/keyword, and cross-modal retrieval.
+    rules: ['hybrid', 'multi-vector', 'sparse', 'keyword', 'cross-modal', 'multi-modal']
+  gpu-system:
+    group: Systems
+    name: GPU-Accelerated ANNS Systems
+    description: Vector search systems built on GPUs, including CPU-GPU co-processing.
+    rules: ['\bGPUs?\b', 'CUDA']
+  out-of-core-system:
+    group: Systems
+    name: Out-of-Core ANNS Systems
+    description: Indexes larger than DRAM, kept on SSD or disk, or spread across tiered or disaggregated memory.
+    rules: ['\bSSDs?\b', 'disk', 'out-of-core', 'storage', 'tiered', '\bCXL\b', 'billion']
+  distributed-system:
+    group: Systems
+    name: Distributed ANNS Systems
+    description: Multi-node, RDMA, federated and scale-out vector search.
+    rules: ['distributed', '\bRDMA\b', 'scale-out', 'federated', 'cluster']
+  other-system:
+    group: Systems
+    name: Vector Databases & Other Systems
+    description: Vector databases and DBMS integration, CPU-efficient engines, privacy and security, and retrieval systems for RAG and KV caches.
+    rules: ['database', '\bDBMS', 'engine', 'serving', '\bRAG\b', 'retrieval-augmented', 'KV ?cache', 'privacy', 'private', 'secure', 'encrypted']
+  accelerator:
+    group: Hardware Accelerators
+    name: Hardware Accelerators
+    description: Dedicated hardware such as ASIC, FPGA, processing-in/near-memory and in-storage/in-flash designs. GPU software belongs under Systems.
+    rules: ['accelerat', 'in-storage', 'near-memory', 'near-data', 'in-memory', 'processing-in-memory', '\bPIM\b', 'FPGA', 'ASIC', 'NAND', 'flash', 'DRAM', 'SRAM', 'hardware']
+    venues: [ISCA, MICRO, HPCA, ASPLOS]
+  benchmark:
+    group: Benchmarking & Characterization
+    name: Benchmarking & Characterization
+    description: Experimental studies ([Experiments & Analysis]), benchmarks, workload characterization and surveys.
+    rules: ['Experiments (&|and) Analysis', 'experimental', 'benchmark', 'evaluation', '\bstudy\b', 'survey', 'characteriz', 'in-depth analysis', 'tutorial']
+
+# Order in which the auto-classifier tries the categories' rules.
+classify_order: [benchmark, accelerator, gpu-system, distributed-system, out-of-core-system, filtered-algorithm, hybrid-algorithm, other-system]

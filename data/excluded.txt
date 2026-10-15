@@ -47,3 +47,22 @@ FP8-Flow-MoE: A Casting-Free FP8 Recipe without Double Quantization Error
 MixLLM: LLM Quantization with Global Mixed-precision between Output-features and Highly-efficient System Design
 CAGE: Curvature-Aware Gradient Estimation For Accurate Quantization-Aware Training
 Kitty: Accurate and Efficient 2-bit KV Cache Quantization with Dynamic Channel-wise Precision Boost
+AixelAsk: A Stepwise-Guided Retrieval and Reasoning Framework for Large Table QA
+CONE: Embeddings for Complex Numerical Data Preserving Unit and Variable Semantics
+Continuous Subgraph Matching via Cost-Model-based Dynamic Vertex Dominance Embeddings
+Drama : Unifying Data Retrieval and Analysis for Open-Domain Analytic Queries
+Fast Indexing for Temporal Information Retrieval
+Retrieve-and-Verify: A Table Context Selection Framework for Accurate Column Annotations
+FeLoG: Scalable and Efficient Distributed Graph Embedding with Feedback Loop Mechanism
+SeDA: Bridging the Gap between Efficient Syntactic and Precise Semantic Search of Similar Passages in Large Text Corpora
+Frugal: Efficient and Economic Embedding Model Training with Commodity GPUs
+SparseTransX: Efficient Training of Translation-Based Knowledge Graph Embeddings Using Sparse Matrix Operations
+AquaPipe: A Quality-Aware Pipeline for Knowledge Retrieval and Large Language Models
+Atom: An Efficient Query Serving System for Embedding-based Knowledge Graph Reasoning with Operator-level Batching
+CARINA: An Efficient CXL-Oriented Embedding Serving System for Recommendation Models
+Deep Overlapping Community Search via Subspace Embedding
+Pneuma: Leveraging LLMs for Tabular Data Representation and Retrieval in an End-to-End System
+Table Overlap Estimation through Graph Embeddings
+Effective and Efficient Attributed Hypergraph Embedding on Nodes and Hyperedges
+Efficient Graph Embedding Generation and Update for Large-Scale Temporal Graph
+GeoBloom: Revisiting Lightweight Models for Geographic Information Retrieval

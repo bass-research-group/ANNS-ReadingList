@@ -1295,3 +1295,126 @@
   tags: [graph]
   url: https://doi.org/10.1145/3710848.3710867
   source: dblp
+- title: 'ANSMET: Approximate Nearest Neighbor Search with Near-Memory Processing and Hybrid Early Termination'
+  authors: [Yiwei Li, Yuxin Jin, Boyu Tian, et al.]
+  venue: ISCA
+  year: 2025
+  subtopic: accelerators
+  tags: [near-memory, early-termination]
+  url: https://doi.org/10.1145/3695053.3731013
+  pdf: https://people.iiis.tsinghua.edu.cn/~gaomy/pubs/ansmet.isca25.pdf
+  source: program
+- title: 'DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign'
+  authors: [Derrick Quinn, E. Ezgi Yücel, Martin Prammer, et al.]
+  venue: ISCA
+  year: 2025
+  subtopic: accelerators
+  tags: [near-memory, rag]
+  url: https://par.nsf.gov/biblio/10634219
+  source: program
+- title: 'REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing'
+  authors: [Kangqi Chen, Andreas Kosmas Kakolyris, Rakesh Nadig, Manos Frouzakis, et al.]
+  venue: ISCA
+  year: 2025
+  subtopic: accelerators
+  tags: [in-storage, ivf, rag]
+  arxiv: https://arxiv.org/abs/2506.16444
+  source: program
+- title: In-Storage Acceleration of Retrieval Augmented Generation as a Service
+  authors: [Rohan Mahapatra, Harsha Santhanam, Christopher Priebe, et al.]
+  venue: ISCA
+  year: 2025
+  subtopic: accelerators
+  tags: [in-storage, rag]
+  url: https://doi.org/10.1145/3695053.3731032
+  source: program
+- title: 'HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation'
+  authors: [Chaoqiang Liu, Haifeng Liu, Dan Chen, et al.]
+  venue: ISCA
+  year: 2025
+  subtopic: accelerators
+  tags: [pim, rag]
+  source: program
+- title: 'RAGO: Systematic Performance Optimization for Retrieval-Augmented Generation Serving'
+  authors: [Wenqi Jiang, Suvinay Subramanian, Cat Graves, et al.]
+  venue: ISCA
+  year: 2025
+  subtopic: systems
+  tags: [rag]
+  url: https://doi.org/10.1145/3695053.3731093
+  arxiv: https://arxiv.org/abs/2503.14649
+  code: https://github.com/google/rago
+  source: program
+- title: 'Hermes: Algorithm-System Co-design for Efficient Retrieval-Augmented Generation At-Scale'
+  authors: [Michael Shen, Muhammad Umar, Kiwan Maeng, et al.]
+  venue: ISCA
+  year: 2025
+  subtopic: systems
+  tags: [rag, distributed]
+  url: https://pure.psu.edu/en/publications/hermes-algorithm-system-co-design-for-efficient-retrieval-augment/
+  source: program
+- title: 'NasZip: Software and Hardware Co-design to Accelerate Approximate Nearest Neighbor Search with DIMM-based Near-Data Processing'
+  authors: [Cheng Zou, S. Yang, C. Nie, et al.]
+  venue: ISCA
+  year: 2026
+  subtopic: accelerators
+  tags: [near-memory, early-termination, graph]
+  url: https://doi.org/10.1109/ISCA66397.2026.00105
+  arxiv: https://arxiv.org/abs/2605.21952
+  code: https://github.com/Intelligent-Computing-Research-Group/NasZip
+  source: program
+- title: Accelerating Retrieval Augmented Language Model via PIM and PNM Integration
+  authors: [Je-Woo Jang, Junyong Oh, et al.]
+  venue: MICRO
+  year: 2025
+  subtopic: accelerators
+  tags: [pim, near-memory, ivf, quantization, rag]
+  url: https://doi.org/10.1145/3725843.3756020
+  source: program
+- title: Characterizing and Optimizing Realistic Workloads on a Commercial Compute-in-SRAM Device
+  authors: [Niansong Zhang, Wenbo Zhu, Courtney Golden, et al.]
+  venue: MICRO
+  year: 2025
+  subtopic: accelerators
+  tags: [compute-in-sram, rag]
+  url: https://doi.org/10.1145/3725843.3756132
+  arxiv: https://arxiv.org/abs/2509.05451
+  note: Characterization paper; its main case study is RAG retrieval on the GSI APU.
+  source: program
+- title: 'NiF: Hybrid In-Flash and In-Storage Acceleration for Approximate Nearest Neighbor Search'
+  authors: [Myoungjun Chun, et al.]
+  venue: MICRO
+  year: 2026
+  subtopic: accelerators
+  tags: [in-storage, in-flash]
+  status: accepted
+  note: Listed in the MICRO 2026 program (Session 4A).
+  source: program
+- title: 'WiFlash: Wordline-Parallel Approximate Nearest Neighbor Search Inside Flash Cell Array'
+  authors: [Hyunjin Kim, Juchan Lee, Inseong Choi, et al.]
+  venue: MICRO
+  year: 2026
+  subtopic: accelerators
+  tags: [in-flash]
+  status: accepted
+  note: Listed in the MICRO 2026 program (Session 9B).
+  source: program
+- title: 'MFNNS: A Multiplier-Free Near-Memory Accelerator for Graph-based ANNS'
+  authors: [Rui Meng, Yonghao Chen, Jiaxiang Zou, et al.]
+  venue: MICRO
+  year: 2026
+  subtopic: accelerators
+  tags: [near-memory, graph]
+  status: accepted
+  note: Listed in the MICRO 2026 program (Session 9B).
+  source: program
+- title: 'D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation'
+  authors: [Chang Eun Song, Sumukh Pinge, Tianqi Zhang, et al.]
+  venue: MICRO
+  year: 2026
+  subtopic: accelerators
+  tags: [in-storage, in-flash, ivf, rag]
+  arxiv: https://arxiv.org/abs/2607.17538
+  status: accepted
+  note: Listed in the MICRO 2026 program (Session 9B).
+  source: program

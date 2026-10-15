@@ -39,7 +39,7 @@ python3 scripts/find_candidates.py  # lists new DBLP hits not yet in papers.yaml
 ## Paper list
 
 <!-- BEGIN GENERATED -->
-There are **132** papers so far.
+There are **146** papers so far.
 
 | Venue | 2025 | 2026 | Total |
 |---|---|---|---|
@@ -49,8 +49,8 @@ There are **132** papers so far.
 | [SIGMOD](papers/by-venue/SIGMOD.md) | 16 | 43 | 59 |
 | [VLDB](papers/by-venue/VLDB.md) | 26 | 31 | 57 |
 | [MLSys](papers/by-venue/MLSys.md) | — | 3 | 3 |
-| [ISCA](papers/by-venue/ISCA.md) | — | — | 0 |
-| [MICRO](papers/by-venue/MICRO.md) | — | — | 0 |
+| [ISCA](papers/by-venue/ISCA.md) | 7 | 1 | 8 |
+| [MICRO](papers/by-venue/MICRO.md) | 2 | 4 | 6 |
 | [HPCA](papers/by-venue/HPCA.md) | 2 | 1 | 3 |
 | [SC](papers/by-venue/SC.md) | 2 | 1 | 3 |
 | [PPoPP](papers/by-venue/PPoPP.md) | 1 | — | 1 |
@@ -58,8 +58,8 @@ There are **132** papers so far.
 | Sub-topic | 2025 | 2026 | Total |
 |---|---|---|---|
 | [Algorithms](#algorithms) | 26 | 47 | 73 |
-| [Systems](#systems) | 18 | 23 | 41 |
-| [Accelerators](#accelerators) | 7 | 11 | 18 |
+| [Systems](#systems) | 20 | 23 | 43 |
+| [Accelerators](#accelerators) | 14 | 16 | 30 |
 
 ## Papers by sub-topic
 
@@ -227,6 +227,11 @@ _Vector databases, disk/SSD-resident and distributed search, updates, DBMS integ
 - **VSAG: An Optimized Search Framework for Graph-based Approximate Nearest Neighbor Search**<br>Xiaoyao Zhong, Haotian Li, Jiabao Jin, Mingyu Yang, Deming Chu, Xiangyu Wang, et al. [[paper]](https://www.vldb.org/pvldb/vol18/p5017-cheng.pdf) [[pdf]](https://www.vldb.org/pvldb/vol18/p5017-cheng.pdf) `graph`
 - **VStream: A Distributed Streaming Vector Search System**<br>Shenghao Gong, Haobo Sun, Ziquan Fang, Liu Liu, Lu Chen, Yunjun Gao [[paper]](https://www.vldb.org/pvldb/vol18/p1593-gao.pdf) [[pdf]](https://www.vldb.org/pvldb/vol18/p1593-gao.pdf) `distributed` `dynamic`
 
+#### ISCA 2025
+
+- **Hermes: Algorithm-System Co-design for Efficient Retrieval-Augmented Generation At-Scale**<br>Michael Shen, Muhammad Umar, Kiwan Maeng, et al. [[paper]](https://pure.psu.edu/en/publications/hermes-algorithm-system-co-design-for-efficient-retrieval-augment/) `rag` `distributed`
+- **RAGO: Systematic Performance Optimization for Retrieval-Augmented Generation Serving**<br>Wenqi Jiang, Suvinay Subramanian, Cat Graves, et al. [[paper]](https://doi.org/10.1145/3695053.3731093) [[arXiv]](https://arxiv.org/abs/2503.14649) [[code]](https://github.com/google/rago) `rag`
+
 ### Accelerators
 
 _GPU, FPGA, ASIC, processing-in/near-memory, in-storage, and CXL-based vector search._
@@ -250,6 +255,17 @@ _GPU, FPGA, ASIC, processing-in/near-memory, in-storage, and CXL-based vector se
 - **GPU-Native Approximate Nearest Neighbor Search with IVF-RaBitQ: Fast Index Build and Search**<br>Jifan Shi, Jianyang Gao, James Xia, Tamas B. Fehér, Cheng Long [[paper]](https://www.vldb.org/pvldb/vol19/p3454-shi.pdf) [[pdf]](https://www.vldb.org/pvldb/vol19/p3454-shi.pdf) `gpu` `quantization`
 - **SVFusion: A CPU-GPU Co-Processing Architecture for Large-Scale Real-Time Vector Search**<br>Yuchen Peng, Dingyu Yang, Zhongle Xie, Ji Sun, Lidan Shou, Ke Chen, et al. [[paper]](https://www.vldb.org/pvldb/vol19/p1074-yang.pdf) [[pdf]](https://www.vldb.org/pvldb/vol19/p1074-yang.pdf) `gpu` `dynamic`
 
+#### ISCA 2026
+
+- **NasZip: Software and Hardware Co-design to Accelerate Approximate Nearest Neighbor Search with DIMM-based Near-Data Processing**<br>Cheng Zou, S. Yang, C. Nie, et al. [[paper]](https://doi.org/10.1109/ISCA66397.2026.00105) [[arXiv]](https://arxiv.org/abs/2605.21952) [[code]](https://github.com/Intelligent-Computing-Research-Group/NasZip) `near-memory` `early-termination` `graph`
+
+#### MICRO 2026
+
+- **D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation** *(accepted, to appear)*<br>Chang Eun Song, Sumukh Pinge, Tianqi Zhang, et al. [[arXiv]](https://arxiv.org/abs/2607.17538) `in-storage` `in-flash` `ivf` `rag`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
+- **MFNNS: A Multiplier-Free Near-Memory Accelerator for Graph-based ANNS** *(accepted, to appear)*<br>Rui Meng, Yonghao Chen, Jiaxiang Zou, et al. `near-memory` `graph`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
+- **NiF: Hybrid In-Flash and In-Storage Acceleration for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Myoungjun Chun, et al. `in-storage` `in-flash`<br><sub>Listed in the MICRO 2026 program (Session 4A).</sub>
+- **WiFlash: Wordline-Parallel Approximate Nearest Neighbor Search Inside Flash Cell Array** *(accepted, to appear)*<br>Hyunjin Kim, Juchan Lee, Inseong Choi, et al. `in-flash`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
+
 #### SC 2026
 
 - **PIMCQG: Co-Designing Billion-Scale Graph-Based Approximate Nearest Neighbor Search for Processing-in-Memory** *(accepted, to appear)*<br>Sitian Chen, Yusen Li, Yao Chen, et al. [[arXiv]](https://arxiv.org/abs/2605.25522) [[code]](https://github.com/steam009/PIMCQG) `pim` `graph` `quantization` `billion-scale`<br><sub>Acceptance per the code README and <a href="https://amelieczhou.github.io/publications.html">author homepage</a>.</sub>
@@ -262,6 +278,19 @@ _GPU, FPGA, ASIC, processing-in/near-memory, in-storage, and CXL-based vector se
 
 - **Chameleon: a Heterogeneous and Disaggregated Accelerator System for Retrieval-Augmented Language Models**<br>Wenqi Jiang, Marco Zeller, Roger Waleffe, Torsten Hoefler, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p42-jiang.pdf) [[pdf]](https://www.vldb.org/pvldb/vol18/p42-jiang.pdf) `rag` `disaggregated`
 - **Fast Graph Vector Search via Hardware Acceleration and Delayed-Synchronization Traversal**<br>Wenqi Jiang, Hang Hu, Torsten Hoefler, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p3797-jiang.pdf) [[pdf]](https://www.vldb.org/pvldb/vol18/p3797-jiang.pdf) `fpga` `graph`
+
+#### ISCA 2025
+
+- **ANSMET: Approximate Nearest Neighbor Search with Near-Memory Processing and Hybrid Early Termination**<br>Yiwei Li, Yuxin Jin, Boyu Tian, et al. [[paper]](https://doi.org/10.1145/3695053.3731013) [[pdf]](https://people.iiis.tsinghua.edu.cn/~gaomy/pubs/ansmet.isca25.pdf) `near-memory` `early-termination`
+- **DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign**<br>Derrick Quinn, E. Ezgi Yücel, Martin Prammer, et al. [[paper]](https://par.nsf.gov/biblio/10634219) `near-memory` `rag`
+- **HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation**<br>Chaoqiang Liu, Haifeng Liu, Dan Chen, et al. `pim` `rag`
+- **In-Storage Acceleration of Retrieval Augmented Generation as a Service**<br>Rohan Mahapatra, Harsha Santhanam, Christopher Priebe, et al. [[paper]](https://doi.org/10.1145/3695053.3731032) `in-storage` `rag`
+- **REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing**<br>Kangqi Chen, Andreas Kosmas Kakolyris, Rakesh Nadig, Manos Frouzakis, et al. [[arXiv]](https://arxiv.org/abs/2506.16444) `in-storage` `ivf` `rag`
+
+#### MICRO 2025
+
+- **Accelerating Retrieval Augmented Language Model via PIM and PNM Integration**<br>Je-Woo Jang, Junyong Oh, et al. [[paper]](https://doi.org/10.1145/3725843.3756020) `pim` `near-memory` `ivf` `quantization` `rag`
+- **Characterizing and Optimizing Realistic Workloads on a Commercial Compute-in-SRAM Device**<br>Niansong Zhang, Wenbo Zhu, Courtney Golden, et al. [[paper]](https://doi.org/10.1145/3725843.3756132) [[arXiv]](https://arxiv.org/abs/2509.05451) `compute-in-sram` `rag`<br><sub>Characterization paper; its main case study is RAG retrieval on the GSI APU.</sub>
 
 #### HPCA 2025
 

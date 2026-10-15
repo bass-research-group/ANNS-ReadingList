@@ -39,7 +39,7 @@ python3 scripts/find_candidates.py  # lists new DBLP hits not yet in papers.yaml
 ## Paper list
 
 <!-- BEGIN GENERATED -->
-There are **125** papers so far.
+There are **132** papers so far.
 
 | Venue | 2025 | 2026 | Total |
 |---|---|---|---|
@@ -51,15 +51,15 @@ There are **125** papers so far.
 | [MLSys](papers/by-venue/MLSys.md) | — | 3 | 3 |
 | [ISCA](papers/by-venue/ISCA.md) | — | — | 0 |
 | [MICRO](papers/by-venue/MICRO.md) | — | — | 0 |
-| [HPCA](papers/by-venue/HPCA.md) | — | — | 0 |
-| [SC](papers/by-venue/SC.md) | — | — | 0 |
-| [PPoPP](papers/by-venue/PPoPP.md) | — | — | 0 |
+| [HPCA](papers/by-venue/HPCA.md) | 2 | 1 | 3 |
+| [SC](papers/by-venue/SC.md) | 2 | 1 | 3 |
+| [PPoPP](papers/by-venue/PPoPP.md) | 1 | — | 1 |
 
 | Sub-topic | 2025 | 2026 | Total |
 |---|---|---|---|
-| [Algorithms](#algorithms) | 25 | 47 | 72 |
-| [Systems](#systems) | 18 | 22 | 40 |
-| [Accelerators](#accelerators) | 3 | 10 | 13 |
+| [Algorithms](#algorithms) | 26 | 47 | 73 |
+| [Systems](#systems) | 18 | 23 | 41 |
+| [Accelerators](#accelerators) | 7 | 11 | 18 |
 
 ## Papers by sub-topic
 
@@ -154,6 +154,10 @@ _Index structures (graph, IVF, trees), quantization, filtered/hybrid search, ear
 - **UNIFY: Unified Index for Range Filtered Approximate Nearest Neighbors Search**<br>Anqi Liang, Pengcheng Zhang, Bin Yao, Zhongpu Chen, Yitong Song, Guangxu Cheng [[paper]](https://www.vldb.org/pvldb/vol18/p1118-yao.pdf) [[pdf]](https://www.vldb.org/pvldb/vol18/p1118-yao.pdf) `filtered`
 - **Wolverine: Highly Efficient Monotonic Search Path Repair for Graph-based ANN Index Updates**<br>Dawei Liu, Bolong Zheng, Ziyang Yue, Fuhao Ruan, Xiaofang Zhou, Christian S. Jensen [[paper]](https://www.vldb.org/pvldb/vol18/p2268-zheng.pdf) [[pdf]](https://www.vldb.org/pvldb/vol18/p2268-zheng.pdf) `graph` `dynamic`
 
+#### PPoPP 2025
+
+- **PANNS: Enhancing Graph-based Approximate Nearest Neighbor Search through Recency-aware Construction and Parameterized Search**<br>Xizhe Yin, Chao Gao, Zhijia Zhao, et al. [[paper]](https://doi.org/10.1145/3710848.3710867) `graph`
+
 ### Systems
 
 _Vector databases, disk/SSD-resident and distributed search, updates, DBMS integration, privacy, and retrieval for RAG / KV cache._
@@ -191,6 +195,10 @@ _Vector databases, disk/SSD-resident and distributed search, updates, DBMS integ
 
 - **LEANN: A Low-Storage Overhead Vector Index**<br>Yichuan Wang, Zhifei Li, Shu Liu, Yongji Wu, Ziming Mao, Yilong Zhao, et al. [[paper]](https://proceedings.mlsys.org/paper_files/paper/2026/hash/e27ea0cd50b798ff8942caf9203f0992-Abstract-Conference.html) [[pdf]](https://proceedings.mlsys.org/paper_files/paper/2026/file/e27ea0cd50b798ff8942caf9203f0992-Paper-Conference.pdf) `storage` `graph`
 - **TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval**<br>Chien-Yu Lin, Keisuke Kamahori, Yiyu Liu, Xiaoxiang Shi, Madhav Kashyap, Yile Gu, et al. [[paper]](https://proceedings.mlsys.org/paper_files/paper/2026/hash/7fd522b89ac21009b7bbe7560a9a5add-Abstract-Conference.html) [[pdf]](https://proceedings.mlsys.org/paper_files/paper/2026/file/7fd522b89ac21009b7bbe7560a9a5add-Paper-Conference.pdf) `rag` `gpu`
+
+#### HPCA 2026
+
+- **VectorLiteRAG: Latency-Aware and Fine-Grained Resource Partitioning for Efficient RAG**<br>Junkyum Kim, Divya Mahajan [[paper]](https://doi.org/10.1109/HPCA68181.2026.11408552) [[arXiv]](https://arxiv.org/abs/2504.08930) `rag` `gpu` `ivf`
 
 #### OSDI 2025
 
@@ -242,6 +250,10 @@ _GPU, FPGA, ASIC, processing-in/near-memory, in-storage, and CXL-based vector se
 - **GPU-Native Approximate Nearest Neighbor Search with IVF-RaBitQ: Fast Index Build and Search**<br>Jifan Shi, Jianyang Gao, James Xia, Tamas B. Fehér, Cheng Long [[paper]](https://www.vldb.org/pvldb/vol19/p3454-shi.pdf) [[pdf]](https://www.vldb.org/pvldb/vol19/p3454-shi.pdf) `gpu` `quantization`
 - **SVFusion: A CPU-GPU Co-Processing Architecture for Large-Scale Real-Time Vector Search**<br>Yuchen Peng, Dingyu Yang, Zhongle Xie, Ji Sun, Lidan Shou, Ke Chen, et al. [[paper]](https://www.vldb.org/pvldb/vol19/p1074-yang.pdf) [[pdf]](https://www.vldb.org/pvldb/vol19/p1074-yang.pdf) `gpu` `dynamic`
 
+#### SC 2026
+
+- **PIMCQG: Co-Designing Billion-Scale Graph-Based Approximate Nearest Neighbor Search for Processing-in-Memory** *(accepted, to appear)*<br>Sitian Chen, Yusen Li, Yao Chen, et al. [[arXiv]](https://arxiv.org/abs/2605.25522) [[code]](https://github.com/steam009/PIMCQG) `pim` `graph` `quantization` `billion-scale`<br><sub>Acceptance per the code README and <a href="https://amelieczhou.github.io/publications.html">author homepage</a>.</sub>
+
 #### ASPLOS 2025
 
 - **Accelerating Retrieval-Augmented Generation**<br>Derrick Quinn, Mohammad Nouri, Neel Patel, John Salihu, Alireza Salemi, Sukhan Lee, et al. [[paper]](https://doi.org/10.1145/3669940.3707264) [[arXiv]](https://arxiv.org/abs/2412.15246) `rag` `near-memory`
@@ -250,4 +262,14 @@ _GPU, FPGA, ASIC, processing-in/near-memory, in-storage, and CXL-based vector se
 
 - **Chameleon: a Heterogeneous and Disaggregated Accelerator System for Retrieval-Augmented Language Models**<br>Wenqi Jiang, Marco Zeller, Roger Waleffe, Torsten Hoefler, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p42-jiang.pdf) [[pdf]](https://www.vldb.org/pvldb/vol18/p42-jiang.pdf) `rag` `disaggregated`
 - **Fast Graph Vector Search via Hardware Acceleration and Delayed-Synchronization Traversal**<br>Wenqi Jiang, Hang Hu, Torsten Hoefler, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p3797-jiang.pdf) [[pdf]](https://www.vldb.org/pvldb/vol18/p3797-jiang.pdf) `fpga` `graph`
+
+#### HPCA 2025
+
+- **AccelES: Accelerating Top-K SpMV for Embedding Similarity via Low-bit Pruning**<br>Jiaqi Zhai, Xuanhua Shi, Kaiyi Huang, et al. [[paper]](https://doi.org/10.1109/HPCA61900.2025.00077) `exact-search` `sparse`<br><sub>Exact (not approximate) top-K embedding similarity search; adjacent to ANNS.</sub>
+- **NeuVSA: A Unified and Efficient Accelerator for Neural Vector Search**<br>Ziming Yuan, Lei Dai, Wen Li, et al. [[paper]](https://doi.org/10.1109/HPCA61900.2025.00065) `quantization` `learned`
+
+#### SC 2025
+
+- **DRIM-ANN: An Approximate Nearest Neighbor Search Engine based on Commercial DRAM-PIMs**<br>Mingkai Chen, Tianhua Han, Cheng Liu, et al. [[paper]](https://doi.org/10.1145/3712285.3759801) [[arXiv]](https://arxiv.org/abs/2410.15621) `pim` `ivf` `quantization`
+- **UpANNS: Enhancing Billion-Scale ANNS Efficiency with Real-World PIM Architecture**<br>Sitian Chen, Amelie Chi Zhou, Yucheng Shi, et al. [[paper]](https://doi.org/10.1145/3712285.3759777) [[arXiv]](https://arxiv.org/abs/2410.23805) `pim` `ivf` `quantization` `billion-scale`
 <!-- END GENERATED -->

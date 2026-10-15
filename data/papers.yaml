@@ -1232,3 +1232,66 @@
   url: https://www.vldb.org/pvldb/vol19/p2839-zou.pdf
   pdf: https://www.vldb.org/pvldb/vol19/p2839-zou.pdf
   source: dblp
+- title: 'NeuVSA: A Unified and Efficient Accelerator for Neural Vector Search'
+  authors: [Ziming Yuan, Lei Dai, Wen Li, et al.]
+  venue: HPCA
+  year: 2025
+  subtopic: accelerators
+  tags: [quantization, learned]
+  url: https://doi.org/10.1109/HPCA61900.2025.00065
+  source: dblp
+- title: 'AccelES: Accelerating Top-K SpMV for Embedding Similarity via Low-bit Pruning'
+  authors: [Jiaqi Zhai, Xuanhua Shi, Kaiyi Huang, et al.]
+  venue: HPCA
+  year: 2025
+  subtopic: accelerators
+  tags: [exact-search, sparse]
+  url: https://doi.org/10.1109/HPCA61900.2025.00077
+  note: Exact (not approximate) top-K embedding similarity search; adjacent to ANNS.
+  source: dblp
+- title: 'VectorLiteRAG: Latency-Aware and Fine-Grained Resource Partitioning for Efficient RAG'
+  authors: [Junkyum Kim, Divya Mahajan]
+  venue: HPCA
+  year: 2026
+  subtopic: systems
+  tags: [rag, gpu, ivf]
+  url: https://doi.org/10.1109/HPCA68181.2026.11408552
+  arxiv: https://arxiv.org/abs/2504.08930
+  source: dblp
+- title: 'UpANNS: Enhancing Billion-Scale ANNS Efficiency with Real-World PIM Architecture'
+  authors: [Sitian Chen, Amelie Chi Zhou, Yucheng Shi, et al.]
+  venue: SC
+  year: 2025
+  subtopic: accelerators
+  tags: [pim, ivf, quantization, billion-scale]
+  url: https://doi.org/10.1145/3712285.3759777
+  arxiv: https://arxiv.org/abs/2410.23805
+  source: dblp
+- title: 'DRIM-ANN: An Approximate Nearest Neighbor Search Engine based on Commercial DRAM-PIMs'
+  authors: [Mingkai Chen, Tianhua Han, Cheng Liu, et al.]
+  venue: SC
+  year: 2025
+  subtopic: accelerators
+  tags: [pim, ivf, quantization]
+  url: https://doi.org/10.1145/3712285.3759801
+  arxiv: https://arxiv.org/abs/2410.15621
+  source: dblp
+- title: 'PIMCQG: Co-Designing Billion-Scale Graph-Based Approximate Nearest Neighbor Search for Processing-in-Memory'
+  authors: [Sitian Chen, Yusen Li, Yao Chen, et al.]
+  venue: SC
+  year: 2026
+  subtopic: accelerators
+  tags: [pim, graph, quantization, billion-scale]
+  arxiv: https://arxiv.org/abs/2605.25522
+  code: https://github.com/steam009/PIMCQG
+  status: accepted
+  note: 'Acceptance per the code README and <a href="https://amelieczhou.github.io/publications.html">author homepage</a>.'
+  source: preprint
+- title: 'PANNS: Enhancing Graph-based Approximate Nearest Neighbor Search through Recency-aware Construction and Parameterized Search'
+  authors: [Xizhe Yin, Chao Gao, Zhijia Zhao, et al.]
+  venue: PPoPP
+  year: 2025
+  subtopic: algorithms
+  tags: [graph]
+  url: https://doi.org/10.1145/3710848.3710867
+  source: dblp

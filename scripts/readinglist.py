@@ -74,11 +74,13 @@ def relevance(title, cfg):
 def classify(title, venue, cfg):
     """Best-guess category from title keywords; a human should confirm it."""
     for key in cfg["classify_order"]:
-        cat = cfg["categories"][key]
-        if cat.get("venues") and venue not in cat["venues"]:
-            continue
-        if _any(cat.get("rules", []), title):
-            return key
+        for rule in cfg["categories"][key].get("rules", []):
+            if isinstance(rule, dict):
+                if venue not in rule["venues"]:
+                    continue
+                rule = rule["pattern"]
+            if re.search(rule, title, re.I):
+                return key
     return cfg["default_category"]
 
 

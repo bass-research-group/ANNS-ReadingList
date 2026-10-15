@@ -82,15 +82,18 @@ ANNS and vector search papers at SIGMOD, all years. Generated from [`data/papers
 - **HONEYBEE: Efficient Role-based Access Control for Vector Databases via Dynamic Partitioning**<br>Hongbin Zhong, Matthew Lentz, Nina Narodytska, Adriana Szekeres, Kexin Rong [[paper]](https://doi.org/10.1145/3786625) [[arXiv]](https://arxiv.org/abs/2505.01538) [[code]](https://github.com/rjzhb/VectorSearch-RBAC) `privacy` `access-control`
 - **Integrating Vector Databases across Embedding Models**<br>Beining Yang, Yang Cao, Yang Ren [[paper]](https://doi.org/10.1145/3769803) `embedding-models`
 
-### Benchmarking & Characterization
+### Benchmarks
 
-- **An In-Depth Study of Filter-Agnostic Vector Search on a PostgreSQL Database System: [Experiments & Analysis]**<br>Duo Lu, Helena Caminal, Manos Chatzakis, Yannis Papakonstantinou, Yannis Chronis, Vaibhav Jain, et al. [[paper]](https://doi.org/10.1145/3802011) [[arXiv]](https://arxiv.org/abs/2603.23710) [[code]](https://github.com/google-systems-research/fvs) `filtered` `postgres`
 - **Attribute Filtering in Approximate Nearest Neighbor Search: An In-depth Experimental Study**<br>Mocheng Li, Xiao Yan, Baotong Lu, Yue Zhang, James Cheng, Chenhao Ma [[paper]](https://doi.org/10.1145/3769763) [[arXiv]](https://arxiv.org/abs/2508.16263) [[code]](https://github.com/lmccccc/FANNBench) `filtered`
-- **Building Stateless Serverless Vector DBs via Block-based Data Partitioning**<br>Daniel Barcelona Pons, Raúl Gracia Tinedo, Albert Cañadilla-Domingo, Xavier Roca-Canals, Pedro García López [[paper]](https://doi.org/10.1145/3769769) [[code]](https://github.com/neardata-eu/serverless-vdb) `serverless`
 - **CANDOR-Bench: Benchmarking In-Memory Continuous ANNS under Dynamic Open-World Streams [Experiments & Analysis]**<br>Mingqi Wang, Junyao Dong, Zhuoyan Wu, Jun Liu, Ruicheng Zhang, Jianjun Zhao, et al. [[paper]](https://doi.org/10.1145/3786630) [[code]](https://github.com/DataSysResearch/CANDOR-Bench) `dynamic`
 - **Reveal Hidden Pitfalls and Navigate Next Generation of Vector Similarity Search from Task-Centric Views: [Experiments & Analysis]**<br>Tingyang Chen, Cong Fu, Jiahua Wu, Haotian Wu, Hua Fan, Xiangyu Ke, et al. [[paper]](https://doi.org/10.1145/3786690) [[arXiv]](https://arxiv.org/abs/2512.12980) [[code]](https://github.com/ZJU-DAILY/Iceberg)
-- **Through the Lens of Hubness: A Revisit on Graph-Based Approximate Nearest Neighbor Search: [Experiments & Analysis]**<br>Xiaoliang Xu, Haonan Dai, Can Li, Mengzhao Wang, Qiang Yue [[paper]](https://doi.org/10.1145/3802120) [[code]](https://github.com/H40NaN/GraphANNS-Hubness) `graph`
 - **VecBench: A Controllable Benchmark for Filtered Vector Search: [Experiments & Analysis]**<br>Xiang Zhang, Chao Zhang, Ju Fan, Guoliang Li, Xiaoyong Du [[paper]](https://doi.org/10.1145/3802125) [[code]](https://github.com/ruc-datalab/VecBench) `filtered`
+
+### Workload Characterization
+
+- **An In-Depth Study of Filter-Agnostic Vector Search on a PostgreSQL Database System: [Experiments & Analysis]**<br>Duo Lu, Helena Caminal, Manos Chatzakis, Yannis Papakonstantinou, Yannis Chronis, Vaibhav Jain, et al. [[paper]](https://doi.org/10.1145/3802011) [[arXiv]](https://arxiv.org/abs/2603.23710) [[code]](https://github.com/google-systems-research/fvs) `filtered` `postgres`
+- **Building Stateless Serverless Vector DBs via Block-based Data Partitioning**<br>Daniel Barcelona Pons, Raúl Gracia Tinedo, Albert Cañadilla-Domingo, Xavier Roca-Canals, Pedro García López [[paper]](https://doi.org/10.1145/3769769) [[code]](https://github.com/neardata-eu/serverless-vdb) `serverless`
+- **Through the Lens of Hubness: A Revisit on Graph-Based Approximate Nearest Neighbor Search: [Experiments & Analysis]**<br>Xiaoliang Xu, Haonan Dai, Can Li, Mengzhao Wang, Qiang Yue [[paper]](https://doi.org/10.1145/3802120) [[code]](https://github.com/H40NaN/GraphANNS-Hubness) `graph`
 
 ## SIGMOD 2025
 
@@ -121,6 +124,6 @@ ANNS and vector search papers at SIGMOD, all years. Generated from [`data/papers
 - **PQCache: Product Quantization-based KVCache for Long Context LLM Inference**<br>Hailin Zhang, Xiaodong Ji, Yilin Chen, Fangcheng Fu, Xupeng Miao, Xiaonan Nie, et al. [[paper]](https://doi.org/10.1145/3725338) [[arXiv]](https://arxiv.org/abs/2407.12820) [[code]](https://github.com/HugoZHL/PQCache) `kvcache` `quantization`
 - **Tribase: A Vector Data Query Engine for Reliable and Lossless Pruning Compression using Triangle Inequalities**<br>Qian Xu, Juan Yang, Feng Zhang, Junda Pan, Kang Chen, Youren Shen, et al. [[paper]](https://doi.org/10.1145/3709743) [[code]](https://github.com/xuqianmamba/Tribase)
 
-### Benchmarking & Characterization
+### Benchmarks
 
 - **Graph-Based Vector Search: An Experimental Evaluation of the State-of-the-Art**<br>Ilias Azizi, Karima Echihabi, Themis Palpanas [[paper]](https://doi.org/10.1145/3709693) [[arXiv]](https://arxiv.org/abs/2502.05575) [[code]](https://github.com/iliasazizi/GVS) `graph`

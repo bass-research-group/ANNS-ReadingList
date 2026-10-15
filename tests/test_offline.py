@@ -74,7 +74,12 @@ def test_classifier():
     assert relevance("Transaction Processing on CXL", CFG) is None
     cases = {
         ("VecBench: A Benchmark for Filtered Vector Search: [Experiments & Analysis]", "SIGMOD"): "benchmark",
-        ("WiFlash: Approximate Nearest Neighbor Search Inside Flash Cell Array", "MICRO"): "accelerator",
+        ("WiFlash: Approximate Nearest Neighbor Search Inside Flash Cell Array", "MICRO"): "fpga-in-storage",
+        ("Fast Graph Vector Search on FPGAs", "VLDB"): "fpga-in-storage",
+        ("MFNNS: A Multiplier-Free Near-Memory Accelerator for Graph-based ANNS", "MICRO"): "domain-specific-accelerator",
+        ("Billion-Scale ANNS on Real-World PIM", "SC"): "domain-specific-accelerator",
+        ("Characterizing Vector Search Workloads on CPUs", "ISCA"): "characterization",
+        ("Vector Databases: A Survey", "VLDB"): "survey",
         ("Accelerating Graph Indexing for ANNS on Modern CPUs", "SIGMOD"): "indexing-algorithm",
         ("Billion-Scale Vector Search on a Single GPU", "SIGMOD"): "gpu-system",
         ("RDMA-Enabled Distributed ANNS", "VLDB"): "distributed-system",

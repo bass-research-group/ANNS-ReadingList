@@ -35,7 +35,7 @@
   authors: [Derrick Quinn, Mohammad Nouri, Neel Patel, John Salihu, Alireza Salemi, Sukhan Lee, Hamed Zamani, Mohammad Alian]
   venue: ASPLOS
   year: 2025
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [rag, near-memory]
   url: https://doi.org/10.1145/3669940.3707264
   arxiv: https://arxiv.org/abs/2412.15246
@@ -238,7 +238,7 @@
   authors: [Wenqi Jiang, Marco Zeller, Roger Waleffe, Torsten Hoefler, Gustavo Alonso]
   venue: VLDB
   year: 2025
-  category: accelerator
+  category: fpga-in-storage
   tags: [rag, disaggregated]
   url: https://www.vldb.org/pvldb/vol18/p42-jiang.pdf
   pdf: https://www.vldb.org/pvldb/vol18/p42-jiang.pdf
@@ -291,7 +291,7 @@
   authors: [Wenqi Jiang, Hang Hu, Torsten Hoefler, Gustavo Alonso]
   venue: VLDB
   year: 2025
-  category: accelerator
+  category: fpga-in-storage
   tags: [fpga, graph]
   url: https://www.vldb.org/pvldb/vol18/p3797-jiang.pdf
   pdf: https://www.vldb.org/pvldb/vol18/p3797-jiang.pdf
@@ -312,8 +312,8 @@
   authors: [Helena Caminal, Yannis Chronis, Yannis Papakonstantinou, Fatma Özcan, Anastasia Ailamaki]
   venue: VLDB
   year: 2025
-  category: benchmark
-  tags: [filtered, survey]
+  category: survey
+  tags: [filtered]
   url: https://www.vldb.org/pvldb/vol18/p5488-caminal.pdf
   pdf: https://www.vldb.org/pvldb/vol18/p5488-caminal.pdf
   source: dblp
@@ -483,7 +483,7 @@
   authors: [Yiwei Li, Yuxin Jin, Boyu Tian, et al.]
   venue: ISCA
   year: 2025
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [near-memory, early-termination]
   url: https://doi.org/10.1145/3695053.3731013
   pdf: https://people.iiis.tsinghua.edu.cn/~gaomy/pubs/ansmet.isca25.pdf
@@ -494,7 +494,7 @@
   authors: [Derrick Quinn, E. Ezgi Yücel, Martin Prammer, et al.]
   venue: ISCA
   year: 2025
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [near-memory, rag]
   url: https://par.nsf.gov/biblio/10634219
   source: program
@@ -513,7 +513,7 @@
   authors: [Chaoqiang Liu, Haifeng Liu, Dan Chen, et al.]
   venue: ISCA
   year: 2025
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [pim, rag]
   source: program
 
@@ -521,7 +521,7 @@
   authors: [Rohan Mahapatra, Harsha Santhanam, Christopher Priebe, et al.]
   venue: ISCA
   year: 2025
-  category: accelerator
+  category: fpga-in-storage
   tags: [in-storage, rag]
   url: https://doi.org/10.1145/3695053.3731032
   source: program
@@ -541,7 +541,7 @@
   authors: [Kangqi Chen, Andreas Kosmas Kakolyris, Rakesh Nadig, Manos Frouzakis, et al.]
   venue: ISCA
   year: 2025
-  category: accelerator
+  category: fpga-in-storage
   tags: [in-storage, ivf, rag]
   arxiv: https://arxiv.org/abs/2506.16444
   source: program
@@ -550,7 +550,7 @@
   authors: [Je-Woo Jang, Junyong Oh, et al.]
   venue: MICRO
   year: 2025
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [pim, near-memory, ivf, quantization, rag]
   url: https://doi.org/10.1145/3725843.3756020
   source: program
@@ -559,7 +559,7 @@
   authors: [Niansong Zhang, Wenbo Zhu, Courtney Golden, et al.]
   venue: MICRO
   year: 2025
-  category: benchmark
+  category: characterization
   tags: [compute-in-sram, rag]
   url: https://doi.org/10.1145/3725843.3756132
   arxiv: https://arxiv.org/abs/2509.05451
@@ -571,7 +571,7 @@
   authors: [Jiaqi Zhai, Xuanhua Shi, Kaiyi Huang, et al.]
   venue: HPCA
   year: 2025
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [exact-search, sparse]
   url: https://doi.org/10.1109/HPCA61900.2025.00077
   note: Exact (not approximate) top-K embedding similarity search; adjacent to ANNS.
@@ -581,7 +581,7 @@
   authors: [Ziming Yuan, Lei Dai, Wen Li, et al.]
   venue: HPCA
   year: 2025
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [quantization, learned]
   url: https://doi.org/10.1109/HPCA61900.2025.00065
   source: dblp
@@ -590,7 +590,7 @@
   authors: [Mingkai Chen, Tianhua Han, Cheng Liu, et al.]
   venue: SC
   year: 2025
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [pim, ivf, quantization]
   url: https://doi.org/10.1145/3712285.3759801
   arxiv: https://arxiv.org/abs/2410.15621
@@ -601,7 +601,7 @@
   authors: [Sitian Chen, Amelie Chi Zhou, Yucheng Shi, et al.]
   venue: SC
   year: 2025
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [pim, ivf, quantization, billion-scale]
   url: https://doi.org/10.1145/3712285.3759777
   arxiv: https://arxiv.org/abs/2410.23805

@@ -10,7 +10,7 @@ ANNS and vector search papers at HPCA, all years. Generated from [`data/papers/`
 
 ## HPCA 2025
 
-### Hardware Accelerators
+### Domain-specific Accelerators
 
 - **AccelES: Accelerating Top-K SpMV for Embedding Similarity via Low-bit Pruning**<br>Jiaqi Zhai, Xuanhua Shi, Kaiyi Huang, et al. [[paper]](https://doi.org/10.1109/HPCA61900.2025.00077) `exact-search` `sparse`<br><sub>Exact (not approximate) top-K embedding similarity search; adjacent to ANNS.</sub>
 - **NeuVSA: A Unified and Efficient Accelerator for Neural Vector Search**<br>Ziming Yuan, Lei Dai, Wen Li, et al. [[paper]](https://doi.org/10.1109/HPCA61900.2025.00065) `quantization` `learned`

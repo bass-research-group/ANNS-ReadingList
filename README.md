@@ -31,8 +31,11 @@ RAG and KV-cache papers are included only when vector retrieval is the core of t
 | | Out-of-Core ANNS Systems | Indexes beyond DRAM: SSD/disk-resident, tiered or disaggregated memory |
 | | Distributed ANNS Systems | Multi-node, RDMA, federated and scale-out search |
 | | Vector Databases & Other Systems | Vector DBMSs and DBMS integration, CPU engines, privacy/security, retrieval for RAG and KV caches |
-| Hardware Accelerators | Hardware Accelerators | Dedicated hardware only: ASIC, FPGA, processing-in/near-memory, in-storage/in-flash. GPU work is under Systems |
-| Benchmarking & Characterization | Benchmarking & Characterization | [Experiments & Analysis] papers, benchmarks, workload characterization, surveys |
+| Architecture | FPGA & In-storage Acceleration | FPGAs and processing inside storage devices (computational SSDs, in-flash/NAND) |
+| | Domain-specific Accelerators | Dedicated hardware only: ASICs and processing-in/near-memory (PIM/NDP). GPU work is under Systems |
+| Experiments & Analysis | Benchmarks | Benchmark suites and experimental evaluations comparing existing methods ([Experiments & Analysis] papers) |
+| | Workload Characterization | In-depth analyses of time/I/O/memory behavior, design-space explorations, characterization on specific hardware |
+| | Surveys | Surveys and tutorials |
 
 **Views.** The list below is grouped by sub-topic, then by venue and year. [`papers/by-venue/`](papers/by-venue/) has one page per
 conference. The README covers the most recent years (`readme_years` in [`config.yaml`](config.yaml)); older years move to
@@ -110,8 +113,11 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 | [Systems: Out-of-Core ANNS Systems](#out-of-core-anns-systems) | 3 | 4 | 0 | 7 |
 | [Systems: Distributed ANNS Systems](#distributed-anns-systems) | 4 | 4 | 0 | 8 |
 | [Systems: Vector Databases & Other Systems](#vector-databases--other-systems) | 12 | 9 | 3 | 24 |
-| [Hardware Accelerators](#hardware-accelerators) | 13 | 6 | 0 | 19 |
-| [Benchmarking & Characterization](#benchmarking--characterization) | 4 | 14 | 1 | 19 |
+| [Architecture: FPGA & In-storage Acceleration](#fpga--in-storage-acceleration) | 4 | 3 | 0 | 7 |
+| [Architecture: Domain-specific Accelerators](#domain-specific-accelerators) | 9 | 3 | 0 | 12 |
+| [Experiments & Analysis: Benchmarks](#benchmarks) | 2 | 9 | 1 | 12 |
+| [Experiments & Analysis: Workload Characterization](#workload-characterization) | 1 | 4 | 0 | 5 |
+| [Experiments & Analysis: Surveys](#surveys) | 1 | 1 | 0 | 2 |
 
 ### Algorithms
 
@@ -394,9 +400,32 @@ _Vector databases and DBMS integration, CPU-efficient engines, privacy and secur
 
 - **RAGO: Systematic Performance Optimization for Retrieval-Augmented Generation Serving**<br>Wenqi Jiang, Suvinay Subramanian, Cat Graves, et al. [[paper]](https://doi.org/10.1145/3695053.3731093) [[arXiv]](https://arxiv.org/abs/2503.14649) [[code]](https://github.com/google/rago) `rag`
 
-### Hardware Accelerators
+### Architecture
 
-_Dedicated hardware such as ASIC, FPGA, processing-in/near-memory and in-storage/in-flash designs. GPU software belongs under Systems._
+#### FPGA & In-storage Acceleration
+
+_Vector search on FPGAs and inside storage devices (computational SSDs, in-flash/NAND processing)._
+
+
+**MICRO 2026**
+
+- **D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation** *(accepted, to appear)*<br>Chang Eun Song, Sumukh Pinge, Tianqi Zhang, et al. [[arXiv]](https://arxiv.org/abs/2607.17538) `in-storage` `in-flash` `ivf` `rag`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
+- **NiF: Hybrid In-Flash and In-Storage Acceleration for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Myoungjun Chun, et al. `in-storage` `in-flash`<br><sub>Listed in the MICRO 2026 program (Session 4A).</sub>
+- **WiFlash: Wordline-Parallel Approximate Nearest Neighbor Search Inside Flash Cell Array** *(accepted, to appear)*<br>Hyunjin Kim, Juchan Lee, Inseong Choi, et al. `in-flash`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
+
+**VLDB 2025**
+
+- **Chameleon: a Heterogeneous and Disaggregated Accelerator System for Retrieval-Augmented Language Models**<br>Wenqi Jiang, Marco Zeller, Roger Waleffe, Torsten Hoefler, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p42-jiang.pdf) [[code]](https://github.com/WenqiJiang/Chameleon) `rag` `disaggregated`
+- **Fast Graph Vector Search via Hardware Acceleration and Delayed-Synchronization Traversal**<br>Wenqi Jiang, Hang Hu, Torsten Hoefler, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p3797-jiang.pdf) [[code]](https://github.com/fpgasystems/Falcon-accelerate-graph-vector-search) `fpga` `graph`
+
+**ISCA 2025**
+
+- **In-Storage Acceleration of Retrieval Augmented Generation as a Service**<br>Rohan Mahapatra, Harsha Santhanam, Christopher Priebe, et al. [[paper]](https://doi.org/10.1145/3695053.3731032) `in-storage` `rag`
+- **REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing**<br>Kangqi Chen, Andreas Kosmas Kakolyris, Rakesh Nadig, Manos Frouzakis, et al. [[arXiv]](https://arxiv.org/abs/2506.16444) `in-storage` `ivf` `rag`
+
+#### Domain-specific Accelerators
+
+_ASICs and processing-in/near-memory (PIM/NDP) designs. GPU software belongs under Systems._
 
 
 **ISCA 2026**
@@ -405,10 +434,7 @@ _Dedicated hardware such as ASIC, FPGA, processing-in/near-memory and in-storage
 
 **MICRO 2026**
 
-- **D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation** *(accepted, to appear)*<br>Chang Eun Song, Sumukh Pinge, Tianqi Zhang, et al. [[arXiv]](https://arxiv.org/abs/2607.17538) `in-storage` `in-flash` `ivf` `rag`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
 - **MFNNS: A Multiplier-Free Near-Memory Accelerator for Graph-based ANNS** *(accepted, to appear)*<br>Rui Meng, Yonghao Chen, Jiaxiang Zou, et al. `near-memory` `graph`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
-- **NiF: Hybrid In-Flash and In-Storage Acceleration for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Myoungjun Chun, et al. `in-storage` `in-flash`<br><sub>Listed in the MICRO 2026 program (Session 4A).</sub>
-- **WiFlash: Wordline-Parallel Approximate Nearest Neighbor Search Inside Flash Cell Array** *(accepted, to appear)*<br>Hyunjin Kim, Juchan Lee, Inseong Choi, et al. `in-flash`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
 
 **SC 2026**
 
@@ -418,18 +444,11 @@ _Dedicated hardware such as ASIC, FPGA, processing-in/near-memory and in-storage
 
 - **Accelerating Retrieval-Augmented Generation**<br>Derrick Quinn, Mohammad Nouri, Neel Patel, John Salihu, Alireza Salemi, Sukhan Lee, et al. [[paper]](https://doi.org/10.1145/3669940.3707264) [[arXiv]](https://arxiv.org/abs/2412.15246) [[code]](https://github.com/architecture-research-group/iks_simulator) `rag` `near-memory`
 
-**VLDB 2025**
-
-- **Chameleon: a Heterogeneous and Disaggregated Accelerator System for Retrieval-Augmented Language Models**<br>Wenqi Jiang, Marco Zeller, Roger Waleffe, Torsten Hoefler, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p42-jiang.pdf) [[code]](https://github.com/WenqiJiang/Chameleon) `rag` `disaggregated`
-- **Fast Graph Vector Search via Hardware Acceleration and Delayed-Synchronization Traversal**<br>Wenqi Jiang, Hang Hu, Torsten Hoefler, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p3797-jiang.pdf) [[code]](https://github.com/fpgasystems/Falcon-accelerate-graph-vector-search) `fpga` `graph`
-
 **ISCA 2025**
 
 - **ANSMET: Approximate Nearest Neighbor Search with Near-Memory Processing and Hybrid Early Termination**<br>Yiwei Li, Yuxin Jin, Boyu Tian, et al. [[paper]](https://doi.org/10.1145/3695053.3731013) [[pdf]](https://people.iiis.tsinghua.edu.cn/~gaomy/pubs/ansmet.isca25.pdf) [[code]](https://github.com/tsinghua-ideal/ANSMET) `near-memory` `early-termination`
 - **DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign**<br>Derrick Quinn, E. Ezgi Yücel, Martin Prammer, et al. [[paper]](https://par.nsf.gov/biblio/10634219) `near-memory` `rag`
 - **HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation**<br>Chaoqiang Liu, Haifeng Liu, Dan Chen, et al. `pim` `rag`
-- **In-Storage Acceleration of Retrieval Augmented Generation as a Service**<br>Rohan Mahapatra, Harsha Santhanam, Christopher Priebe, et al. [[paper]](https://doi.org/10.1145/3695053.3731032) `in-storage` `rag`
-- **REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing**<br>Kangqi Chen, Andreas Kosmas Kakolyris, Rakesh Nadig, Manos Frouzakis, et al. [[arXiv]](https://arxiv.org/abs/2506.16444) `in-storage` `ivf` `rag`
 
 **MICRO 2025**
 
@@ -445,9 +464,11 @@ _Dedicated hardware such as ASIC, FPGA, processing-in/near-memory and in-storage
 - **DRIM-ANN: An Approximate Nearest Neighbor Search Engine based on Commercial DRAM-PIMs**<br>Mingkai Chen, Tianhua Han, Cheng Liu, et al. [[paper]](https://doi.org/10.1145/3712285.3759801) [[arXiv]](https://arxiv.org/abs/2410.15621) [[code]](https://github.com/KMC20/DRIM-ANN) `pim` `ivf` `quantization`
 - **UpANNS: Enhancing Billion-Scale ANNS Efficiency with Real-World PIM Architecture**<br>Sitian Chen, Amelie Chi Zhou, Yucheng Shi, et al. [[paper]](https://doi.org/10.1145/3712285.3759777) [[arXiv]](https://arxiv.org/abs/2410.23805) [[code]](https://github.com/steam009/UpANNS) `pim` `ivf` `quantization` `billion-scale`
 
-### Benchmarking & Characterization
+### Experiments & Analysis
 
-_Experimental studies ([Experiments & Analysis]), benchmarks, workload characterization and surveys._
+#### Benchmarks
+
+_Benchmark suites and frameworks, and experimental evaluations that compare existing methods._
 
 
 **VLDB 2027**
@@ -456,21 +477,16 @@ _Experimental studies ([Experiments & Analysis]), benchmarks, workload character
 
 **SIGMOD 2026**
 
-- **An In-Depth Study of Filter-Agnostic Vector Search on a PostgreSQL Database System: [Experiments & Analysis]**<br>Duo Lu, Helena Caminal, Manos Chatzakis, Yannis Papakonstantinou, Yannis Chronis, Vaibhav Jain, et al. [[paper]](https://doi.org/10.1145/3802011) [[arXiv]](https://arxiv.org/abs/2603.23710) [[code]](https://github.com/google-systems-research/fvs) `filtered` `postgres`
 - **Attribute Filtering in Approximate Nearest Neighbor Search: An In-depth Experimental Study**<br>Mocheng Li, Xiao Yan, Baotong Lu, Yue Zhang, James Cheng, Chenhao Ma [[paper]](https://doi.org/10.1145/3769763) [[arXiv]](https://arxiv.org/abs/2508.16263) [[code]](https://github.com/lmccccc/FANNBench) `filtered`
-- **Building Stateless Serverless Vector DBs via Block-based Data Partitioning**<br>Daniel Barcelona Pons, Raúl Gracia Tinedo, Albert Cañadilla-Domingo, Xavier Roca-Canals, Pedro García López [[paper]](https://doi.org/10.1145/3769769) [[code]](https://github.com/neardata-eu/serverless-vdb) `serverless`
 - **CANDOR-Bench: Benchmarking In-Memory Continuous ANNS under Dynamic Open-World Streams [Experiments & Analysis]**<br>Mingqi Wang, Junyao Dong, Zhuoyan Wu, Jun Liu, Ruicheng Zhang, Jianjun Zhao, et al. [[paper]](https://doi.org/10.1145/3786630) [[code]](https://github.com/DataSysResearch/CANDOR-Bench) `dynamic`
 - **Reveal Hidden Pitfalls and Navigate Next Generation of Vector Similarity Search from Task-Centric Views: [Experiments & Analysis]**<br>Tingyang Chen, Cong Fu, Jiahua Wu, Haotian Wu, Hua Fan, Xiangyu Ke, et al. [[paper]](https://doi.org/10.1145/3786690) [[arXiv]](https://arxiv.org/abs/2512.12980) [[code]](https://github.com/ZJU-DAILY/Iceberg)
-- **Through the Lens of Hubness: A Revisit on Graph-Based Approximate Nearest Neighbor Search: [Experiments & Analysis]**<br>Xiaoliang Xu, Haonan Dai, Can Li, Mengzhao Wang, Qiang Yue [[paper]](https://doi.org/10.1145/3802120) [[code]](https://github.com/H40NaN/GraphANNS-Hubness) `graph`
 - **VecBench: A Controllable Benchmark for Filtered Vector Search: [Experiments & Analysis]**<br>Xiang Zhang, Chao Zhang, Ju Fan, Guoliang Li, Xiaoyong Du [[paper]](https://doi.org/10.1145/3802125) [[code]](https://github.com/ruc-datalab/VecBench) `filtered`
 
 **VLDB 2026**
 
-- **Advances of Query Processing in Vector Databases**<br>Jiadong Xie, Yingfan Liu, Jeffrey Xu Yu [[paper]](https://www.vldb.org/pvldb/vol19/p4893-xie.pdf) `survey`
 - **An Experimental Evaluation of Hybrid Querying on Vectors**<br>Jiaxu Zhu, Jiayu Yuan, Kaiwen Yang, Xiaobao Chen, Shihuan Yu, Hongchang Lv, et al. [[paper]](https://www.vldb.org/pvldb/vol19/p183-zheng.pdf) [[code]](https://github.com/zhujx001/Hybrid-ANNS-Experiment) `filtered`
 - **Balancing the Blend: An Experimental Analysis of Trade-offs in Hybrid Search**<br>Mengzhao Wang, Boyu Tan, Yunjun Gao, Hai Jin, Yingfeng Zhang, Xiangyu Ke, et al. [[paper]](https://www.vldb.org/pvldb/vol19/p1715-gao.pdf) [[code]](https://github.com/infiniflow/infinity) `hybrid`
 - **Disk-Resident Graph ANN Search: An Experimental Evaluation** *(accepted, to appear)*<br>Xiaoyu Chen, Jinxiu Qu, Yitong Song, et al. [[arXiv]](https://arxiv.org/abs/2603.01779) [[code]](https://github.com/hkbudb/disk-vss-survey) `disk` `graph`<br><sub>PVLDB 2026 per the code README; not yet in DBLP.</sub>
-- **I/O Optimizations in Graph-Based Disk-Resident Approximate Nearest Neighbor Search: A Design Space Exploration**<br>Liang Li, Shufeng Gong, Yanan Yang, Yiduo Wang, Jie Wu [[paper]](https://www.vldb.org/pvldb/vol19/p1484-li.pdf) [[code]](https://github.com/LeonLee666/IObench4DiskANN) `disk`
 - **Revisiting Filtered ANN Benchmarks: A Hardness-Controlled Benchmark Generator for Realistic Evaluation**<br>Mintaek Lim, Dogeun Kim, Minwoo Kim, Jaeyoung Do [[paper]](https://www.vldb.org/pvldb/vol19/p2763-lim.pdf) [[code]](https://github.com/AIDAS-Lab/FANN_Benchmark) `filtered`
 - **Towards Robustness: A Critique of Current Vector Database Assessments** *(accepted, to appear)*<br>Zikai Wang, Qianxi Zhang, Baotong Lu, et al. [[arXiv]](https://arxiv.org/abs/2507.00379) [[code]](https://github.com/khaiwang/ANN-Robustness-Submission) `robustness`<br><sub>VLDB 2026 per the artifact README; not yet in DBLP.</sub>
 
@@ -481,9 +497,36 @@ _Experimental studies ([Experiments & Analysis]), benchmarks, workload character
 **VLDB 2025**
 
 - **BigVectorBench: Heterogeneous Data Embedding and Compound Queries are Essential in Evaluating Vector Databases**<br>Guoxin Kang, Zhongxin Ge, Jingpei Hu, Xueya Zhang, Lei Wang, Jianfeng Zhan [[paper]](https://www.vldb.org/pvldb/vol18/p1536-zhan.pdf) [[code]](https://github.com/BenchCouncil/BigVectorBench)
-- **Filtered Vector Search: State-of-the-art and Research Challenges**<br>Helena Caminal, Yannis Chronis, Yannis Papakonstantinou, Fatma Özcan, Anastasia Ailamaki [[paper]](https://www.vldb.org/pvldb/vol18/p5488-caminal.pdf) `filtered` `survey`
+
+#### Workload Characterization
+
+_In-depth analyses of where time, I/O and memory go; design-space explorations; characterization on specific hardware or systems._
+
+
+**SIGMOD 2026**
+
+- **An In-Depth Study of Filter-Agnostic Vector Search on a PostgreSQL Database System: [Experiments & Analysis]**<br>Duo Lu, Helena Caminal, Manos Chatzakis, Yannis Papakonstantinou, Yannis Chronis, Vaibhav Jain, et al. [[paper]](https://doi.org/10.1145/3802011) [[arXiv]](https://arxiv.org/abs/2603.23710) [[code]](https://github.com/google-systems-research/fvs) `filtered` `postgres`
+- **Building Stateless Serverless Vector DBs via Block-based Data Partitioning**<br>Daniel Barcelona Pons, Raúl Gracia Tinedo, Albert Cañadilla-Domingo, Xavier Roca-Canals, Pedro García López [[paper]](https://doi.org/10.1145/3769769) [[code]](https://github.com/neardata-eu/serverless-vdb) `serverless`
+- **Through the Lens of Hubness: A Revisit on Graph-Based Approximate Nearest Neighbor Search: [Experiments & Analysis]**<br>Xiaoliang Xu, Haonan Dai, Can Li, Mengzhao Wang, Qiang Yue [[paper]](https://doi.org/10.1145/3802120) [[code]](https://github.com/H40NaN/GraphANNS-Hubness) `graph`
+
+**VLDB 2026**
+
+- **I/O Optimizations in Graph-Based Disk-Resident Approximate Nearest Neighbor Search: A Design Space Exploration**<br>Liang Li, Shufeng Gong, Yanan Yang, Yiduo Wang, Jie Wu [[paper]](https://www.vldb.org/pvldb/vol19/p1484-li.pdf) [[code]](https://github.com/LeonLee666/IObench4DiskANN) `disk`
 
 **MICRO 2025**
 
 - **Characterizing and Optimizing Realistic Workloads on a Commercial Compute-in-SRAM Device**<br>Niansong Zhang, Wenbo Zhu, Courtney Golden, et al. [[paper]](https://doi.org/10.1145/3725843.3756132) [[arXiv]](https://arxiv.org/abs/2509.05451) [[code]](https://github.com/cornell-zhang/apu-micro25-artifact) `compute-in-sram` `rag`<br><sub>Characterization paper; its main case study is RAG retrieval on the GSI APU.</sub>
+
+#### Surveys
+
+_Surveys and tutorials._
+
+
+**VLDB 2026**
+
+- **Advances of Query Processing in Vector Databases**<br>Jiadong Xie, Yingfan Liu, Jeffrey Xu Yu [[paper]](https://www.vldb.org/pvldb/vol19/p4893-xie.pdf)
+
+**VLDB 2025**
+
+- **Filtered Vector Search: State-of-the-art and Research Challenges**<br>Helena Caminal, Yannis Chronis, Yannis Papakonstantinou, Fatma Özcan, Anastasia Ailamaki [[paper]](https://www.vldb.org/pvldb/vol18/p5488-caminal.pdf) `filtered`
 <!-- END GENERATED -->

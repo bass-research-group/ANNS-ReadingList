@@ -20,7 +20,7 @@ ANNS and vector search papers at VLDB, all years. Generated from [`data/papers/`
 
 - **Can You Trust the Vectors in Your Vector Database? Black-Hole Attack from Embedding Space Defects** *(accepted, to appear)*<br>Hanxi Li, Jiale Lao, Zhengmao Ye, et al. [[arXiv]](https://arxiv.org/abs/2604.05480) [[code]](https://github.com/hanxi19/Black_Hole_Attack_for_Vector_Database) `security` `hubness`
 
-### Benchmarking & Characterization
+### Benchmarks
 
 - **DiskVecLab: A Deployment-Realistic Evaluation Framework for Disk-Based Vector Search** *(accepted, to appear)*<br>Yuxiang Wang, Yongxin Tong, Shuyuan Li, et al. [[code]](https://github.com/alibaba/DiskVecLab) `disk`
 
@@ -67,15 +67,21 @@ ANNS and vector search papers at VLDB, all years. Generated from [`data/papers/`
 - **TEngineDB-V: An OLAP-Native Vector Search System for Large-𝑘 Workloads at Tencent**<br>Xufei Wu, Pengcheng Zhang, Yitong Song, Xiaobo Zhang, Anqi Liang, Kai Wang, et al. [[paper]](https://www.vldb.org/pvldb/vol19/p3955-zhou.pdf) `vector-db`
 - **V3DB: Audit-on-Demand Zero-Knowledge Proofs for Verifiable Vector Search over Committed Snapshots**<br>Zipeng Qiu, Wenjie Qu, Jiaheng Zhang, Binhang Yuan [[paper]](https://www.vldb.org/pvldb/vol19/p2604-qiu.pdf) [[code]](https://github.com/TabibitoQZP/zk-IVF-PQ) `zkp` `verifiable`
 
-### Benchmarking & Characterization
+### Benchmarks
 
-- **Advances of Query Processing in Vector Databases**<br>Jiadong Xie, Yingfan Liu, Jeffrey Xu Yu [[paper]](https://www.vldb.org/pvldb/vol19/p4893-xie.pdf) `survey`
 - **An Experimental Evaluation of Hybrid Querying on Vectors**<br>Jiaxu Zhu, Jiayu Yuan, Kaiwen Yang, Xiaobao Chen, Shihuan Yu, Hongchang Lv, et al. [[paper]](https://www.vldb.org/pvldb/vol19/p183-zheng.pdf) [[code]](https://github.com/zhujx001/Hybrid-ANNS-Experiment) `filtered`
 - **Balancing the Blend: An Experimental Analysis of Trade-offs in Hybrid Search**<br>Mengzhao Wang, Boyu Tan, Yunjun Gao, Hai Jin, Yingfeng Zhang, Xiangyu Ke, et al. [[paper]](https://www.vldb.org/pvldb/vol19/p1715-gao.pdf) [[code]](https://github.com/infiniflow/infinity) `hybrid`
 - **Disk-Resident Graph ANN Search: An Experimental Evaluation** *(accepted, to appear)*<br>Xiaoyu Chen, Jinxiu Qu, Yitong Song, et al. [[arXiv]](https://arxiv.org/abs/2603.01779) [[code]](https://github.com/hkbudb/disk-vss-survey) `disk` `graph`<br><sub>PVLDB 2026 per the code README; not yet in DBLP.</sub>
-- **I/O Optimizations in Graph-Based Disk-Resident Approximate Nearest Neighbor Search: A Design Space Exploration**<br>Liang Li, Shufeng Gong, Yanan Yang, Yiduo Wang, Jie Wu [[paper]](https://www.vldb.org/pvldb/vol19/p1484-li.pdf) [[code]](https://github.com/LeonLee666/IObench4DiskANN) `disk`
 - **Revisiting Filtered ANN Benchmarks: A Hardness-Controlled Benchmark Generator for Realistic Evaluation**<br>Mintaek Lim, Dogeun Kim, Minwoo Kim, Jaeyoung Do [[paper]](https://www.vldb.org/pvldb/vol19/p2763-lim.pdf) [[code]](https://github.com/AIDAS-Lab/FANN_Benchmark) `filtered`
 - **Towards Robustness: A Critique of Current Vector Database Assessments** *(accepted, to appear)*<br>Zikai Wang, Qianxi Zhang, Baotong Lu, et al. [[arXiv]](https://arxiv.org/abs/2507.00379) [[code]](https://github.com/khaiwang/ANN-Robustness-Submission) `robustness`<br><sub>VLDB 2026 per the artifact README; not yet in DBLP.</sub>
+
+### Workload Characterization
+
+- **I/O Optimizations in Graph-Based Disk-Resident Approximate Nearest Neighbor Search: A Design Space Exploration**<br>Liang Li, Shufeng Gong, Yanan Yang, Yiduo Wang, Jie Wu [[paper]](https://www.vldb.org/pvldb/vol19/p1484-li.pdf) [[code]](https://github.com/LeonLee666/IObench4DiskANN) `disk`
+
+### Surveys
+
+- **Advances of Query Processing in Vector Databases**<br>Jiadong Xie, Yingfan Liu, Jeffrey Xu Yu [[paper]](https://www.vldb.org/pvldb/vol19/p4893-xie.pdf)
 
 ## VLDB 2025
 
@@ -116,12 +122,15 @@ ANNS and vector search papers at VLDB, all years. Generated from [`data/papers/`
 - **NaviX: A Native Vector Index Design for Graph DBMSs With Robust Predicate-Agnostic Search Performance**<br>Gaurav Sehgal, Semih Salihoglu [[paper]](https://www.vldb.org/pvldb/vol18/p4438-sehgal.pdf) [[code]](https://github.com/gaurav8297/kuzu) `filtered` `graph-dbms`
 - **VSAG: An Optimized Search Framework for Graph-based Approximate Nearest Neighbor Search**<br>Xiaoyao Zhong, Haotian Li, Jiabao Jin, Mingyu Yang, Deming Chu, Xiangyu Wang, et al. [[paper]](https://www.vldb.org/pvldb/vol18/p5017-cheng.pdf) [[code]](https://github.com/antgroup/vsag) `graph`
 
-### Hardware Accelerators
+### FPGA & In-storage Acceleration
 
 - **Chameleon: a Heterogeneous and Disaggregated Accelerator System for Retrieval-Augmented Language Models**<br>Wenqi Jiang, Marco Zeller, Roger Waleffe, Torsten Hoefler, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p42-jiang.pdf) [[code]](https://github.com/WenqiJiang/Chameleon) `rag` `disaggregated`
 - **Fast Graph Vector Search via Hardware Acceleration and Delayed-Synchronization Traversal**<br>Wenqi Jiang, Hang Hu, Torsten Hoefler, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p3797-jiang.pdf) [[code]](https://github.com/fpgasystems/Falcon-accelerate-graph-vector-search) `fpga` `graph`
 
-### Benchmarking & Characterization
+### Benchmarks
 
 - **BigVectorBench: Heterogeneous Data Embedding and Compound Queries are Essential in Evaluating Vector Databases**<br>Guoxin Kang, Zhongxin Ge, Jingpei Hu, Xueya Zhang, Lei Wang, Jianfeng Zhan [[paper]](https://www.vldb.org/pvldb/vol18/p1536-zhan.pdf) [[code]](https://github.com/BenchCouncil/BigVectorBench)
-- **Filtered Vector Search: State-of-the-art and Research Challenges**<br>Helena Caminal, Yannis Chronis, Yannis Papakonstantinou, Fatma Özcan, Anastasia Ailamaki [[paper]](https://www.vldb.org/pvldb/vol18/p5488-caminal.pdf) `filtered` `survey`
+
+### Surveys
+
+- **Filtered Vector Search: State-of-the-art and Research Challenges**<br>Helena Caminal, Yannis Chronis, Yannis Papakonstantinou, Fatma Özcan, Anastasia Ailamaki [[paper]](https://www.vldb.org/pvldb/vol18/p5488-caminal.pdf) `filtered`

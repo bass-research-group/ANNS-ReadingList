@@ -31,7 +31,7 @@
   authors: [Duo Lu, Helena Caminal, Manos Chatzakis, Yannis Papakonstantinou, Yannis Chronis, Vaibhav Jain, Fatma Özcan]
   venue: SIGMOD
   year: 2026
-  category: benchmark
+  category: characterization
   tags: [filtered, postgres]
   url: https://doi.org/10.1145/3802011
   arxiv: https://arxiv.org/abs/2603.23710
@@ -61,7 +61,7 @@
   authors: [Daniel Barcelona Pons, Raúl Gracia Tinedo, Albert Cañadilla-Domingo, Xavier Roca-Canals, Pedro García López]
   venue: SIGMOD
   year: 2026
-  category: benchmark
+  category: characterization
   tags: [serverless]
   url: https://doi.org/10.1145/3769769
   code: https://github.com/neardata-eu/serverless-vdb
@@ -394,7 +394,7 @@
   authors: [Xiaoliang Xu, Haonan Dai, Can Li, Mengzhao Wang, Qiang Yue]
   venue: SIGMOD
   year: 2026
-  category: benchmark
+  category: characterization
   tags: [graph]
   url: https://doi.org/10.1145/3802120
   code: https://github.com/H40NaN/GraphANNS-Hubness
@@ -464,8 +464,7 @@
   authors: [Jiadong Xie, Yingfan Liu, Jeffrey Xu Yu]
   venue: VLDB
   year: 2026
-  category: benchmark
-  tags: [survey]
+  category: survey
   url: https://www.vldb.org/pvldb/vol19/p4893-xie.pdf
   pdf: https://www.vldb.org/pvldb/vol19/p4893-xie.pdf
   source: dblp
@@ -645,7 +644,7 @@
   authors: [Liang Li, Shufeng Gong, Yanan Yang, Yiduo Wang, Jie Wu]
   venue: VLDB
   year: 2026
-  category: benchmark
+  category: characterization
   tags: [disk]
   url: https://www.vldb.org/pvldb/vol19/p1484-li.pdf
   pdf: https://www.vldb.org/pvldb/vol19/p1484-li.pdf
@@ -838,7 +837,7 @@
   authors: [Cheng Zou, S. Yang, C. Nie, et al.]
   venue: ISCA
   year: 2026
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [near-memory, early-termination, graph]
   url: https://doi.org/10.1109/ISCA66397.2026.00105
   arxiv: https://arxiv.org/abs/2605.21952
@@ -849,7 +848,7 @@
   authors: [Chang Eun Song, Sumukh Pinge, Tianqi Zhang, et al.]
   venue: MICRO
   year: 2026
-  category: accelerator
+  category: fpga-in-storage
   tags: [in-storage, in-flash, ivf, rag]
   arxiv: https://arxiv.org/abs/2607.17538
   status: accepted
@@ -860,7 +859,7 @@
   authors: [Rui Meng, Yonghao Chen, Jiaxiang Zou, et al.]
   venue: MICRO
   year: 2026
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [near-memory, graph]
   status: accepted
   note: Listed in the MICRO 2026 program (Session 9B).
@@ -870,7 +869,7 @@
   authors: [Myoungjun Chun, et al.]
   venue: MICRO
   year: 2026
-  category: accelerator
+  category: fpga-in-storage
   tags: [in-storage, in-flash]
   status: accepted
   note: Listed in the MICRO 2026 program (Session 4A).
@@ -880,7 +879,7 @@
   authors: [Hyunjin Kim, Juchan Lee, Inseong Choi, et al.]
   venue: MICRO
   year: 2026
-  category: accelerator
+  category: fpga-in-storage
   tags: [in-flash]
   status: accepted
   note: Listed in the MICRO 2026 program (Session 9B).
@@ -901,7 +900,7 @@
   authors: [Sitian Chen, Yusen Li, Yao Chen, et al.]
   venue: SC
   year: 2026
-  category: accelerator
+  category: domain-specific-accelerator
   tags: [pim, graph, quantization, billion-scale]
   arxiv: https://arxiv.org/abs/2605.25522
   code: https://github.com/steam009/PIMCQG

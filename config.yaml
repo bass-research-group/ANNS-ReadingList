@@ -13,7 +13,7 @@ readme_years: 2
 #           for multi-volume proceedings. SIGMOD (PACMMOD) has no fixed year-to-issue mapping, so it
 #           relies on csconf-papers.
 #   arxiv:  spellings searched for in arXiv comments ("accepted to <spelling> <year>").
-#   official: accepted-paper pages on the conference site ("{year}" is substituted). Titles there that match
+#   official: accepted-paper or program pages on the conference site ("{year}" and "{yy}" are substituted). Titles there that match
 #           the `strong` keywords are added as accepted papers before DBLP indexes them.
 venues:
   SOSP:   {csconf: SOSP,   dblp: ["conf/sosp/sosp{year}"],         arxiv: [SOSP]}
@@ -25,7 +25,7 @@ venues:
   ISCA:   {dblp: ["conf/isca/isca{year}"],   arxiv: [ISCA]}
   MICRO:  {dblp: ["conf/micro/micro{year}"], arxiv: [MICRO]}
   HPCA:   {dblp: ["conf/hpca/hpca{year}"],   arxiv: [HPCA]}
-  SC:     {dblp: ["conf/sc/sc{year}"],       arxiv: [SC, Supercomputing]}
+  SC:     {dblp: ["conf/sc/sc{year}"],       arxiv: [SC, Supercomputing], official: ["https://sc{yy}.conference-program.com/"]}
   PPoPP:  {dblp: ["conf/ppopp/ppopp{year}"], arxiv: [PPoPP]}
 
 # Title keywords (case-insensitive regexes).

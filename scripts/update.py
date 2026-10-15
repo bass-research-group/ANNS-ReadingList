@@ -169,9 +169,17 @@ def parse_official_page(html, venue, year, cfg):
     for i, line in enumerate(lines):
         if not (15 <= len(line) <= 300) or relevance(line, cfg) != "strong":
             continue
+        if line.endswith(".") or re.match(r"(Description|Abstract|Session)\b", line):  # prose, not a title
+            continue
         nxt = lines[i + 1] if i + 1 < len(lines) else ""
         authors = []
-        if re.search(r"[,;]", nxt) or re.search(r"\(.+\)\*?$", nxt):
+        if re.match(r"Authors?(?=[A-Z])", nxt):
+            # Linklings programs (SC, ...) print "AuthorsFirst LastFirst Last": split at
+            # lower-to-upper case boundaries.
+            nxt = re.sub(r"^Authors?", "", nxt)
+            authors = [a.strip() for a in re.split(r"(?<=[a-z\u00df-\u00ff])(?=[A-Z\u00c0-\u00de])", nxt)
+                       if a.strip()]
+        elif re.search(r"[,;]", nxt) or re.search(r"\(.+\)\*?$", nxt):
             if relevance(nxt, cfg) is None:
                 while re.search(r"\([^()]*\)", nxt):  # affiliations, possibly nested
                     nxt = re.sub(r"\([^()]*\)", "", nxt)
@@ -220,7 +228,7 @@ def collect(cfg, years, fetcher, skip, log):
                 for year in years:
                     if year < current_year():
                         continue
-                    url = url_t.replace("{year}", str(year))
+                    url = url_t.replace("{year}", str(year)).replace("{yy}", str(year)[2:])
                     try:
                         html = fetcher.get(url, missing_ok=True)
                         got = parse_official_page(html, venue, year, cfg) if html else []

@@ -50,10 +50,9 @@ or artifact, where one exists.
 ## Coverage notes (last checked 2026-10-15)
 
 - **Checked against DBLP**: SOSP, OSDI, ASPLOS, SIGMOD, VLDB, MLSys 2025–2026; HPCA 2025–2026; SC 2025; PPoPP 2025–2026.
-- **Checked from the official programs**: ISCA 2025–2026, MICRO 2025, MICRO 2026 (to appear; some author lists are partial).
-- **Partial**: SC 2026, SIGMOD 2027 and VLDB 2027 (from authors' announcements), late PVLDB vol 19 issues. The official
-  [SIGMOD 2027 accepted-papers page](https://2027.sigmod.org/sigmod_papers.shtml) could not be read from the environment
-  this list was built in; the monthly updater reads it.
+- **Checked from the official programs**: ISCA 2025–2026, MICRO 2025, MICRO 2026 (to appear; some author lists are partial),
+  SC 2026 ([technical program](https://sc26.conference-program.com/)), SIGMOD 2027 rounds 1–2 ([accepted papers](https://2027.sigmod.org/sigmod_papers.shtml)).
+- **Partial**: SIGMOD 2027 (later rounds still to come), VLDB 2027 (from authors' announcements), late PVLDB vol 19 issues.
 - **Not decided yet**: ASPLOS 2027 (no vector-search paper among early acceptances), HPCA 2027, PPoPP 2027, MLSys 2027.
 - SOSP 2025–2026 and ASPLOS 2026 have no paper whose core is vector search.
 
@@ -63,7 +62,7 @@ or artifact, where one exists.
 
 1. [`scripts/update.py`](scripts/update.py) pulls accepted-paper lists from DBLP (through
    [csconf-papers](https://github.com/RealZST/csconf-papers) and the DBLP SPARQL endpoint), reads official accepted-paper pages
-   listed under `official` in `config.yaml` (currently [SIGMOD's](https://2027.sigmod.org/sigmod_papers.shtml)), and searches
+   listed under `official` in `config.yaml` (currently [SIGMOD's](https://2027.sigmod.org/sigmod_papers.shtml) and the [SC program](https://sc26.conference-program.com/)), and searches
    arXiv for preprints whose comments say they were accepted to one of the venues.
    - Papers already listed get missing links filled in. A paper marked *accepted* gets its official link once DBLP has it, and loses the mark.
    - New papers whose titles clearly match (`keywords.strong` in `config.yaml`) are added with a guessed sub-topic and marked *auto-added*.
@@ -91,7 +90,7 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 ## Paper list
 
 <!-- BEGIN GENERATED -->
-**165** papers from 2025 on.
+**166** papers from 2025 on.
 
 | Venue | 2025 | 2026 | 2027 | Total |
 |---|---|---|---|---|
@@ -104,7 +103,7 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 | [ISCA](papers/by-venue/ISCA.md) | 7 | 1 | — | 8 |
 | [MICRO](papers/by-venue/MICRO.md) | 2 | 4 | — | 6 |
 | [HPCA](papers/by-venue/HPCA.md) | 2 | 1 | — | 3 |
-| [SC](papers/by-venue/SC.md) | 2 | 1 | — | 3 |
+| [SC](papers/by-venue/SC.md) | 2 | 2 | — | 4 |
 | [PPoPP](papers/by-venue/PPoPP.md) | 1 | — | — | 1 |
 
 | Sub-topic | 2025 | 2026 | 2027 | Total |
@@ -112,7 +111,7 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 | [Algorithms: ANNS Indexing Algorithms](#anns-indexing-algorithms) | 15 | 28 | 6 | 49 |
 | [Algorithms: Filtered ANNS Algorithms](#filtered-anns-algorithms) | 8 | 10 | 3 | 21 |
 | [Algorithms: Hybrid Search Algorithms](#hybrid-search-algorithms) | 1 | 1 | 1 | 3 |
-| [Systems: GPU-Accelerated ANNS Systems](#gpu-accelerated-anns-systems) | 0 | 12 | 1 | 13 |
+| [Systems: GPU-Accelerated ANNS Systems](#gpu-accelerated-anns-systems) | 0 | 13 | 1 | 14 |
 | [Systems: Out-of-Core ANNS Systems](#out-of-core-anns-systems) | 3 | 4 | 0 | 7 |
 | [Systems: Distributed ANNS Systems](#distributed-anns-systems) | 4 | 4 | 1 | 9 |
 | [Systems: Vector Databases & Other Systems](#vector-databases--other-systems) | 12 | 9 | 4 | 25 |
@@ -301,6 +300,10 @@ _Vector search systems built on GPUs, including CPU-GPU co-processing._
 
 - **VectorLiteRAG: Latency-Aware and Fine-Grained Resource Partitioning for Efficient RAG**<br>Junkyum Kim, Divya Mahajan [[paper]](https://doi.org/10.1109/HPCA68181.2026.11408552) [[arXiv]](https://arxiv.org/abs/2504.08930) [[code]](https://github.com/sitar-lab/VectorLiteRAG-AE) `rag` `ivf`
 
+**SC 2026**
+
+- **RT-HiSS: Ray Tracing Accelerated High-Dimensional Vector Similarity Searches** *(accepted, to appear)*<br>Revanth Reddy Munugala, Michael Gowanlock `exact-search` `rt-cores`<br><sub>SC26 program, session "Scalable Search and Data Analytics for Scientific Discovery" (Nov 18, 2026).</sub>
+
 #### Out-of-Core ANNS Systems
 
 _Indexes larger than DRAM, kept on SSD or disk, or spread across tiered or disaggregated memory._
@@ -449,7 +452,7 @@ _ASICs and processing-in/near-memory (PIM/NDP) designs. GPU software belongs und
 
 **SC 2026**
 
-- **PIMCQG: Co-Designing Billion-Scale Graph-Based Approximate Nearest Neighbor Search for Processing-in-Memory** *(accepted, to appear)*<br>Sitian Chen, Yusen Li, Yao Chen, et al. [[arXiv]](https://arxiv.org/abs/2605.25522) [[code]](https://github.com/steam009/PIMCQG) `pim` `graph` `quantization` `billion-scale`<br><sub>Acceptance per the code README and <a href="https://amelieczhou.github.io/publications.html">author homepage</a>.</sub>
+- **PIMCQG: Co-Designing Billion-Scale Graph-Based Approximate Nearest Neighbor Search for Processing-in-Memory** *(accepted, to appear)*<br>Sitian Chen, Yusen Li, Yao Chen, Minwen Deng, Jintao Meng, Amelie Chi Zhou [[arXiv]](https://arxiv.org/abs/2605.25522) [[code]](https://github.com/steam009/PIMCQG) `pim` `graph` `quantization` `billion-scale`<br><sub>SC26 program, session "Specialized Acceleration and Services for Emerging HPC Workloads" (Nov 19, 2026).</sub>
 
 **ASPLOS 2025**
 

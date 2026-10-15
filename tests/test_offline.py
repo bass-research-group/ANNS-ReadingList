@@ -126,3 +126,11 @@ def test_official_page_real_excerpt():
     assert not any("Jaro-Winkler" in t or "Community Search" in t for t in titles)
     jing = next(r for r in recs if r["title"].startswith("Reverse Neighbor"))
     assert jing["authors"][0] == "Liuchang JING" and len(jing["authors"]) == 5  # nested parentheses removed
+
+
+def test_official_page_linklings_program():
+    """Excerpt of https://sc26.conference-program.com/ (author names run together)."""
+    recs = update.parse_official_page((FIX / "sc26-program-excerpt.txt").read_text(), "SC", 2026, CFG)
+    assert [r["title"][:7] for r in recs] == ["RT-HiSS", "PIMCQG:"]
+    assert recs[0]["authors"] == ["Revanth Reddy Munugala", "Michael Gowanlock"]
+    assert recs[1]["authors"][-1] == "Amelie Chi Zhou" and len(recs[1]["authors"]) == 6

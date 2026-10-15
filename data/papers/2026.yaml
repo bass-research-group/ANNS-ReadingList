@@ -897,7 +897,7 @@
   source: dblp
 
 - title: 'PIMCQG: Co-Designing Billion-Scale Graph-Based Approximate Nearest Neighbor Search for Processing-in-Memory'
-  authors: [Sitian Chen, Yusen Li, Yao Chen, et al.]
+  authors: [Sitian Chen, Yusen Li, Yao Chen, Minwen Deng, Jintao Meng, Amelie Chi Zhou]
   venue: SC
   year: 2026
   category: domain-specific-accelerator
@@ -905,5 +905,15 @@
   arxiv: https://arxiv.org/abs/2605.25522
   code: https://github.com/steam009/PIMCQG
   status: accepted
-  note: Acceptance per the code README and <a href="https://amelieczhou.github.io/publications.html">author homepage</a>.
+  note: SC26 program, session "Specialized Acceleration and Services for Emerging HPC Workloads" (Nov 19, 2026).
   source: preprint
+
+- title: 'RT-HiSS: Ray Tracing Accelerated High-Dimensional Vector Similarity Searches'
+  authors: [Revanth Reddy Munugala, Michael Gowanlock]
+  venue: SC
+  year: 2026
+  category: gpu-system
+  tags: [exact-search, rt-cores]
+  status: accepted
+  note: SC26 program, session "Scalable Search and Data Analytics for Scientific Discovery" (Nov 18, 2026).
+  source: program

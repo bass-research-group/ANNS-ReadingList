@@ -79,3 +79,4 @@ Buoy: Efficient and Effective Cache Replacement for Prefix Caching
 CatKV: Accelerating Position-Independent Caching with Context-Adaptive KV Cache Compression
 DARIC: A Position-Independent KV Cache Reuse System with Distribution-Aware Recomputation
 Adaptive Ensemble Indexing for Temporal Information Retrieval via Learned Cost Models
+MemLLM: End-to-End In-Storage Acceleration of Retrieval-Augmented Generation using Precomputed KV Caches

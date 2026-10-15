@@ -183,7 +183,8 @@ def parse_official_page(html, venue, year, cfg):
             if relevance(nxt, cfg) is None:
                 while re.search(r"\([^()]*\)", nxt):  # affiliations, possibly nested
                     nxt = re.sub(r"\([^()]*\)", "", nxt)
-                parts = re.split(r";", nxt) if ";" in nxt else re.split(r",|\band\b", nxt)
+                # affiliations are gone, so commas and semicolons both separate names
+                parts = re.split(r"[,;]|\band\b", nxt)
                 authors = [a.strip(" *") for a in parts if a.strip(" *")]
         out.append({"title": clean_title(line), "authors": authors or ["(see program)"],
                     "venue": venue, "year": year, "status": "accepted", "source": "program",
@@ -228,7 +229,7 @@ def collect(cfg, years, fetcher, skip, log):
                 for year in years:
                     if year < current_year():
                         continue
-                    url = url_t.replace("{year}", str(year)).replace("{yy}", str(year)[2:])
+                    url = expand(url_t.replace("{yy}", str(year)[2:]), year)
                     try:
                         html = fetcher.get(url, missing_ok=True)
                         got = parse_official_page(html, venue, year, cfg) if html else []

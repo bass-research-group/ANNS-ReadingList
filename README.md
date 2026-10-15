@@ -50,7 +50,7 @@ or artifact, where one exists.
 ## Coverage notes (last checked 2026-10-15)
 
 - **Checked against DBLP**: SOSP, OSDI, ASPLOS, SIGMOD, VLDB, MLSys 2025–2026; HPCA 2025–2026; SC 2025; PPoPP 2025–2026.
-- **Checked from the official programs**: ISCA 2025–2026, MICRO 2025, MICRO 2026 (to appear; some author lists are partial),
+- **Checked from the official programs**: ISCA 2025–2026, MICRO 2025, MICRO 2026 ([program](https://www.microarch.org/micro59/program/)),
   SC 2026 ([technical program](https://sc26.conference-program.com/)), SIGMOD 2027 rounds 1–2 ([accepted papers](https://2027.sigmod.org/sigmod_papers.shtml)).
 - **Partial**: SIGMOD 2027 (later rounds still to come), VLDB 2027 (from authors' announcements), late PVLDB vol 19 issues.
 - **Not decided yet**: ASPLOS 2027 (no vector-search paper among early acceptances), HPCA 2027, PPoPP 2027, MLSys 2027.
@@ -62,7 +62,7 @@ or artifact, where one exists.
 
 1. [`scripts/update.py`](scripts/update.py) pulls accepted-paper lists from DBLP (through
    [csconf-papers](https://github.com/RealZST/csconf-papers) and the DBLP SPARQL endpoint), reads official accepted-paper pages
-   listed under `official` in `config.yaml` (currently [SIGMOD's](https://2027.sigmod.org/sigmod_papers.shtml) and the [SC program](https://sc26.conference-program.com/)), and searches
+   listed under `official` in `config.yaml` (currently [SIGMOD's](https://2027.sigmod.org/sigmod_papers.shtml) the [SC program](https://sc26.conference-program.com/) and the [MICRO program](https://www.microarch.org/micro59/program/)), and searches
    arXiv for preprints whose comments say they were accepted to one of the venues.
    - Papers already listed get missing links filled in. A paper marked *accepted* gets its official link once DBLP has it, and loses the mark.
    - New papers whose titles clearly match (`keywords.strong` in `config.yaml`) are added with a guessed sub-topic and marked *auto-added*.
@@ -90,7 +90,7 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 ## Paper list
 
 <!-- BEGIN GENERATED -->
-**166** papers from 2025 on.
+**167** papers from 2025 on.
 
 | Venue | 2025 | 2026 | 2027 | Total |
 |---|---|---|---|---|
@@ -101,7 +101,7 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 | [VLDB](papers/by-venue/VLDB.md) | 26 | 33 | 5 | 64 |
 | [MLSys](papers/by-venue/MLSys.md) | — | 3 | — | 3 |
 | [ISCA](papers/by-venue/ISCA.md) | 7 | 1 | — | 8 |
-| [MICRO](papers/by-venue/MICRO.md) | 2 | 4 | — | 6 |
+| [MICRO](papers/by-venue/MICRO.md) | 2 | 5 | — | 7 |
 | [HPCA](papers/by-venue/HPCA.md) | 2 | 1 | — | 3 |
 | [SC](papers/by-venue/SC.md) | 2 | 2 | — | 4 |
 | [PPoPP](papers/by-venue/PPoPP.md) | 1 | — | — | 1 |
@@ -111,7 +111,7 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 | [Algorithms: ANNS Indexing Algorithms](#anns-indexing-algorithms) | 15 | 28 | 6 | 49 |
 | [Algorithms: Filtered ANNS Algorithms](#filtered-anns-algorithms) | 8 | 10 | 3 | 21 |
 | [Algorithms: Hybrid Search Algorithms](#hybrid-search-algorithms) | 1 | 1 | 1 | 3 |
-| [Systems: GPU-Accelerated ANNS Systems](#gpu-accelerated-anns-systems) | 0 | 13 | 1 | 14 |
+| [Systems: GPU-Accelerated ANNS Systems](#gpu-accelerated-anns-systems) | 0 | 14 | 1 | 15 |
 | [Systems: Out-of-Core ANNS Systems](#out-of-core-anns-systems) | 3 | 4 | 0 | 7 |
 | [Systems: Distributed ANNS Systems](#distributed-anns-systems) | 4 | 4 | 1 | 9 |
 | [Systems: Vector Databases & Other Systems](#vector-databases--other-systems) | 12 | 9 | 4 | 25 |
@@ -296,6 +296,10 @@ _Vector search systems built on GPUs, including CPU-GPU co-processing._
 
 - **TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval**<br>Chien-Yu Lin, Keisuke Kamahori, Yiyu Liu, Xiaoxiang Shi, Madhav Kashyap, Yile Gu, et al. [[paper]](https://proceedings.mlsys.org/paper_files/paper/2026/hash/7fd522b89ac21009b7bbe7560a9a5add-Abstract-Conference.html) [[pdf]](https://proceedings.mlsys.org/paper_files/paper/2026/file/7fd522b89ac21009b7bbe7560a9a5add-Paper-Conference.pdf) [[code]](https://github.com/uw-syfi/TeleRAG) `rag`
 
+**MICRO 2026**
+
+- **AMG: AMX–GPU Cooperative Acceleration of Billion-Scale ANNS via GEMM Reformulation** *(accepted, to appear)*<br>Minho Kim, Houxiang Ji, Hwanjun Lee, Jaeyoung Kang, Sungju Kim, Hyunkyun Shin, et al. `amx` `billion-scale` `cpu-gpu`<br><sub>MICRO 2026 program (Day 1, Nov 2, 2026).</sub>
+
 **HPCA 2026**
 
 - **VectorLiteRAG: Latency-Aware and Fine-Grained Resource Partitioning for Efficient RAG**<br>Junkyum Kim, Divya Mahajan [[paper]](https://doi.org/10.1109/HPCA68181.2026.11408552) [[arXiv]](https://arxiv.org/abs/2504.08930) [[code]](https://github.com/sitar-lab/VectorLiteRAG-AE) `rag` `ivf`
@@ -423,9 +427,9 @@ _Vector search on FPGAs and inside storage devices (computational SSDs, in-flash
 
 **MICRO 2026**
 
-- **D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation** *(accepted, to appear)*<br>Chang Eun Song, Sumukh Pinge, Tianqi Zhang, et al. [[arXiv]](https://arxiv.org/abs/2607.17538) `in-storage` `in-flash` `ivf` `rag`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
-- **NiF: Hybrid In-Flash and In-Storage Acceleration for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Myoungjun Chun, et al. `in-storage` `in-flash`<br><sub>Listed in the MICRO 2026 program (Session 4A).</sub>
-- **WiFlash: Wordline-Parallel Approximate Nearest Neighbor Search Inside Flash Cell Array** *(accepted, to appear)*<br>Hyunjin Kim, Juchan Lee, Inseong Choi, et al. `in-flash`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
+- **D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation** *(accepted, to appear)*<br>Chang Eun Song, Sumukh Pinge, Tianqi Zhang, Sung Eun Kim, Tajana Rosing, Mingu Kang [[arXiv]](https://arxiv.org/abs/2607.17538) `in-storage` `in-flash` `ivf` `rag`<br><sub>MICRO 2026 program (Day 3, Nov 4, 2026).</sub>
+- **NiF: Hybrid In-Flash and In-Storage Acceleration for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Myoungjun Chun, Jaeyong Lee, Gwuiin Kim, Minhyeong Kim, Inhyuk Choi, Myungsuk Kim, et al. `in-storage` `in-flash`<br><sub>MICRO 2026 program (Day 2, Nov 3, 2026).</sub>
+- **WiFlash: Wordline-Parallel Approximate Nearest Neighbor Search Inside Flash Cell Array** *(accepted, to appear)*<br>Hyunjin Kim, Juchan Lee, Inseong Choi, Jinho Lee, Jae-Joon Kim `in-flash`<br><sub>MICRO 2026 program (Day 3, Nov 4, 2026).</sub>
 
 **VLDB 2025**
 
@@ -448,7 +452,7 @@ _ASICs and processing-in/near-memory (PIM/NDP) designs. GPU software belongs und
 
 **MICRO 2026**
 
-- **MFNNS: A Multiplier-Free Near-Memory Accelerator for Graph-based ANNS** *(accepted, to appear)*<br>Rui Meng, Yonghao Chen, Jiaxiang Zou, et al. `near-memory` `graph`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
+- **MFNNS: A Multiplier-Free Near-Memory Accelerator for Graph-based ANNS** *(accepted, to appear)*<br>Rui Meng, Yonghao Chen, Jiaxiang Zou, Jingyu Guo, Chenyu Zhang, Xinyu Chen `near-memory` `graph`<br><sub>MICRO 2026 program (Day 3, Nov 4, 2026).</sub>
 
 **SC 2026**
 

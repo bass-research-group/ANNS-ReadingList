@@ -134,3 +134,13 @@ def test_official_page_linklings_program():
     assert [r["title"][:7] for r in recs] == ["RT-HiSS", "PIMCQG:"]
     assert recs[0]["authors"] == ["Revanth Reddy Munugala", "Michael Gowanlock"]
     assert recs[1]["authors"][-1] == "Amelie Chi Zhou" and len(recs[1]["authors"]) == 6
+
+
+def test_official_page_micro_program():
+    """Excerpt of https://www.microarch.org/micro59/program/ (authors grouped by affiliation)."""
+    recs = update.parse_official_page((FIX / "micro2026-program-excerpt.txt").read_text(), "MICRO", 2026, CFG)
+    assert [r["title"].split(":")[0] for r in recs] == ["AMG", "NiF", "MFNNS", "WiFlash", "D-NOVA"]
+    amg = recs[0]["authors"]
+    assert amg[4:7] == ["Sungju Kim", "Hyunkyun Shin", "Daehoon Kim"] and len(amg) == 8
+    assert recs[-1]["authors"][-1] == "Mingu Kang"  # nested parentheses in the affiliation
+    assert update.expand("https://www.microarch.org/micro{year-1967}/program/", 2026).endswith("micro59/program/")

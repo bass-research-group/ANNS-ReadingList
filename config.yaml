@@ -13,7 +13,7 @@ readme_years: 2
 #           for multi-volume proceedings. SIGMOD (PACMMOD) has no fixed year-to-issue mapping, so it
 #           relies on csconf-papers.
 #   arxiv:  spellings searched for in arXiv comments ("accepted to <spelling> <year>").
-#   official: accepted-paper or program pages on the conference site ("{year}" and "{yy}" are substituted). Titles there that match
+#   official: accepted-paper or program pages on the conference site ("{year}", "{yy}" and offsets such as "{year-1967}" are substituted). Titles there that match
 #           the `strong` keywords are added as accepted papers before DBLP indexes them.
 venues:
   SOSP:   {csconf: SOSP,   dblp: ["conf/sosp/sosp{year}"],         arxiv: [SOSP]}
@@ -23,7 +23,7 @@ venues:
   VLDB:   {csconf: VLDB,   dblp: ["journals/pvldb/pvldb{year-2007}"], arxiv: [VLDB, PVLDB]}
   MLSys:  {csconf: MLSys,  dblp: ["conf/mlsys/mlsys{year}"],       arxiv: [MLSys]}
   ISCA:   {dblp: ["conf/isca/isca{year}"],   arxiv: [ISCA]}
-  MICRO:  {dblp: ["conf/micro/micro{year}"], arxiv: [MICRO]}
+  MICRO:  {dblp: ["conf/micro/micro{year}"], arxiv: [MICRO], official: ["https://www.microarch.org/micro{year-1967}/program/"]}
   HPCA:   {dblp: ["conf/hpca/hpca{year}"],   arxiv: [HPCA]}
   SC:     {dblp: ["conf/sc/sc{year}"],       arxiv: [SC, Supercomputing], official: ["https://sc{yy}.conference-program.com/"]}
   PPoPP:  {dblp: ["conf/ppopp/ppopp{year}"], arxiv: [PPoPP]}

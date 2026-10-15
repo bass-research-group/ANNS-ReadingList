@@ -1,0 +1,67 @@
+name: Update reading list
+
+on:
+  schedule:
+    # 04:17 UTC on the 2nd of each month, a day after csconf-papers refreshes its DBLP lists.
+    - cron: "17 4 2 * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["data/**", "config.yaml", "scripts/**", "README.md"]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: update-reading-list
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Run offline tests
+        run: python -m pytest -q
+
+      # Fetch new papers and links. Skipped on push events, which only re-render.
+      - name: Find new papers and links
+        id: fetch
+        if: github.event_name != 'push'
+        run: python scripts/update.py
+        continue-on-error: true
+
+      # Re-render the README, per-venue pages and archive. Years older than
+      # `readme_years` (config.yaml) move from the README to archive/<year>.md.
+      - name: Render pages
+        run: python scripts/build.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data papers archive README.md
+          git diff --staged --quiet || git commit -m "Update reading list $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Open an issue if fetching failed
+        if: steps.fetch.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Reading-list update failed on ${new Date().toISOString().slice(0, 10)}`,
+              body: `scripts/update.py failed. Whatever it fetched before failing was still committed.\n\nRun log: ${run}\n\nUsually a transient DBLP/arXiv outage or rate limit: re-run the workflow.`,
+            });

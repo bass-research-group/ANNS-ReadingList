@@ -1,0 +1,68 @@
+# Titles reviewed and judged out of scope (not ANNS / vector search as the core).
+# scripts/find_candidates.py skips these. One title per line.
+HedraRAG: Co-Optimizing Generation and Retrieval for Heterogeneous RAG Workflows
+METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation
+DecDEC: A Systems Approach to Advancing Low-Bit LLM Quantization
+MVQ: Towards Efficient DNN Compression and Acceleration with Masked Vector Quantization
+Memento Filter: A Fast, Dynamic, and Robust Range Filter
+Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation
+Automatic Database Configuration Debugging using Retrieval-Augmented Language Models
+SBSC: A fast Self-tuned Bipartite proximity graph-based Spectral Clustering
+Dialogue Benchmark Generation from Knowledge Graphs with Cost-Effective Retrieval-Augmented LLMs
+LEGO-GraphRAG: Modularizing Graph-based Retrieval-Augmented Generation for Design Space Exploration
+Beyond Quacking: Deep Integration of Language Models and RAG into DuckDB
+Diva: Dynamic Range Filter for Var-Length Keys and Queries
+HADES: Range-Filtered Private Aggregation on Public Data
+S^3AND: Efficient Subgraph Similarity Search Under Aggregated Neighbor Difference Semantics
+In-depth Analysis of Graph-based RAG in a Unified Framework
+QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving
+MiLo: Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators
+ADAngel: Accelerating Arbitrary-Precision Quantized LLMs with Adaptive Computing Mapping
+M2XFP: A Metadata-Augmented Microscaling Data Format for Efficient Low-bit Quantization
+LOOPRAG: Enhancing Loop Transformation Optimization with Retrieval-Augmented Large Language Models
+Hourglass: An Adaptive Range Filter with Lightweight Hybrid Encoding
+SEFRQO: A Self-Evolving Fine-Tuned RAG-Based Query Optimizer
+Aeris Filter: A Strongly and Monotonically Adaptive Range Filter
+High-Throughput k Nearest Neighbors Search in Road Networks
+Corrigendum: Attribute Filtering in Approximate Nearest Neighbor Search: An In-depth Experimental Study: [Experiments & Analysis]
+From Prefix Cache to Fusion RAG Cache: Accelerating LLM Inference in Retrieval-Augmented Generation
+Balancing Global and Local: Representative Sampling for Large-Scale Vector Data
+SchemaRAG: A Schema-aware Retrieval-Augmented Generation Framework for Text-to-SQL
+HAMMER: An Automatic RAG Tuning System via Hierarchical Memory-Guided Monte Carlo Tree Search
+Skyline Retrieval meets Set-Cover Chunk Merging: A Cost-Effective RAG-Sketch for Long-Context LLM QA
+GraphContainer: A Unified Platform for Comparing and Debugging Graph RAG Methods
+RT-RkNN: Reverse k Nearest Neighbor Queries as a Graphics Ray Casting Problem
+Graph-Based Retrieval-Augmented Generation: Applications, Challenges, Solutions, and Opportunities
+Error-bounded Point Cloud Compression Using Truncated Octahedron Quantization
+RAGPerf: An End-to-End Benchmarking Framework for Retrieval-Augmented Generation Systems
+PAIL: Efficient kNN Search on Set-Valued Attributes
+QStore: Quantization-Aware Compressed Model Storage
+QA-GraphRAG: Query-Adaptive Plug-and-Play Retrieval Integration for Graph-based Retrieval-Augmented Generation
+MGRAG: Semantic Subgraph Matching and Graph-Aware Caching for Multimodal Retrieval-Augmented Generation
+BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents
+Efficient Banzhaf-Based Data Valuation for k-Nearest Neighbors Classification
+Ontology-Guided Long-Term Agent Memory for Conversational RAG
+MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing
+FP8-Flow-MoE: A Casting-Free FP8 Recipe without Double Quantization Error
+MixLLM: LLM Quantization with Global Mixed-precision between Output-features and Highly-efficient System Design
+CAGE: Curvature-Aware Gradient Estimation For Accurate Quantization-Aware Training
+Kitty: Accurate and Efficient 2-bit KV Cache Quantization with Dynamic Channel-wise Precision Boost
+AixelAsk: A Stepwise-Guided Retrieval and Reasoning Framework for Large Table QA
+CONE: Embeddings for Complex Numerical Data Preserving Unit and Variable Semantics
+Continuous Subgraph Matching via Cost-Model-based Dynamic Vertex Dominance Embeddings
+Drama : Unifying Data Retrieval and Analysis for Open-Domain Analytic Queries
+Fast Indexing for Temporal Information Retrieval
+Retrieve-and-Verify: A Table Context Selection Framework for Accurate Column Annotations
+FeLoG: Scalable and Efficient Distributed Graph Embedding with Feedback Loop Mechanism
+SeDA: Bridging the Gap between Efficient Syntactic and Precise Semantic Search of Similar Passages in Large Text Corpora
+Frugal: Efficient and Economic Embedding Model Training with Commodity GPUs
+SparseTransX: Efficient Training of Translation-Based Knowledge Graph Embeddings Using Sparse Matrix Operations
+AquaPipe: A Quality-Aware Pipeline for Knowledge Retrieval and Large Language Models
+Atom: An Efficient Query Serving System for Embedding-based Knowledge Graph Reasoning with Operator-level Batching
+CARINA: An Efficient CXL-Oriented Embedding Serving System for Recommendation Models
+Deep Overlapping Community Search via Subspace Embedding
+Pneuma: Leveraging LLMs for Tabular Data Representation and Retrieval in an End-to-End System
+Table Overlap Estimation through Graph Embeddings
+Effective and Efficient Attributed Hypergraph Embedding on Nodes and Hyperedges
+Efficient Graph Embedding Generation and Update for Large-Scale Temporal Graph
+GeoBloom: Revisiting Lightweight Models for Geographic Information Retrieval

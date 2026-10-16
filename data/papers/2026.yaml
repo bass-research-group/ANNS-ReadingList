@@ -23,7 +23,7 @@
   authors: [Ziwen Song, Bin Wang, Xiaochun Yang]
   venue: SIGMOD
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   url: https://doi.org/10.1145/3769753
   source: dblp
 
@@ -111,7 +111,7 @@
   authors: [Manos Chatzakis, Yannis Papakonstantinou, Themis Palpanas]
   venue: SIGMOD
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   tags: [early-termination]
   url: https://doi.org/10.1145/3749160
   arxiv: https://arxiv.org/abs/2505.19001
@@ -133,7 +133,7 @@
   authors: [Chao Zhang, Renée J. Miller]
   venue: SIGMOD
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   tags: [graph]
   url: https://doi.org/10.1145/3786639
   arxiv: https://arxiv.org/abs/2512.06636
@@ -144,7 +144,7 @@
   authors: [Zhiyuan Hua, Qiji Mo, Zebin Yao, Lixiao Cui, Xiaoguang Liu, Gang Wang, Zijing Wei, Xinyu Liu, Tianxiao Tang, Shaozhi Liu, Lin Qu]
   venue: SIGMOD
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   tags: [graph]
   url: https://doi.org/10.1145/3769783
   code: https://github.com/yuhuifishash/NGFix
@@ -330,7 +330,7 @@
   authors: [Hao Duan, Yitong Song, Bin Yao, Anqi Liang]
   venue: SIGMOD
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   tags: [graph, tuning]
   url: https://doi.org/10.1145/3749179
   arxiv: https://arxiv.org/abs/2508.17886
@@ -404,7 +404,7 @@
   authors: [Yitong Song, Pengcheng Zhang, Chao Gao, Bin Yao, Kai Wang, Zongyuan Wu, Lin Qu]
   venue: SIGMOD
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   url: https://doi.org/10.1145/3769838
   code: https://github.com/petrizhang/TRIM
   source: dblp
@@ -495,7 +495,7 @@
   authors: [Zeyu Wang, Manos Chatzakis, Qitong Wang, Themis Palpanas, Peng Wang, Wei Wang]
   venue: VLDB
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   tags: [graph, cost-model]
   url: https://www.vldb.org/pvldb/vol19/p3820-wang.pdf
   pdf: https://www.vldb.org/pvldb/vol19/p3820-wang.pdf
@@ -517,7 +517,7 @@
   authors: [Ziqi Yin, Gao Cong, Kai Zeng, Jinwei Zhu, Bin Cui]
   venue: VLDB
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   tags: [large-k]
   url: https://www.vldb.org/pvldb/vol19/p3468-yin.pdf
   pdf: https://www.vldb.org/pvldb/vol19/p3468-yin.pdf
@@ -538,7 +538,7 @@
   authors: [Sonia Horchidan, Fabian Zeiher, Henrik Boström, Paris Carbone]
   venue: VLDB
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   url: https://www.vldb.org/pvldb/vol19/p29-horchidan.pdf
   pdf: https://www.vldb.org/pvldb/vol19/p29-horchidan.pdf
   code: https://github.com/soniahorchidan/conann
@@ -676,7 +676,7 @@
   authors: [Jonghyun Bae, Tae Jun Ham, Alan Li, Supawit Chockchowwat, Yannis Papakonstantinou]
   venue: VLDB
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   tags: [ivf, tuning]
   url: https://www.vldb.org/pvldb/vol19/p3091-chockchowwat.pdf
   pdf: https://www.vldb.org/pvldb/vol19/p3091-chockchowwat.pdf
@@ -827,7 +827,7 @@
   authors: [Jianan Lu, Asaf Cidon, Michael Freedman]
   venue: MLSys
   year: 2026
-  category: indexing-algorithm
+  category: search-optimization
   tags: [early-termination]
   url: https://proceedings.mlsys.org/paper_files/paper/2026/hash/78834433edc3291f4c6cbbd2759324db-Abstract-Conference.html
   pdf: https://proceedings.mlsys.org/paper_files/paper/2026/file/78834433edc3291f4c6cbbd2759324db-Paper-Conference.pdf

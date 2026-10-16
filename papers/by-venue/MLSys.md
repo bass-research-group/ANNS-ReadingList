@@ -4,7 +4,7 @@ ANNS and vector search papers at MLSys, all years. Generated from [`data/papers/
 
 ## MLSys 2026
 
-### ANNS Indexing Algorithms
+### ANNS Search Optimization & Tuning
 
 - **When Enough is Enough: Rank-Aware Early Termination for Vector Search**<br>Jianan Lu, Asaf Cidon, Michael Freedman [[paper]](https://proceedings.mlsys.org/paper_files/paper/2026/hash/78834433edc3291f4c6cbbd2759324db-Abstract-Conference.html) [[pdf]](https://proceedings.mlsys.org/paper_files/paper/2026/file/78834433edc3291f4c6cbbd2759324db-Paper-Conference.pdf) `early-termination`
 

@@ -66,7 +66,12 @@ categories:
   indexing-algorithm:
     group: Algorithms
     name: ANNS Indexing Algorithms
-    description: Graph, IVF/clustering, tree and hashing indexes; quantization; search, early termination, updates, tuning and theory.
+    description: Index structures (graph, IVF/clustering, tree, hashing), quantization, index construction, updates and merging, and theory.
+  search-optimization:
+    group: Algorithms
+    name: ANNS Search Optimization & Tuning
+    description: Query-time techniques that leave the index unchanged, such as early termination, recall/cost prediction, per-query search budgets, distance-computation pruning, and parameter tuning.
+    rules: ['terminat', 'cost estimat', 'cardinality estimat', 'tuning', 'tuner', 'autotun', 'budget', 'adaptive .*search', 'distance comput', 'distance comparison', 'pruning', 'conformal', 'hardness', '\brecall\b']
   filtered-algorithm:
     group: Algorithms
     name: Filtered ANNS Algorithms
@@ -124,4 +129,4 @@ categories:
     rules: ['survey', 'tutorial', 'state-of-the-art and', 'research challenges', 'advances (of|in)', 'overview']
 
 # Order in which the auto-classifier tries the categories' rules.
-classify_order: [survey, characterization, benchmark, fpga-in-storage, domain-specific-accelerator, gpu-system, distributed-system, out-of-core-system, filtered-algorithm, hybrid-algorithm, other-system]
+classify_order: [survey, characterization, benchmark, fpga-in-storage, domain-specific-accelerator, gpu-system, distributed-system, out-of-core-system, filtered-algorithm, hybrid-algorithm, search-optimization, other-system]

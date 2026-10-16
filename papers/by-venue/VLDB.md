@@ -4,10 +4,6 @@ ANNS and vector search papers at VLDB, all years. Generated from [`data/papers/`
 
 ## VLDB 2027
 
-### ANNS Indexing Algorithms
-
-- **HNSecW: A Logarithmic-Time MPC Protocol for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Fahong Zhang, Weijie Jin, Lixu Wang, et al. `privacy` `mpc` `graph`
-
 ### Filtered ANNS Algorithms
 
 - **VectorMaton: Efficient Vector Search with Pattern Constraints via an Enhanced Suffix Automaton** *(accepted, to appear)*<br>Haoxuan Xie, Siqiang Luo [[arXiv]](https://arxiv.org/abs/2603.01525) [[code]](https://github.com/ForwardStar/VectorMaton)
@@ -19,6 +15,7 @@ ANNS and vector search papers at VLDB, all years. Generated from [`data/papers/`
 ### Vector Databases & Other Systems
 
 - **Can You Trust the Vectors in Your Vector Database? Black-Hole Attack from Embedding Space Defects** *(accepted, to appear)*<br>Hanxi Li, Jiale Lao, Zhengmao Ye, et al. [[arXiv]](https://arxiv.org/abs/2604.05480) [[code]](https://github.com/hanxi19/Black_Hole_Attack_for_Vector_Database) `security` `hubness`
+- **HNSecW: A Logarithmic-Time MPC Protocol for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Fahong Zhang, Weijie Jin, Lixu Wang, et al. `privacy` `mpc` `graph`
 
 ### Benchmarks
 
@@ -29,15 +26,18 @@ ANNS and vector search papers at VLDB, all years. Generated from [`data/papers/`
 ### ANNS Indexing Algorithms
 
 - **A Topology-Aware Localized Update Strategy for Graph-Based ANN Index**<br>Song Yu, Shengyuan Lin, Shufeng Gong, Yongqing Xie, Ruicheng Liu, Yijie Zhou, et al. [[paper]](https://www.vldb.org/pvldb/vol19/p495-yu.pdf) [[code]](https://github.com/iDC-NEU/Greator) `graph` `dynamic`
-- **ANNiE: A Learned Query Cost Estimator for Graph-Based Approximate Nearest Neighbor Search**<br>Zeyu Wang, Manos Chatzakis, Qitong Wang, Themis Palpanas, Peng Wang, Wei Wang [[paper]](https://www.vldb.org/pvldb/vol19/p3820-wang.pdf) [[code]](https://github.com/CaucherWang/ANNiE) `graph` `cost-model`
-- **BBC: Improving Large-𝑘 Approximate Nearest Neighbor Search with a Bucket-based Result Collector**<br>Ziqi Yin, Gao Cong, Kai Zeng, Jinwei Zhu, Bin Cui [[paper]](https://www.vldb.org/pvldb/vol19/p3468-yin.pdf) [[code]](https://github.com/Heisenberg-Yin/BBC) `large-k`
-- **ConANN: Conformal Approximate Nearest Neighbor Search**<br>Sonia Horchidan, Fabian Zeiher, Henrik Boström, Paris Carbone [[paper]](https://www.vldb.org/pvldb/vol19/p29-horchidan.pdf) [[code]](https://github.com/soniahorchidan/conann)
 - **CONDA: A Connectivity-Aware Dynamic Index for Approximate Nearest Neighbor Search over Evolving Data**<br>Darae Lee, Min-Soo Kim [[paper]](https://www.vldb.org/pvldb/vol19/p3357-lee.pdf) [[code]](https://github.com/darae-lee/CONDA) `dynamic` `graph`
 - **HEXA: A Disjoint-Subgraph-Based Indexing Framework for Approximate Nearest Neighbor Search at Billion Scale**<br>Yifei Xu, Yanyan Shen, Youmin Chen, Linpeng Huang [[paper]](https://www.vldb.org/pvldb/vol19/p2922-shen.pdf) `graph` `billion-scale`
 - **JHQ: Johnson-Lindenstrauss Enhanced Hierarchical Quantization for High-Dimensional Approximate Nearest Neighbor Search**<br>Jiabao Han, Mengxuan Zhang, Goce Trajcevski [[paper]](https://www.vldb.org/pvldb/vol19/p1530-han.pdf) [[code]](https://github.com/ANU-DB-Mengxuan-Group/VLDB26-JHQ) `quantization`
-- **QBAT: Model-based Query Budget Autotuner for Clustering-based Approximate Nearest Neighbor Search**<br>Jonghyun Bae, Tae Jun Ham, Alan Li, Supawit Chockchowwat, Yannis Papakonstantinou [[paper]](https://www.vldb.org/pvldb/vol19/p3091-chockchowwat.pdf) `ivf` `tuning`
 - **Quantization Meets Projection: A Happy Marriage for Approximate k-Nearest Neighbor Search**<br>Mingyu Yang, Liuchang Jing, Wentao Li, Wei Wang [[paper]](https://www.vldb.org/pvldb/vol19/p1240-yang.pdf) [[code]](https://github.com/mingyu-hkustgz/RESQ) `quantization`
 - **Sparse Neighborhood Graph-Based Approximate Nearest Neighbor Search Revisited: Theoretical Analysis and Optimization**<br>Xinran Ma, Zhaoqi Zhou, Chuan Zhou, Zaijiu Shang, Guoliang Li, Zhiming Ma [[paper]](https://www.vldb.org/pvldb/vol19/p2817-zhou.pdf) [[code]](https://github.com/maxila320/OPT-SNG) `graph` `theory`
+
+### ANNS Search Optimization & Tuning
+
+- **ANNiE: A Learned Query Cost Estimator for Graph-Based Approximate Nearest Neighbor Search**<br>Zeyu Wang, Manos Chatzakis, Qitong Wang, Themis Palpanas, Peng Wang, Wei Wang [[paper]](https://www.vldb.org/pvldb/vol19/p3820-wang.pdf) [[code]](https://github.com/CaucherWang/ANNiE) `graph` `cost-model`
+- **BBC: Improving Large-𝑘 Approximate Nearest Neighbor Search with a Bucket-based Result Collector**<br>Ziqi Yin, Gao Cong, Kai Zeng, Jinwei Zhu, Bin Cui [[paper]](https://www.vldb.org/pvldb/vol19/p3468-yin.pdf) [[code]](https://github.com/Heisenberg-Yin/BBC) `large-k`
+- **ConANN: Conformal Approximate Nearest Neighbor Search**<br>Sonia Horchidan, Fabian Zeiher, Henrik Boström, Paris Carbone [[paper]](https://www.vldb.org/pvldb/vol19/p29-horchidan.pdf) [[code]](https://github.com/soniahorchidan/conann)
+- **QBAT: Model-based Query Budget Autotuner for Clustering-based Approximate Nearest Neighbor Search**<br>Jonghyun Bae, Tae Jun Ham, Alan Li, Supawit Chockchowwat, Yannis Papakonstantinou [[paper]](https://www.vldb.org/pvldb/vol19/p3091-chockchowwat.pdf) `ivf` `tuning`
 
 ### Filtered ANNS Algorithms
 
@@ -88,14 +88,17 @@ ANNS and vector search papers at VLDB, all years. Generated from [`data/papers/`
 ### ANNS Indexing Algorithms
 
 - **Accelerating Approximate Nearest Neighbor Search in Hierarchical Graphs: Efficient Level Navigation with Shortcuts**<br>Zengyang Gong, Yuxiang Zeng, Lei Chen [[paper]](https://www.vldb.org/pvldb/vol18/p3518-chen.pdf) `graph`
-- **Cardinality Estimation for Similarity Search on High-Dimensional Data Objects: The Impact of Reference Objects**<br>Hai Lan, Shixun Huang, Zhifeng Bao, Renata Borovica-Gajic [[paper]](https://www.vldb.org/pvldb/vol18/p544-bao.pdf) [[code]](https://github.com/rmitbggroup/CE4HD)
 - **Cracking Vector Search Indexes**<br>Vasilis Mageirakos, Bowen Wu, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p3951-mageirakos.pdf) [[code]](https://github.com/mageirakos/crack-ivf-vldb) `adaptive`
-- **Efficient Data-aware Distance Comparison Operations for High-Dimensional Approximate Nearest Neighbor Search**<br>Liwei Deng, Penghao Chen, Ximu Zeng, Tianfu Wang, Yan Zhao, Kai Zheng [[paper]](https://www.vldb.org/pvldb/vol18/p812-zheng.pdf) [[code]](https://github.com/Ur-Eine/DADE)
 - **GTI: Graph-based Tree Index with Logarithm Updates for Nearest Neighbor Search in High-Dimensional Spaces**<br>Ruiyao Ma, Yifan Zhu, Baihua Zheng, Lu Chen, Congcong Ge, Yunjun Gao [[paper]](https://www.vldb.org/pvldb/vol18/p986-gao.pdf) [[code]](https://github.com/ZJU-DAILY/GTI-Graph-based-Tree-Index) `dynamic`
 - **Maximum Inner Product is Query-Scaled Nearest Neighbor**<br>Tingyang Chen, Cong Fu, Kun Wang, Xiangyu Ke, Yunjun Gao, Wenchao Zhou, et al. [[paper]](https://www.vldb.org/pvldb/vol18/p1770-ke.pdf) [[code]](https://github.com/ZJU-DAILY/PSP) `mips`
 - **Not Small Enough? SegPQ: A Learned Approach to Compress Product Quantization Codebooks**<br>Qiyu Liu, Yanlin Qi, Siyuan Han, Jingshu Peng, Jin Li, Lei Chen [[paper]](https://www.vldb.org/pvldb/vol18/p3730-liu.pdf) [[code]](https://github.com/qyliu-hkust/segpq) `quantization`
 - **Revisiting the Index Construction of Proximity Graph-Based Approximate Nearest Neighbor Search**<br>Shuo Yang, Jiadong Xie, Yingfan Liu, Jeffrey Xu Yu, Xiyue Gao, Qianru Wang, et al. [[paper]](https://www.vldb.org/pvldb/vol18/p1825-liu.pdf) [[code]](https://github.com/xdyangsh/FastKCNA) `graph`
 - **Wolverine: Highly Efficient Monotonic Search Path Repair for Graph-based ANN Index Updates**<br>Dawei Liu, Bolong Zheng, Ziyang Yue, Fuhao Ruan, Xiaofang Zhou, Christian S. Jensen [[paper]](https://www.vldb.org/pvldb/vol18/p2268-zheng.pdf) [[code]](https://github.com/LDW2020/Wolverine) `graph` `dynamic`
+
+### ANNS Search Optimization & Tuning
+
+- **Cardinality Estimation for Similarity Search on High-Dimensional Data Objects: The Impact of Reference Objects**<br>Hai Lan, Shixun Huang, Zhifeng Bao, Renata Borovica-Gajic [[paper]](https://www.vldb.org/pvldb/vol18/p544-bao.pdf) [[code]](https://github.com/rmitbggroup/CE4HD)
+- **Efficient Data-aware Distance Comparison Operations for High-Dimensional Approximate Nearest Neighbor Search**<br>Liwei Deng, Penghao Chen, Ximu Zeng, Tianfu Wang, Yan Zhao, Kai Zheng [[paper]](https://www.vldb.org/pvldb/vol18/p812-zheng.pdf) [[code]](https://github.com/Ur-Eine/DADE)
 
 ### Filtered ANNS Algorithms
 

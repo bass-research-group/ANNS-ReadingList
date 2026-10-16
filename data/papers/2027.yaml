@@ -13,7 +13,7 @@
   authors: [Qiuhao Wang, Zuowei Chen, Xu Yang, Saiyu Qi, Yong Qi]
   venue: SIGMOD
   year: 2027
-  category: indexing-algorithm
+  category: other-system
   tags: [privacy]
   code: https://github.com/meander-wqh/Amora
   status: accepted
@@ -44,7 +44,7 @@
   authors: [Geon Choi, Hoeun Lee, Jaeyoung Do]
   venue: SIGMOD
   year: 2027
-  category: indexing-algorithm
+  category: search-optimization
   tags: [graph, tuning]
   arxiv: https://arxiv.org/abs/2607.04630
   code: https://github.com/AIDASLab/CHAT
@@ -158,7 +158,7 @@
   authors: [Fahong Zhang, Weijie Jin, Lixu Wang, et al.]
   venue: VLDB
   year: 2027
-  category: indexing-algorithm
+  category: other-system
   tags: [privacy, mpc, graph]
   status: accepted
   source: preprint

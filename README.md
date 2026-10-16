@@ -24,7 +24,8 @@ RAG and KV-cache papers are included only when vector retrieval is the core of t
 
 | Group | Sub-topic | What goes there |
 |---|---|---|
-| Algorithms | ANNS Indexing Algorithms | Graph, IVF/clustering, tree and hashing indexes; quantization; search, early termination, updates, tuning, theory |
+| Algorithms | ANNS Indexing Algorithms | Index structures (graph, IVF/clustering, tree, hashing), quantization, index construction, updates and merging, theory |
+| | ANNS Search Optimization & Tuning | Query-time techniques that leave the index unchanged: early termination, recall/cost prediction, per-query search budgets, distance-computation pruning, parameter tuning |
 | | Filtered ANNS Algorithms | Vector search under attribute, label, range or other predicates |
 | | Hybrid Search Algorithms | Vectors combined with other modalities: multi-vector, dense + sparse/keyword, cross-modal |
 | Systems | GPU-Accelerated ANNS Systems | Vector search on GPUs, including CPU-GPU co-processing |
@@ -108,13 +109,14 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 
 | Sub-topic | 2025 | 2026 | 2027 | Total |
 |---|---|---|---|---|
-| [Algorithms: ANNS Indexing Algorithms](#anns-indexing-algorithms) | 15 | 28 | 6 | 49 |
+| [Algorithms: ANNS Indexing Algorithms](#anns-indexing-algorithms) | 13 | 17 | 3 | 33 |
+| [Algorithms: ANNS Search Optimization & Tuning](#anns-search-optimization--tuning) | 2 | 11 | 1 | 14 |
 | [Algorithms: Filtered ANNS Algorithms](#filtered-anns-algorithms) | 8 | 10 | 3 | 21 |
 | [Algorithms: Hybrid Search Algorithms](#hybrid-search-algorithms) | 1 | 1 | 1 | 3 |
 | [Systems: GPU-Accelerated ANNS Systems](#gpu-accelerated-anns-systems) | 0 | 14 | 1 | 15 |
 | [Systems: Out-of-Core ANNS Systems](#out-of-core-anns-systems) | 3 | 4 | 0 | 7 |
 | [Systems: Distributed ANNS Systems](#distributed-anns-systems) | 4 | 4 | 1 | 9 |
-| [Systems: Vector Databases & Other Systems](#vector-databases--other-systems) | 12 | 9 | 4 | 25 |
+| [Systems: Vector Databases & Other Systems](#vector-databases--other-systems) | 12 | 9 | 6 | 27 |
 | [Architecture: FPGA & In-storage Acceleration](#fpga--in-storage-acceleration) | 4 | 3 | 0 | 7 |
 | [Architecture: Domain-specific Accelerators](#domain-specific-accelerators) | 9 | 3 | 0 | 12 |
 | [Experiments & Analysis: Benchmarks](#benchmarks) | 2 | 9 | 1 | 12 |
@@ -125,27 +127,17 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 
 #### ANNS Indexing Algorithms
 
-_Graph, IVF/clustering, tree and hashing indexes; quantization; search, early termination, updates, tuning and theory._
+_Index structures (graph, IVF/clustering, tree, hashing), quantization, index construction, updates and merging, and theory._
 
 
 **SIGMOD 2027**
 
-- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, Saiyu Qi, Yong Qi [[code]](https://github.com/meander-wqh/Amora) `privacy`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
-- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
 - **Hardware-Optimized Quantized Graphs for Fast Similarity Search** *(accepted, to appear)*<br>Xiao Luo, John Paparrizos `graph` `quantization`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 - **RaP: A Redirect-and-Patch Framework for Efficient Dynamic Updates in Graph-Based ANN Indexes** *(accepted, to appear)*<br>Zhoujin Tian, Xi Zhao, Yao Tian, Zhengjun Huang, Xiaofang Zhou `graph` `dynamic`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 - **Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging** *(accepted, to appear)*<br>Liuchang Jing, Mingyu Yang, Lei Li, Jianbin Qin, Wei Wang [[arXiv]](https://arxiv.org/abs/2602.17099) [[code]](https://github.com/JingLiuchang/hnsw-merge) `graph` `merging`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
-**VLDB 2027**
-
-- **HNSecW: A Logarithmic-Time MPC Protocol for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Fahong Zhang, Weijie Jin, Lixu Wang, et al. `privacy` `mpc` `graph`
-
 **SIGMOD 2026**
 
-- **Accelerating High-Dimensional ANN Search via Skipping Redundant Distance Computations**<br>Ziwen Song, Bin Wang, Xiaochun Yang [[paper]](https://doi.org/10.1145/3769753)
-- **DARTH: Declarative Recall Through Early Termination for Approximate Nearest Neighbor Search**<br>Manos Chatzakis, Yannis Papakonstantinou, Themis Palpanas [[paper]](https://doi.org/10.1145/3749160) [[arXiv]](https://arxiv.org/abs/2505.19001) [[code]](https://github.com/MChatzakis/DARTH) `early-termination`
-- **Distribution-Aware Exploration for Adaptive HNSW Search**<br>Chao Zhang, Renée J. Miller [[paper]](https://doi.org/10.1145/3786639) [[arXiv]](https://arxiv.org/abs/2512.06636) [[code]](https://github.com/chaozhang-cs/hnsw-ada-ef) `graph`
-- **Dynamically Detect and Fix Hardness for Efficient Approximate Nearest Neighbor Search**<br>Zhiyuan Hua, Qiji Mo, Zebin Yao, Lixiao Cui, Xiaoguang Liu, Gang Wang, et al. [[paper]](https://doi.org/10.1145/3769783) [[code]](https://github.com/yuhuifishash/NGFix) `graph`
 - **Efficient and Robust Out-Of-Distribution Vector Similarity Search with Cross-Distribution Monotonic Graph**<br>Qiang Yue, Mengzhao Wang, Xiaoliang Xu, Cheng Long, Yuxiang Wang, Jiahui Wang [[paper]](https://doi.org/10.1145/3786643) [[code]](https://github.com/Lsyhprum/CDMG) `graph` `ood`
 - **Efficient Approximate Nearest Neighbor Search via Hemi-Sphere Centroids Graph**<br>Runwen Qiu, Jing Tang [[paper]](https://doi.org/10.1145/3769786) [[code]](https://github.com/QiuRunwen/hscg) `graph`
 - **Efficient Vector Index Merging in Vector Databases**<br>Chenzhe Jin, Yunan Zhang, Jiayi Liu, Jianguo Wang [[paper]](https://doi.org/10.1145/3786645) `merging`
@@ -154,28 +146,18 @@ _Graph, IVF/clustering, tree and hashing indexes; quantization; search, early te
 - **FGIM: a Fast Graph-based Indexes Merging Framework for Approximate Nearest Neighbor Search**<br>Zekai Wu, Jiabao Jin, Peng Cheng, Xiaoyao Zhong, Lei Chen, Yongxin Tong, et al. [[paper]](https://doi.org/10.1145/3786651) [[arXiv]](https://arxiv.org/abs/2603.21710) `graph` `merging`
 - **LM-Tree: A Hybrid Learned Index for Similarity Search in Metric Spaces**<br>Yaqi Wang, Bin Wang, Rui Zhu, Wenli Sun, Xiaochun Yang [[paper]](https://doi.org/10.1145/3786665) `metric-space` `learned`
 - **On Efficient Approximate Aggregate Nearest Neighbor Queries over Learned Representations**<br>Carrie Wang, Sihem Amer-Yahia, Laks V. S. Lakshmanan, Reynold Cheng [[paper]](https://doi.org/10.1145/3786672) [[arXiv]](https://arxiv.org/abs/2502.18803) [[code]](https://github.com/Carrieww/AQNNs)
-- **PGTuner: An Efficient Framework for Automatic and Transferable Configuration Tuning of Proximity Graphs**<br>Hao Duan, Yitong Song, Bin Yao, Anqi Liang [[paper]](https://doi.org/10.1145/3749179) [[arXiv]](https://arxiv.org/abs/2508.17886) [[code]](https://github.com/hao-duan/PGTuner) `graph` `tuning`
 - **RAIRS: Optimizing Redundant Assignment and List Layout for IVF-Based ANN Search**<br>Zehai Yang, Shimin Chen [[paper]](https://doi.org/10.1145/3786687) [[arXiv]](https://arxiv.org/abs/2601.07183) [[code]](https://github.com/schencoding/rairs) `ivf`
 - **SAQ: Pushing the Limits of Vector Quantization through Code Adjustment and Dimension Segmentation**<br>Hui Li, Shiyuan Deng, Xiao Yan, Xiangyu Zhi, James Cheng [[paper]](https://doi.org/10.1145/3769824) [[arXiv]](https://arxiv.org/abs/2509.12086) [[code]](https://github.com/howarlii/SAQ) `quantization`
 - **TaCo: Data-adaptive and Query-aware Subspace Collision for High-dimensional Approximate Nearest Neighbor Search**<br>Jiuqi Wei, Zhenyu Liao, Ruoyu Han, Quanqing Xu, Chuanhui Yang, Themis Palpanas [[paper]](https://doi.org/10.1145/3802118) [[arXiv]](https://arxiv.org/abs/2603.24919) [[code]](https://github.com/WeiJiuQi/TaCo)
-- **TRIM: Accelerating High-Dimensional Vector Similarity Search with Enhanced Triangle-Inequality-Based Pruning**<br>Yitong Song, Pengcheng Zhang, Chao Gao, Bin Yao, Kai Wang, Zongyuan Wu, et al. [[paper]](https://doi.org/10.1145/3769838) [[code]](https://github.com/petrizhang/TRIM)
 
 **VLDB 2026**
 
 - **A Topology-Aware Localized Update Strategy for Graph-Based ANN Index**<br>Song Yu, Shengyuan Lin, Shufeng Gong, Yongqing Xie, Ruicheng Liu, Yijie Zhou, et al. [[paper]](https://www.vldb.org/pvldb/vol19/p495-yu.pdf) [[code]](https://github.com/iDC-NEU/Greator) `graph` `dynamic`
-- **ANNiE: A Learned Query Cost Estimator for Graph-Based Approximate Nearest Neighbor Search**<br>Zeyu Wang, Manos Chatzakis, Qitong Wang, Themis Palpanas, Peng Wang, Wei Wang [[paper]](https://www.vldb.org/pvldb/vol19/p3820-wang.pdf) [[code]](https://github.com/CaucherWang/ANNiE) `graph` `cost-model`
-- **BBC: Improving Large-𝑘 Approximate Nearest Neighbor Search with a Bucket-based Result Collector**<br>Ziqi Yin, Gao Cong, Kai Zeng, Jinwei Zhu, Bin Cui [[paper]](https://www.vldb.org/pvldb/vol19/p3468-yin.pdf) [[code]](https://github.com/Heisenberg-Yin/BBC) `large-k`
-- **ConANN: Conformal Approximate Nearest Neighbor Search**<br>Sonia Horchidan, Fabian Zeiher, Henrik Boström, Paris Carbone [[paper]](https://www.vldb.org/pvldb/vol19/p29-horchidan.pdf) [[code]](https://github.com/soniahorchidan/conann)
 - **CONDA: A Connectivity-Aware Dynamic Index for Approximate Nearest Neighbor Search over Evolving Data**<br>Darae Lee, Min-Soo Kim [[paper]](https://www.vldb.org/pvldb/vol19/p3357-lee.pdf) [[code]](https://github.com/darae-lee/CONDA) `dynamic` `graph`
 - **HEXA: A Disjoint-Subgraph-Based Indexing Framework for Approximate Nearest Neighbor Search at Billion Scale**<br>Yifei Xu, Yanyan Shen, Youmin Chen, Linpeng Huang [[paper]](https://www.vldb.org/pvldb/vol19/p2922-shen.pdf) `graph` `billion-scale`
 - **JHQ: Johnson-Lindenstrauss Enhanced Hierarchical Quantization for High-Dimensional Approximate Nearest Neighbor Search**<br>Jiabao Han, Mengxuan Zhang, Goce Trajcevski [[paper]](https://www.vldb.org/pvldb/vol19/p1530-han.pdf) [[code]](https://github.com/ANU-DB-Mengxuan-Group/VLDB26-JHQ) `quantization`
-- **QBAT: Model-based Query Budget Autotuner for Clustering-based Approximate Nearest Neighbor Search**<br>Jonghyun Bae, Tae Jun Ham, Alan Li, Supawit Chockchowwat, Yannis Papakonstantinou [[paper]](https://www.vldb.org/pvldb/vol19/p3091-chockchowwat.pdf) `ivf` `tuning`
 - **Quantization Meets Projection: A Happy Marriage for Approximate k-Nearest Neighbor Search**<br>Mingyu Yang, Liuchang Jing, Wentao Li, Wei Wang [[paper]](https://www.vldb.org/pvldb/vol19/p1240-yang.pdf) [[code]](https://github.com/mingyu-hkustgz/RESQ) `quantization`
 - **Sparse Neighborhood Graph-Based Approximate Nearest Neighbor Search Revisited: Theoretical Analysis and Optimization**<br>Xinran Ma, Zhaoqi Zhou, Chuan Zhou, Zaijiu Shang, Guoliang Li, Zhiming Ma [[paper]](https://www.vldb.org/pvldb/vol19/p2817-zhou.pdf) [[code]](https://github.com/maxila320/OPT-SNG) `graph` `theory`
-
-**MLSys 2026**
-
-- **When Enough is Enough: Rank-Aware Early Termination for Vector Search**<br>Jianan Lu, Asaf Cidon, Michael Freedman [[paper]](https://proceedings.mlsys.org/paper_files/paper/2026/hash/78834433edc3291f4c6cbbd2759324db-Abstract-Conference.html) [[pdf]](https://proceedings.mlsys.org/paper_files/paper/2026/file/78834433edc3291f4c6cbbd2759324db-Paper-Conference.pdf) `early-termination`
 
 **SIGMOD 2025**
 
@@ -188,9 +170,7 @@ _Graph, IVF/clustering, tree and hashing indexes; quantization; search, early te
 **VLDB 2025**
 
 - **Accelerating Approximate Nearest Neighbor Search in Hierarchical Graphs: Efficient Level Navigation with Shortcuts**<br>Zengyang Gong, Yuxiang Zeng, Lei Chen [[paper]](https://www.vldb.org/pvldb/vol18/p3518-chen.pdf) `graph`
-- **Cardinality Estimation for Similarity Search on High-Dimensional Data Objects: The Impact of Reference Objects**<br>Hai Lan, Shixun Huang, Zhifeng Bao, Renata Borovica-Gajic [[paper]](https://www.vldb.org/pvldb/vol18/p544-bao.pdf) [[code]](https://github.com/rmitbggroup/CE4HD)
 - **Cracking Vector Search Indexes**<br>Vasilis Mageirakos, Bowen Wu, Gustavo Alonso [[paper]](https://www.vldb.org/pvldb/vol18/p3951-mageirakos.pdf) [[code]](https://github.com/mageirakos/crack-ivf-vldb) `adaptive`
-- **Efficient Data-aware Distance Comparison Operations for High-Dimensional Approximate Nearest Neighbor Search**<br>Liwei Deng, Penghao Chen, Ximu Zeng, Tianfu Wang, Yan Zhao, Kai Zheng [[paper]](https://www.vldb.org/pvldb/vol18/p812-zheng.pdf) [[code]](https://github.com/Ur-Eine/DADE)
 - **GTI: Graph-based Tree Index with Logarithm Updates for Nearest Neighbor Search in High-Dimensional Spaces**<br>Ruiyao Ma, Yifan Zhu, Baihua Zheng, Lu Chen, Congcong Ge, Yunjun Gao [[paper]](https://www.vldb.org/pvldb/vol18/p986-gao.pdf) [[code]](https://github.com/ZJU-DAILY/GTI-Graph-based-Tree-Index) `dynamic`
 - **Maximum Inner Product is Query-Scaled Nearest Neighbor**<br>Tingyang Chen, Cong Fu, Kun Wang, Xiangyu Ke, Yunjun Gao, Wenchao Zhou, et al. [[paper]](https://www.vldb.org/pvldb/vol18/p1770-ke.pdf) [[code]](https://github.com/ZJU-DAILY/PSP) `mips`
 - **Not Small Enough? SegPQ: A Learned Approach to Compress Product Quantization Codebooks**<br>Qiyu Liu, Yanlin Qi, Siyuan Han, Jingshu Peng, Jin Li, Lei Chen [[paper]](https://www.vldb.org/pvldb/vol18/p3730-liu.pdf) [[code]](https://github.com/qyliu-hkust/segpq) `quantization`
@@ -200,6 +180,40 @@ _Graph, IVF/clustering, tree and hashing indexes; quantization; search, early te
 **PPoPP 2025**
 
 - **PANNS: Enhancing Graph-based Approximate Nearest Neighbor Search through Recency-aware Construction and Parameterized Search**<br>Xizhe Yin, Chao Gao, Zhijia Zhao, et al. [[paper]](https://doi.org/10.1145/3710848.3710867) `graph`
+
+#### ANNS Search Optimization & Tuning
+
+_Query-time techniques that leave the index unchanged, such as early termination, recall/cost prediction, per-query search budgets, distance-computation pruning, and parameter tuning._
+
+
+**SIGMOD 2027**
+
+- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
+
+**SIGMOD 2026**
+
+- **Accelerating High-Dimensional ANN Search via Skipping Redundant Distance Computations**<br>Ziwen Song, Bin Wang, Xiaochun Yang [[paper]](https://doi.org/10.1145/3769753)
+- **DARTH: Declarative Recall Through Early Termination for Approximate Nearest Neighbor Search**<br>Manos Chatzakis, Yannis Papakonstantinou, Themis Palpanas [[paper]](https://doi.org/10.1145/3749160) [[arXiv]](https://arxiv.org/abs/2505.19001) [[code]](https://github.com/MChatzakis/DARTH) `early-termination`
+- **Distribution-Aware Exploration for Adaptive HNSW Search**<br>Chao Zhang, Renée J. Miller [[paper]](https://doi.org/10.1145/3786639) [[arXiv]](https://arxiv.org/abs/2512.06636) [[code]](https://github.com/chaozhang-cs/hnsw-ada-ef) `graph`
+- **Dynamically Detect and Fix Hardness for Efficient Approximate Nearest Neighbor Search**<br>Zhiyuan Hua, Qiji Mo, Zebin Yao, Lixiao Cui, Xiaoguang Liu, Gang Wang, et al. [[paper]](https://doi.org/10.1145/3769783) [[code]](https://github.com/yuhuifishash/NGFix) `graph`
+- **PGTuner: An Efficient Framework for Automatic and Transferable Configuration Tuning of Proximity Graphs**<br>Hao Duan, Yitong Song, Bin Yao, Anqi Liang [[paper]](https://doi.org/10.1145/3749179) [[arXiv]](https://arxiv.org/abs/2508.17886) [[code]](https://github.com/hao-duan/PGTuner) `graph` `tuning`
+- **TRIM: Accelerating High-Dimensional Vector Similarity Search with Enhanced Triangle-Inequality-Based Pruning**<br>Yitong Song, Pengcheng Zhang, Chao Gao, Bin Yao, Kai Wang, Zongyuan Wu, et al. [[paper]](https://doi.org/10.1145/3769838) [[code]](https://github.com/petrizhang/TRIM)
+
+**VLDB 2026**
+
+- **ANNiE: A Learned Query Cost Estimator for Graph-Based Approximate Nearest Neighbor Search**<br>Zeyu Wang, Manos Chatzakis, Qitong Wang, Themis Palpanas, Peng Wang, Wei Wang [[paper]](https://www.vldb.org/pvldb/vol19/p3820-wang.pdf) [[code]](https://github.com/CaucherWang/ANNiE) `graph` `cost-model`
+- **BBC: Improving Large-𝑘 Approximate Nearest Neighbor Search with a Bucket-based Result Collector**<br>Ziqi Yin, Gao Cong, Kai Zeng, Jinwei Zhu, Bin Cui [[paper]](https://www.vldb.org/pvldb/vol19/p3468-yin.pdf) [[code]](https://github.com/Heisenberg-Yin/BBC) `large-k`
+- **ConANN: Conformal Approximate Nearest Neighbor Search**<br>Sonia Horchidan, Fabian Zeiher, Henrik Boström, Paris Carbone [[paper]](https://www.vldb.org/pvldb/vol19/p29-horchidan.pdf) [[code]](https://github.com/soniahorchidan/conann)
+- **QBAT: Model-based Query Budget Autotuner for Clustering-based Approximate Nearest Neighbor Search**<br>Jonghyun Bae, Tae Jun Ham, Alan Li, Supawit Chockchowwat, Yannis Papakonstantinou [[paper]](https://www.vldb.org/pvldb/vol19/p3091-chockchowwat.pdf) `ivf` `tuning`
+
+**MLSys 2026**
+
+- **When Enough is Enough: Rank-Aware Early Termination for Vector Search**<br>Jianan Lu, Asaf Cidon, Michael Freedman [[paper]](https://proceedings.mlsys.org/paper_files/paper/2026/hash/78834433edc3291f4c6cbbd2759324db-Abstract-Conference.html) [[pdf]](https://proceedings.mlsys.org/paper_files/paper/2026/file/78834433edc3291f4c6cbbd2759324db-Paper-Conference.pdf) `early-termination`
+
+**VLDB 2025**
+
+- **Cardinality Estimation for Similarity Search on High-Dimensional Data Objects: The Impact of Reference Objects**<br>Hai Lan, Shixun Huang, Zhifeng Bao, Renata Borovica-Gajic [[paper]](https://www.vldb.org/pvldb/vol18/p544-bao.pdf) [[code]](https://github.com/rmitbggroup/CE4HD)
+- **Efficient Data-aware Distance Comparison Operations for High-Dimensional Approximate Nearest Neighbor Search**<br>Liwei Deng, Penghao Chen, Ximu Zeng, Tianfu Wang, Yan Zhao, Kai Zheng [[paper]](https://www.vldb.org/pvldb/vol18/p812-zheng.pdf) [[code]](https://github.com/Ur-Eine/DADE)
 
 #### Filtered ANNS Algorithms
 
@@ -368,6 +382,7 @@ _Vector databases and DBMS integration, CPU-efficient engines, privacy and secur
 
 **SIGMOD 2027**
 
+- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, Saiyu Qi, Yong Qi [[code]](https://github.com/meander-wqh/Amora) `privacy`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 - **Catching Inconsistencies in Vector Similarity Retrieval** *(accepted, to appear)*<br>Zixiao Huang, Ruochun Jin, Haotian Wang, Meng Zhang, Yuhua Tang `testing` `vector-db`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 - **Metric Algebra: Embedding-Independence in Vector Databases** *(accepted, to appear)*<br>Tianjian Yang, Yang Cao, Beining Yang, Ziying Chen, Tiejun Ma `embedding-models`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
 - **Phantom Neighbors: Information Leakage and Its Prevention in Access-Controlled Vector Databases** *(accepted, to appear)*<br>Yizheng Zhao `privacy` `access-control`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
@@ -375,6 +390,7 @@ _Vector databases and DBMS integration, CPU-efficient engines, privacy and secur
 **VLDB 2027**
 
 - **Can You Trust the Vectors in Your Vector Database? Black-Hole Attack from Embedding Space Defects** *(accepted, to appear)*<br>Hanxi Li, Jiale Lao, Zhengmao Ye, et al. [[arXiv]](https://arxiv.org/abs/2604.05480) [[code]](https://github.com/hanxi19/Black_Hole_Attack_for_Vector_Database) `security` `hubness`
+- **HNSecW: A Logarithmic-Time MPC Protocol for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Fahong Zhang, Weijie Jin, Lixu Wang, et al. `privacy` `mpc` `graph`
 
 **SIGMOD 2026**
 

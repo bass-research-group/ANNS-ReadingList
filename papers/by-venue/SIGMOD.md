@@ -6,11 +6,13 @@ ANNS and vector search papers at SIGMOD, all years. Generated from [`data/papers
 
 ### ANNS Indexing Algorithms
 
-- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, Saiyu Qi, Yong Qi [[code]](https://github.com/meander-wqh/Amora) `privacy`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
-- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
 - **Hardware-Optimized Quantized Graphs for Fast Similarity Search** *(accepted, to appear)*<br>Xiao Luo, John Paparrizos `graph` `quantization`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 - **RaP: A Redirect-and-Patch Framework for Efficient Dynamic Updates in Graph-Based ANN Indexes** *(accepted, to appear)*<br>Zhoujin Tian, Xi Zhao, Yao Tian, Zhengjun Huang, Xiaofang Zhou `graph` `dynamic`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 - **Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging** *(accepted, to appear)*<br>Liuchang Jing, Mingyu Yang, Lei Li, Jianbin Qin, Wei Wang [[arXiv]](https://arxiv.org/abs/2602.17099) [[code]](https://github.com/JingLiuchang/hnsw-merge) `graph` `merging`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+
+### ANNS Search Optimization & Tuning
+
+- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
 
 ### Filtered ANNS Algorithms
 
@@ -27,6 +29,7 @@ ANNS and vector search papers at SIGMOD, all years. Generated from [`data/papers
 
 ### Vector Databases & Other Systems
 
+- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, Saiyu Qi, Yong Qi [[code]](https://github.com/meander-wqh/Amora) `privacy`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 - **Catching Inconsistencies in Vector Similarity Retrieval** *(accepted, to appear)*<br>Zixiao Huang, Ruochun Jin, Haotian Wang, Meng Zhang, Yuhua Tang `testing` `vector-db`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 - **Metric Algebra: Embedding-Independence in Vector Databases** *(accepted, to appear)*<br>Tianjian Yang, Yang Cao, Beining Yang, Ziying Chen, Tiejun Ma `embedding-models`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
 - **Phantom Neighbors: Information Leakage and Its Prevention in Access-Controlled Vector Databases** *(accepted, to appear)*<br>Yizheng Zhao `privacy` `access-control`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
@@ -35,10 +38,6 @@ ANNS and vector search papers at SIGMOD, all years. Generated from [`data/papers
 
 ### ANNS Indexing Algorithms
 
-- **Accelerating High-Dimensional ANN Search via Skipping Redundant Distance Computations**<br>Ziwen Song, Bin Wang, Xiaochun Yang [[paper]](https://doi.org/10.1145/3769753)
-- **DARTH: Declarative Recall Through Early Termination for Approximate Nearest Neighbor Search**<br>Manos Chatzakis, Yannis Papakonstantinou, Themis Palpanas [[paper]](https://doi.org/10.1145/3749160) [[arXiv]](https://arxiv.org/abs/2505.19001) [[code]](https://github.com/MChatzakis/DARTH) `early-termination`
-- **Distribution-Aware Exploration for Adaptive HNSW Search**<br>Chao Zhang, Renée J. Miller [[paper]](https://doi.org/10.1145/3786639) [[arXiv]](https://arxiv.org/abs/2512.06636) [[code]](https://github.com/chaozhang-cs/hnsw-ada-ef) `graph`
-- **Dynamically Detect and Fix Hardness for Efficient Approximate Nearest Neighbor Search**<br>Zhiyuan Hua, Qiji Mo, Zebin Yao, Lixiao Cui, Xiaoguang Liu, Gang Wang, et al. [[paper]](https://doi.org/10.1145/3769783) [[code]](https://github.com/yuhuifishash/NGFix) `graph`
 - **Efficient and Robust Out-Of-Distribution Vector Similarity Search with Cross-Distribution Monotonic Graph**<br>Qiang Yue, Mengzhao Wang, Xiaoliang Xu, Cheng Long, Yuxiang Wang, Jiahui Wang [[paper]](https://doi.org/10.1145/3786643) [[code]](https://github.com/Lsyhprum/CDMG) `graph` `ood`
 - **Efficient Approximate Nearest Neighbor Search via Hemi-Sphere Centroids Graph**<br>Runwen Qiu, Jing Tang [[paper]](https://doi.org/10.1145/3769786) [[code]](https://github.com/QiuRunwen/hscg) `graph`
 - **Efficient Vector Index Merging in Vector Databases**<br>Chenzhe Jin, Yunan Zhang, Jiayi Liu, Jianguo Wang [[paper]](https://doi.org/10.1145/3786645) `merging`
@@ -47,10 +46,17 @@ ANNS and vector search papers at SIGMOD, all years. Generated from [`data/papers
 - **FGIM: a Fast Graph-based Indexes Merging Framework for Approximate Nearest Neighbor Search**<br>Zekai Wu, Jiabao Jin, Peng Cheng, Xiaoyao Zhong, Lei Chen, Yongxin Tong, et al. [[paper]](https://doi.org/10.1145/3786651) [[arXiv]](https://arxiv.org/abs/2603.21710) `graph` `merging`
 - **LM-Tree: A Hybrid Learned Index for Similarity Search in Metric Spaces**<br>Yaqi Wang, Bin Wang, Rui Zhu, Wenli Sun, Xiaochun Yang [[paper]](https://doi.org/10.1145/3786665) `metric-space` `learned`
 - **On Efficient Approximate Aggregate Nearest Neighbor Queries over Learned Representations**<br>Carrie Wang, Sihem Amer-Yahia, Laks V. S. Lakshmanan, Reynold Cheng [[paper]](https://doi.org/10.1145/3786672) [[arXiv]](https://arxiv.org/abs/2502.18803) [[code]](https://github.com/Carrieww/AQNNs)
-- **PGTuner: An Efficient Framework for Automatic and Transferable Configuration Tuning of Proximity Graphs**<br>Hao Duan, Yitong Song, Bin Yao, Anqi Liang [[paper]](https://doi.org/10.1145/3749179) [[arXiv]](https://arxiv.org/abs/2508.17886) [[code]](https://github.com/hao-duan/PGTuner) `graph` `tuning`
 - **RAIRS: Optimizing Redundant Assignment and List Layout for IVF-Based ANN Search**<br>Zehai Yang, Shimin Chen [[paper]](https://doi.org/10.1145/3786687) [[arXiv]](https://arxiv.org/abs/2601.07183) [[code]](https://github.com/schencoding/rairs) `ivf`
 - **SAQ: Pushing the Limits of Vector Quantization through Code Adjustment and Dimension Segmentation**<br>Hui Li, Shiyuan Deng, Xiao Yan, Xiangyu Zhi, James Cheng [[paper]](https://doi.org/10.1145/3769824) [[arXiv]](https://arxiv.org/abs/2509.12086) [[code]](https://github.com/howarlii/SAQ) `quantization`
 - **TaCo: Data-adaptive and Query-aware Subspace Collision for High-dimensional Approximate Nearest Neighbor Search**<br>Jiuqi Wei, Zhenyu Liao, Ruoyu Han, Quanqing Xu, Chuanhui Yang, Themis Palpanas [[paper]](https://doi.org/10.1145/3802118) [[arXiv]](https://arxiv.org/abs/2603.24919) [[code]](https://github.com/WeiJiuQi/TaCo)
+
+### ANNS Search Optimization & Tuning
+
+- **Accelerating High-Dimensional ANN Search via Skipping Redundant Distance Computations**<br>Ziwen Song, Bin Wang, Xiaochun Yang [[paper]](https://doi.org/10.1145/3769753)
+- **DARTH: Declarative Recall Through Early Termination for Approximate Nearest Neighbor Search**<br>Manos Chatzakis, Yannis Papakonstantinou, Themis Palpanas [[paper]](https://doi.org/10.1145/3749160) [[arXiv]](https://arxiv.org/abs/2505.19001) [[code]](https://github.com/MChatzakis/DARTH) `early-termination`
+- **Distribution-Aware Exploration for Adaptive HNSW Search**<br>Chao Zhang, Renée J. Miller [[paper]](https://doi.org/10.1145/3786639) [[arXiv]](https://arxiv.org/abs/2512.06636) [[code]](https://github.com/chaozhang-cs/hnsw-ada-ef) `graph`
+- **Dynamically Detect and Fix Hardness for Efficient Approximate Nearest Neighbor Search**<br>Zhiyuan Hua, Qiji Mo, Zebin Yao, Lixiao Cui, Xiaoguang Liu, Gang Wang, et al. [[paper]](https://doi.org/10.1145/3769783) [[code]](https://github.com/yuhuifishash/NGFix) `graph`
+- **PGTuner: An Efficient Framework for Automatic and Transferable Configuration Tuning of Proximity Graphs**<br>Hao Duan, Yitong Song, Bin Yao, Anqi Liang [[paper]](https://doi.org/10.1145/3749179) [[arXiv]](https://arxiv.org/abs/2508.17886) [[code]](https://github.com/hao-duan/PGTuner) `graph` `tuning`
 - **TRIM: Accelerating High-Dimensional Vector Similarity Search with Enhanced Triangle-Inequality-Based Pruning**<br>Yitong Song, Pengcheng Zhang, Chao Gao, Bin Yao, Kai Wang, Zongyuan Wu, et al. [[paper]](https://doi.org/10.1145/3769838) [[code]](https://github.com/petrizhang/TRIM)
 
 ### Filtered ANNS Algorithms

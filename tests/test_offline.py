@@ -86,6 +86,9 @@ def test_classifier():
         ("Vector Search on Modern SSDs", "VLDB"): "out-of-core-system",
         ("Range-Filtered Approximate Nearest Neighbor Search", "VLDB"): "filtered-algorithm",
         ("Multi-Vector Retrieval with Graphs", "SIGMOD"): "hybrid-algorithm",
+        ("When Enough is Enough: Rank-Aware Early Termination for Vector Search", "MLSys"): "search-optimization",
+        ("ANNiE: A Learned Query Cost Estimator for Graph-Based ANN Search", "VLDB"): "search-optimization",
+        ("A Topology-Aware Localized Update Strategy for Graph-Based ANN Index", "VLDB"): "indexing-algorithm",
     }
     for (title, venue), want in cases.items():
         assert classify(title, venue, CFG) == want, title

@@ -228,7 +228,7 @@
   authors: [Hai Lan, Shixun Huang, Zhifeng Bao, Renata Borovica-Gajic]
   venue: VLDB
   year: 2025
-  category: indexing-algorithm
+  category: search-optimization
   url: https://www.vldb.org/pvldb/vol18/p544-bao.pdf
   pdf: https://www.vldb.org/pvldb/vol18/p544-bao.pdf
   code: https://github.com/rmitbggroup/CE4HD
@@ -281,7 +281,7 @@
   authors: [Liwei Deng, Penghao Chen, Ximu Zeng, Tianfu Wang, Yan Zhao, Kai Zheng]
   venue: VLDB
   year: 2025
-  category: indexing-algorithm
+  category: search-optimization
   url: https://www.vldb.org/pvldb/vol18/p812-zheng.pdf
   pdf: https://www.vldb.org/pvldb/vol18/p812-zheng.pdf
   code: https://github.com/Ur-Eine/DADE

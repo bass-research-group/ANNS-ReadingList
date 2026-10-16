@@ -50,8 +50,9 @@ or artifact, where one exists.
 ## Coverage notes (last checked 2026-10-15)
 
 - **Checked against DBLP**: SOSP, OSDI, ASPLOS, SIGMOD, VLDB, MLSys 2025–2026; HPCA 2025–2026; SC 2025; PPoPP 2025–2026.
-- **Checked from the official programs**: ISCA 2025–2026, MICRO 2025, MICRO 2026 (to appear; some author lists are partial).
-- **Partial**: SC 2026, SIGMOD 2027 and VLDB 2027 (from authors' announcements), late PVLDB vol 19 issues.
+- **Checked from the official programs**: ISCA 2025–2026, MICRO 2025, MICRO 2026 ([program](https://www.microarch.org/micro59/program/)),
+  SC 2026 ([technical program](https://sc26.conference-program.com/)), SIGMOD 2027 rounds 1–2 ([accepted papers](https://2027.sigmod.org/sigmod_papers.shtml)).
+- **Partial**: SIGMOD 2027 (later rounds still to come), VLDB 2027 (from authors' announcements), late PVLDB vol 19 issues.
 - **Not decided yet**: ASPLOS 2027 (no vector-search paper among early acceptances), HPCA 2027, PPoPP 2027, MLSys 2027.
 - SOSP 2025–2026 and ASPLOS 2026 have no paper whose core is vector search.
 
@@ -60,8 +61,9 @@ or artifact, where one exists.
 [`.github/workflows/update.yml`](.github/workflows/update.yml) runs on the 2nd of every month (and on demand from the Actions tab):
 
 1. [`scripts/update.py`](scripts/update.py) pulls accepted-paper lists from DBLP (through
-   [csconf-papers](https://github.com/RealZST/csconf-papers) and the DBLP SPARQL endpoint) and searches arXiv for preprints whose
-   comments say they were accepted to one of the venues.
+   [csconf-papers](https://github.com/RealZST/csconf-papers) and the DBLP SPARQL endpoint), reads official accepted-paper pages
+   listed under `official` in `config.yaml` (currently [SIGMOD's](https://2027.sigmod.org/sigmod_papers.shtml), the [SC program](https://sc26.conference-program.com/) and the [MICRO program](https://www.microarch.org/micro59/program/)), and searches
+   arXiv for preprints whose comments say they were accepted to one of the venues.
    - Papers already listed get missing links filled in. A paper marked *accepted* gets its official link once DBLP has it, and loses the mark.
    - New papers whose titles clearly match (`keywords.strong` in `config.yaml`) are added with a guessed sub-topic and marked *auto-added*.
    - Weaker matches go to [`data/candidates.md`](data/candidates.md) for a person to accept or dismiss.
@@ -88,31 +90,31 @@ Pushing changes under `data/` to `main` also re-renders the pages automatically.
 ## Paper list
 
 <!-- BEGIN GENERATED -->
-**160** papers from 2025 on.
+**167** papers from 2025 on.
 
 | Venue | 2025 | 2026 | 2027 | Total |
 |---|---|---|---|---|
 | [SOSP](papers/by-venue/SOSP.md) | — | — | — | 0 |
 | [OSDI](papers/by-venue/OSDI.md) | 3 | 2 | — | 5 |
 | [ASPLOS](papers/by-venue/ASPLOS.md) | 1 | — | — | 1 |
-| [SIGMOD](papers/by-venue/SIGMOD.md) | 16 | 43 | 7 | 66 |
+| [SIGMOD](papers/by-venue/SIGMOD.md) | 16 | 43 | 12 | 71 |
 | [VLDB](papers/by-venue/VLDB.md) | 26 | 33 | 5 | 64 |
 | [MLSys](papers/by-venue/MLSys.md) | — | 3 | — | 3 |
 | [ISCA](papers/by-venue/ISCA.md) | 7 | 1 | — | 8 |
-| [MICRO](papers/by-venue/MICRO.md) | 2 | 4 | — | 6 |
+| [MICRO](papers/by-venue/MICRO.md) | 2 | 5 | — | 7 |
 | [HPCA](papers/by-venue/HPCA.md) | 2 | 1 | — | 3 |
-| [SC](papers/by-venue/SC.md) | 2 | 1 | — | 3 |
+| [SC](papers/by-venue/SC.md) | 2 | 2 | — | 4 |
 | [PPoPP](papers/by-venue/PPoPP.md) | 1 | — | — | 1 |
 
 | Sub-topic | 2025 | 2026 | 2027 | Total |
 |---|---|---|---|---|
-| [Algorithms: ANNS Indexing Algorithms](#anns-indexing-algorithms) | 15 | 28 | 4 | 47 |
-| [Algorithms: Filtered ANNS Algorithms](#filtered-anns-algorithms) | 8 | 10 | 2 | 20 |
+| [Algorithms: ANNS Indexing Algorithms](#anns-indexing-algorithms) | 15 | 28 | 6 | 49 |
+| [Algorithms: Filtered ANNS Algorithms](#filtered-anns-algorithms) | 8 | 10 | 3 | 21 |
 | [Algorithms: Hybrid Search Algorithms](#hybrid-search-algorithms) | 1 | 1 | 1 | 3 |
-| [Systems: GPU-Accelerated ANNS Systems](#gpu-accelerated-anns-systems) | 0 | 12 | 1 | 13 |
+| [Systems: GPU-Accelerated ANNS Systems](#gpu-accelerated-anns-systems) | 0 | 14 | 1 | 15 |
 | [Systems: Out-of-Core ANNS Systems](#out-of-core-anns-systems) | 3 | 4 | 0 | 7 |
-| [Systems: Distributed ANNS Systems](#distributed-anns-systems) | 4 | 4 | 0 | 8 |
-| [Systems: Vector Databases & Other Systems](#vector-databases--other-systems) | 12 | 9 | 3 | 24 |
+| [Systems: Distributed ANNS Systems](#distributed-anns-systems) | 4 | 4 | 1 | 9 |
+| [Systems: Vector Databases & Other Systems](#vector-databases--other-systems) | 12 | 9 | 4 | 25 |
 | [Architecture: FPGA & In-storage Acceleration](#fpga--in-storage-acceleration) | 4 | 3 | 0 | 7 |
 | [Architecture: Domain-specific Accelerators](#domain-specific-accelerators) | 9 | 3 | 0 | 12 |
 | [Experiments & Analysis: Benchmarks](#benchmarks) | 2 | 9 | 1 | 12 |
@@ -128,9 +130,11 @@ _Graph, IVF/clustering, tree and hashing indexes; quantization; search, early te
 
 **SIGMOD 2027**
 
-- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, et al. [[code]](https://github.com/meander-wqh/Amora) `privacy`
-- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (<a href="https://aidas.snu.ac.kr/news/2026-06-13-1-paper-has-been-accepted-to-sigmod-2027/">lab news</a>).</sub>
-- **Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging** *(accepted, to appear)*<br>Liuchang Jing, Mingyu Yang, Lei Li, et al. [[arXiv]](https://arxiv.org/abs/2602.17099) [[code]](https://github.com/JingLiuchang/hnsw-merge) `graph` `merging`<br><sub>arXiv v1 title: "Multiple Index Merge for Approximate Nearest Neighbor Search".</sub>
+- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, Saiyu Qi, Yong Qi [[code]](https://github.com/meander-wqh/Amora) `privacy`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
+- **Hardware-Optimized Quantized Graphs for Fast Similarity Search** *(accepted, to appear)*<br>Xiao Luo, John Paparrizos `graph` `quantization`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **RaP: A Redirect-and-Patch Framework for Efficient Dynamic Updates in Graph-Based ANN Indexes** *(accepted, to appear)*<br>Zhoujin Tian, Xi Zhao, Yao Tian, Zhengjun Huang, Xiaofang Zhou `graph` `dynamic`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging** *(accepted, to appear)*<br>Liuchang Jing, Mingyu Yang, Lei Li, Jianbin Qin, Wei Wang [[arXiv]](https://arxiv.org/abs/2602.17099) [[code]](https://github.com/JingLiuchang/hnsw-merge) `graph` `merging`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 **VLDB 2027**
 
@@ -204,7 +208,8 @@ _Vector search under attribute, label, range or other structured predicates._
 
 **SIGMOD 2027**
 
-- **Fast Label-Filtering Approximate Nearest Neighbor Search via Progressive Label Set Stratification** *(accepted, to appear)*<br>Ziqi Wang, Jingzhe Zhang, Shuo Shen, et al. [[arXiv]](https://arxiv.org/abs/2609.15058)
+- **Dynamic Graph Indexing for Label-Filtered Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Mengxu Jiang, Zhi Yang, Fangyuan Zhang, Yin Yang, Sibo Wang `dynamic` `graph`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Fast Label-Filtering Approximate Nearest Neighbor Search via Progressive Label Set Stratification** *(accepted, to appear)*<br>Ziqi Wang, Jingzhe Zhang, Shuo Shen, Wei Hu [[arXiv]](https://arxiv.org/abs/2609.15058)<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 **VLDB 2027**
 
@@ -266,7 +271,7 @@ _Vector search systems built on GPUs, including CPU-GPU co-processing._
 
 **SIGMOD 2027**
 
-- **All-in-One Graph-Based Indexing for Hybrid Search on GPUs** *(accepted, to appear)*<br>Zhonggen Li, Yougen Li, Yifan Zhu, et al. [[arXiv]](https://arxiv.org/abs/2511.00855) `graph` `hybrid`
+- **All-in-One Graph-Based Indexing for Hybrid Search on GPUs** *(accepted, to appear)*<br>Zhonggen Li, Yougen Li, Yifan Zhu, Congcong Ge, Guoteng Xu, Yunjun Gao [[arXiv]](https://arxiv.org/abs/2511.00855) `graph` `hybrid`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 **OSDI 2026**
 
@@ -291,9 +296,17 @@ _Vector search systems built on GPUs, including CPU-GPU co-processing._
 
 - **TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval**<br>Chien-Yu Lin, Keisuke Kamahori, Yiyu Liu, Xiaoxiang Shi, Madhav Kashyap, Yile Gu, et al. [[paper]](https://proceedings.mlsys.org/paper_files/paper/2026/hash/7fd522b89ac21009b7bbe7560a9a5add-Abstract-Conference.html) [[pdf]](https://proceedings.mlsys.org/paper_files/paper/2026/file/7fd522b89ac21009b7bbe7560a9a5add-Paper-Conference.pdf) [[code]](https://github.com/uw-syfi/TeleRAG) `rag`
 
+**MICRO 2026**
+
+- **AMG: AMX–GPU Cooperative Acceleration of Billion-Scale ANNS via GEMM Reformulation** *(accepted, to appear)*<br>Minho Kim, Houxiang Ji, Hwanjun Lee, Jaeyoung Kang, Sungju Kim, Hyunkyun Shin, et al. `amx` `billion-scale` `cpu-gpu`<br><sub>MICRO 2026 program (Day 1, Nov 2, 2026).</sub>
+
 **HPCA 2026**
 
 - **VectorLiteRAG: Latency-Aware and Fine-Grained Resource Partitioning for Efficient RAG**<br>Junkyum Kim, Divya Mahajan [[paper]](https://doi.org/10.1109/HPCA68181.2026.11408552) [[arXiv]](https://arxiv.org/abs/2504.08930) [[code]](https://github.com/sitar-lab/VectorLiteRAG-AE) `rag` `ivf`
+
+**SC 2026**
+
+- **RT-HiSS: Ray Tracing Accelerated High-Dimensional Vector Similarity Searches** *(accepted, to appear)*<br>Revanth Reddy Munugala, Michael Gowanlock `exact-search` `rt-cores`<br><sub>SC26 program, session "Scalable Search and Data Analytics for Scientific Discovery" (Nov 18, 2026).</sub>
 
 #### Out-of-Core ANNS Systems
 
@@ -324,6 +337,10 @@ _Indexes larger than DRAM, kept on SSD or disk, or spread across tiered or disag
 _Multi-node, RDMA, federated and scale-out vector search._
 
 
+**SIGMOD 2027**
+
+- **TITAN: A High-Throughput Distributed System for Approximate Nearest Neighbor Search on Large-scale Datasets** *(accepted, to appear)*<br>Ziyi Li, Angjun Lin, Yuhao Lin, Quanqing Xu, Ruixuan Zhang, Yuanyuan Zhu, et al.<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+
 **SIGMOD 2026**
 
 - **CoTra: Towards Efficient and Scalable Distributed Vector Search with RDMA**<br>Xiangyu Zhi, Meng Chen, Xiao Yan, Baotong Lu, Hui Li, Qianxi Zhang, et al. [[paper]](https://doi.org/10.1145/3786634) [[arXiv]](https://arxiv.org/abs/2507.06653) [[code]](https://github.com/xiangyuzhi/CoTra) `rdma`
@@ -351,8 +368,9 @@ _Vector databases and DBMS integration, CPU-efficient engines, privacy and secur
 
 **SIGMOD 2027**
 
-- **Catching Inconsistencies in Vector Similarity Retrieval** *(accepted, to appear)*<br>Zixiao Huang, Ruochun Jin, Haotian Wang, et al. `testing` `vector-db`<br><sub>SIGMOD 2027 round 2, per the author's publication page.</sub>
-- **Metric Algebra: Embedding-Independence in Vector Databases** *(accepted, to appear)*<br>University of Edinburgh authors (to be filled in) `embedding-models`<br><sub>Listed in the SIGMOD 2027 round 1 accepted papers.</sub>
+- **Catching Inconsistencies in Vector Similarity Retrieval** *(accepted, to appear)*<br>Zixiao Huang, Ruochun Jin, Haotian Wang, Meng Zhang, Yuhua Tang `testing` `vector-db`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Metric Algebra: Embedding-Independence in Vector Databases** *(accepted, to appear)*<br>Tianjian Yang, Yang Cao, Beining Yang, Ziying Chen, Tiejun Ma `embedding-models`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
+- **Phantom Neighbors: Information Leakage and Its Prevention in Access-Controlled Vector Databases** *(accepted, to appear)*<br>Yizheng Zhao `privacy` `access-control`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 **VLDB 2027**
 
@@ -409,9 +427,9 @@ _Vector search on FPGAs and inside storage devices (computational SSDs, in-flash
 
 **MICRO 2026**
 
-- **D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation** *(accepted, to appear)*<br>Chang Eun Song, Sumukh Pinge, Tianqi Zhang, et al. [[arXiv]](https://arxiv.org/abs/2607.17538) `in-storage` `in-flash` `ivf` `rag`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
-- **NiF: Hybrid In-Flash and In-Storage Acceleration for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Myoungjun Chun, et al. `in-storage` `in-flash`<br><sub>Listed in the MICRO 2026 program (Session 4A).</sub>
-- **WiFlash: Wordline-Parallel Approximate Nearest Neighbor Search Inside Flash Cell Array** *(accepted, to appear)*<br>Hyunjin Kim, Juchan Lee, Inseong Choi, et al. `in-flash`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
+- **D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation** *(accepted, to appear)*<br>Chang Eun Song, Sumukh Pinge, Tianqi Zhang, Sung Eun Kim, Tajana Rosing, Mingu Kang [[arXiv]](https://arxiv.org/abs/2607.17538) `in-storage` `in-flash` `ivf` `rag`<br><sub>MICRO 2026 program (Day 3, Nov 4, 2026).</sub>
+- **NiF: Hybrid In-Flash and In-Storage Acceleration for Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Myoungjun Chun, Jaeyong Lee, Gwuiin Kim, Minhyeong Kim, Inhyuk Choi, Myungsuk Kim, et al. `in-storage` `in-flash`<br><sub>MICRO 2026 program (Day 2, Nov 3, 2026).</sub>
+- **WiFlash: Wordline-Parallel Approximate Nearest Neighbor Search Inside Flash Cell Array** *(accepted, to appear)*<br>Hyunjin Kim, Juchan Lee, Inseong Choi, Jinho Lee, Jae-Joon Kim `in-flash`<br><sub>MICRO 2026 program (Day 3, Nov 4, 2026).</sub>
 
 **VLDB 2025**
 
@@ -434,11 +452,11 @@ _ASICs and processing-in/near-memory (PIM/NDP) designs. GPU software belongs und
 
 **MICRO 2026**
 
-- **MFNNS: A Multiplier-Free Near-Memory Accelerator for Graph-based ANNS** *(accepted, to appear)*<br>Rui Meng, Yonghao Chen, Jiaxiang Zou, et al. `near-memory` `graph`<br><sub>Listed in the MICRO 2026 program (Session 9B).</sub>
+- **MFNNS: A Multiplier-Free Near-Memory Accelerator for Graph-based ANNS** *(accepted, to appear)*<br>Rui Meng, Yonghao Chen, Jiaxiang Zou, Jingyu Guo, Chenyu Zhang, Xinyu Chen `near-memory` `graph`<br><sub>MICRO 2026 program (Day 3, Nov 4, 2026).</sub>
 
 **SC 2026**
 
-- **PIMCQG: Co-Designing Billion-Scale Graph-Based Approximate Nearest Neighbor Search for Processing-in-Memory** *(accepted, to appear)*<br>Sitian Chen, Yusen Li, Yao Chen, et al. [[arXiv]](https://arxiv.org/abs/2605.25522) [[code]](https://github.com/steam009/PIMCQG) `pim` `graph` `quantization` `billion-scale`<br><sub>Acceptance per the code README and <a href="https://amelieczhou.github.io/publications.html">author homepage</a>.</sub>
+- **PIMCQG: Co-Designing Billion-Scale Graph-Based Approximate Nearest Neighbor Search for Processing-in-Memory** *(accepted, to appear)*<br>Sitian Chen, Yusen Li, Yao Chen, Minwen Deng, Jintao Meng, Amelie Chi Zhou [[arXiv]](https://arxiv.org/abs/2605.25522) [[code]](https://github.com/steam009/PIMCQG) `pim` `graph` `quantization` `billion-scale`<br><sub>SC26 program, session "Specialized Acceleration and Services for Emerging HPC Workloads" (Nov 19, 2026).</sub>
 
 **ASPLOS 2025**
 

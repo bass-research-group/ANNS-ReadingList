@@ -6,22 +6,30 @@ ANNS and vector search papers at SIGMOD, all years. Generated from [`data/papers
 
 ### ANNS Indexing Algorithms
 
-- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, et al. [[code]](https://github.com/meander-wqh/Amora) `privacy`
-- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (<a href="https://aidas.snu.ac.kr/news/2026-06-13-1-paper-has-been-accepted-to-sigmod-2027/">lab news</a>).</sub>
-- **Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging** *(accepted, to appear)*<br>Liuchang Jing, Mingyu Yang, Lei Li, et al. [[arXiv]](https://arxiv.org/abs/2602.17099) [[code]](https://github.com/JingLiuchang/hnsw-merge) `graph` `merging`<br><sub>arXiv v1 title: "Multiple Index Merge for Approximate Nearest Neighbor Search".</sub>
+- **Amora: Communication-Efficient Private Approximate Nearest Neighbors Search** *(accepted, to appear)*<br>Qiuhao Wang, Zuowei Chen, Xu Yang, Saiyu Qi, Yong Qi [[code]](https://github.com/meander-wqh/Amora) `privacy`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning** *(accepted, to appear)*<br>Geon Choi, Hoeun Lee, Jaeyoung Do [[arXiv]](https://arxiv.org/abs/2607.04630) [[code]](https://github.com/AIDASLab/CHAT) `graph` `tuning`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
+- **Hardware-Optimized Quantized Graphs for Fast Similarity Search** *(accepted, to appear)*<br>Xiao Luo, John Paparrizos `graph` `quantization`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **RaP: A Redirect-and-Patch Framework for Efficient Dynamic Updates in Graph-Based ANN Indexes** *(accepted, to appear)*<br>Zhoujin Tian, Xi Zhao, Yao Tian, Zhengjun Huang, Xiaofang Zhou `graph` `dynamic`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Reverse Neighbor Sliding and Order Selection for Efficient Multi-Proximity Graph Merging** *(accepted, to appear)*<br>Liuchang Jing, Mingyu Yang, Lei Li, Jianbin Qin, Wei Wang [[arXiv]](https://arxiv.org/abs/2602.17099) [[code]](https://github.com/JingLiuchang/hnsw-merge) `graph` `merging`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 ### Filtered ANNS Algorithms
 
-- **Fast Label-Filtering Approximate Nearest Neighbor Search via Progressive Label Set Stratification** *(accepted, to appear)*<br>Ziqi Wang, Jingzhe Zhang, Shuo Shen, et al. [[arXiv]](https://arxiv.org/abs/2609.15058)
+- **Dynamic Graph Indexing for Label-Filtered Approximate Nearest Neighbor Search** *(accepted, to appear)*<br>Mengxu Jiang, Zhi Yang, Fangyuan Zhang, Yin Yang, Sibo Wang `dynamic` `graph`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Fast Label-Filtering Approximate Nearest Neighbor Search via Progressive Label Set Stratification** *(accepted, to appear)*<br>Ziqi Wang, Jingzhe Zhang, Shuo Shen, Wei Hu [[arXiv]](https://arxiv.org/abs/2609.15058)<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 ### GPU-Accelerated ANNS Systems
 
-- **All-in-One Graph-Based Indexing for Hybrid Search on GPUs** *(accepted, to appear)*<br>Zhonggen Li, Yougen Li, Yifan Zhu, et al. [[arXiv]](https://arxiv.org/abs/2511.00855) `graph` `hybrid`
+- **All-in-One Graph-Based Indexing for Hybrid Search on GPUs** *(accepted, to appear)*<br>Zhonggen Li, Yougen Li, Yifan Zhu, Congcong Ge, Guoteng Xu, Yunjun Gao [[arXiv]](https://arxiv.org/abs/2511.00855) `graph` `hybrid`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+
+### Distributed ANNS Systems
+
+- **TITAN: A High-Throughput Distributed System for Approximate Nearest Neighbor Search on Large-scale Datasets** *(accepted, to appear)*<br>Ziyi Li, Angjun Lin, Yuhao Lin, Quanqing Xu, Ruixuan Zhang, Yuanyuan Zhu, et al.<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 ### Vector Databases & Other Systems
 
-- **Catching Inconsistencies in Vector Similarity Retrieval** *(accepted, to appear)*<br>Zixiao Huang, Ruochun Jin, Haotian Wang, et al. `testing` `vector-db`<br><sub>SIGMOD 2027 round 2, per the author's publication page.</sub>
-- **Metric Algebra: Embedding-Independence in Vector Databases** *(accepted, to appear)*<br>University of Edinburgh authors (to be filled in) `embedding-models`<br><sub>Listed in the SIGMOD 2027 round 1 accepted papers.</sub>
+- **Catching Inconsistencies in Vector Similarity Retrieval** *(accepted, to appear)*<br>Zixiao Huang, Ruochun Jin, Haotian Wang, Meng Zhang, Yuhua Tang `testing` `vector-db`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
+- **Metric Algebra: Embedding-Independence in Vector Databases** *(accepted, to appear)*<br>Tianjian Yang, Yang Cao, Beining Yang, Ziying Chen, Tiejun Ma `embedding-models`<br><sub>SIGMOD 2027 round 1 (official accepted-papers page).</sub>
+- **Phantom Neighbors: Information Leakage and Its Prevention in Access-Controlled Vector Databases** *(accepted, to appear)*<br>Yizheng Zhao `privacy` `access-control`<br><sub>SIGMOD 2027 round 2 (official accepted-papers page).</sub>
 
 ## SIGMOD 2026
 

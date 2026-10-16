@@ -1,0 +1,26 @@
+10:30am - 12:00pm CST	Paper	
+Scalable Search and Data Analytics for Scientific Discovery 
+W175abc	
+TP
+Session Chair
+DescriptionThe papers make search and analysis over massive scientific data tractable: genome-scale gene-network construction, aggressively pruned cancer mutation-combination search, visualization-aware particle-data representation, and RT-core accelerated exact high-dimensional similarity search.
+Presentations
+10:52am - 11:15am CST
+Robust Score-Bounded Search for Multi-Hit Carcinogenic Gene Combination Identification
+AuthorsZhengyang BaiEmil VataiRitvik PrabhuBernard MoussadChen ZhuangWu-chun FengMohamed Wahib
+11:15am - 11:37am CST
+RT-HiSS: Ray Tracing Accelerated High-Dimensional Vector Similarity Searches
+AuthorsRevanth Reddy MunugalaMichael Gowanlock
+1:30pm - 3:00pm CST	Paper	
+Specialized Acceleration and Services for Emerging HPC Workloads 
+W176abc	
+TP
+Session Chair
+DescriptionThese papers redesign systems around emerging workloads that do not fit conventional HPC execution models: processing-in-memory graph search, GPU zero-knowledge proof generation, secure MPC-based collectives, and eBPF-based serverless HPC.
+Presentations
+1:30pm - 1:52pm CST
+PIMCQG: Co-Designing Billion-Scale Graph-Based Approximate Nearest Neighbor Search for Processing-in-Memory
+AuthorsSitian ChenYusen LiYao ChenMinwen DengJintao MengAmelie Chi Zhou
+1:52pm - 2:15pm CST
+FluxZK: Scalable and Efficient Zero-Knowledge Proof Computation via GPU Acceleration
+AuthorsXinwei QiangLiukun YuXiyu WangZhengyi LiShixuan SunJingwen LengChen ChenJiaping GuiZhenzhe ZhengJin DongMinyi Guo

@@ -1,0 +1,20 @@
+Day 1: November 2nd, 2026
+8:00 AM – 8:30 AM
+Welcome Message from the General Chair
+Dimitris Gizopoulos (National and Kapodistrian Univ. of Athens)
+TriOoO: An Extensible DSA Framework for Machine Learning Molecular Dynamics
+Zihan Yan (Inst. of Computing Technology, CAS; Univ. of Chinese Academy of Sciences); Ning Kang, Guojun Yuan (Inst. of Computing Technology, CAS)
+AMG: AMX–GPU Cooperative Acceleration of Billion-Scale ANNS via GEMM Reformulation
+Minho Kim (DGIST); Houxiang Ji (Univ. of Illinois Urbana-Champaign); Hwanjun Lee (DGIST); Jaeyoung Kang (Univ. of Illinois Urbana-Champaign); Sungju Kim, Hyunkyun Shin, Daehoon Kim (Yonsei Univ.); Nam Sung Kim (Univ. of Illinois, Urbana-Champaign)
+Day 2: November 3rd, 2026
+NiF: Hybrid In-Flash and In-Storage Acceleration for Approximate Nearest Neighbor Search
+Myoungjun Chun (Soongsil Univ.); Jaeyong Lee, Gwuiin Kim (Seoul National Univ.); Minhyeong Kim (Soongsil Univ.); Inhyuk Choi (Seoul National Univ.); Myungsuk Kim (Kyungpook National Univ.); Nam Sung Kim (Univ. of Illinois, Urbana-Champaign); Jihong Kim (Seoul National Univ.)
+Day 3: November 4th, 2026
+MemLLM: End-to-End In-Storage Acceleration of Retrieval-Augmented Generation using Precomputed KV Caches
+Seungkwan Kang, Hyungseok Ko, Heemin Kim, Myoungsoo Jung (KAIST)
+MFNNS: A Multiplier-Free Near-Memory Accelerator for Graph-based ANNS
+Rui Meng, Yonghao Chen, Jiaxiang Zou, Jingyu Guo, Chenyu Zhang, Xinyu Chen (The Hong Kong Univ. of Science and Technology (Guangzhou))
+WiFlash: Wordline-Parallel Approximate Nearest Neighbor Search Inside Flash Cell Array
+Hyunjin Kim, Juchan Lee, Inseong Choi, Jinho Lee, Jae-Joon Kim (Seoul National Univ.)
+D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation
+Chang Eun Song, Sumukh Pinge, Tianqi Zhang, Sung Eun Kim, Tajana Rosing (Univ. of California, San Diego); Mingu Kang (Univ. of California San Diego (UCSD))

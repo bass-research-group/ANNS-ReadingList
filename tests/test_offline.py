@@ -95,3 +95,52 @@ def test_listing_renders_every_category():
     text = build.listing(load_papers(), CFG)
     for cat in CFG["categories"].values():
         assert cat["description"] in text
+
+
+def test_official_page_parser():
+    html = """<html><body><h2>Round 1</h2><ul>
+    <li><strong>Metric Algebra: Embedding-Independence in Vector Databases</strong><br>
+    Alice Smith (University of Edinburgh), Bob Jones (University of Edinburgh)</li>
+    <li><strong>Efficient Transaction Processing on CXL</strong><br>Carol White (MIT)</li>
+    <li><b>Fast Graph-Based Approximate Nearest Neighbor Search on SSDs</b></li>
+    </ul></body></html>"""
+    recs = update.parse_official_page(html, "SIGMOD", 2027, CFG)
+    assert [r["title"] for r in recs] == ["Metric Algebra: Embedding-Independence in Vector Databases",
+                                         "Fast Graph-Based Approximate Nearest Neighbor Search on SSDs"]
+    assert recs[0]["authors"] == ["Alice Smith", "Bob Jones"]
+    assert recs[1]["authors"] == ["(see program)"]
+    # a placeholder author list in the data gets replaced by the program's names
+    papers = [{"title": recs[0]["title"], "authors": ["University of Edinburgh authors (to be filled in)"],
+               "venue": "SIGMOD", "year": 2027, "category": "indexing-algorithm", "status": "accepted"}]
+    update.merge(papers, recs, CFG, log=lambda m: None)
+    assert papers[0]["authors"] == ["Alice Smith", "Bob Jones"]
+    assert papers[0]["status"] == "accepted"
+
+
+def test_official_page_real_excerpt():
+    """Excerpt of https://2027.sigmod.org/sigmod_papers.shtml as text (bulleted, affiliations in parentheses)."""
+    recs = update.parse_official_page((FIX / "sigmod2027-papers-excerpt.txt").read_text(), "SIGMOD", 2027, CFG)
+    titles = [r["title"] for r in recs]
+    assert len(titles) == 12
+    assert "All-in-one Graph-based Indexing for Hybrid Search on GPUs" in titles
+    assert not any("Jaro-Winkler" in t or "Community Search" in t for t in titles)
+    jing = next(r for r in recs if r["title"].startswith("Reverse Neighbor"))
+    assert jing["authors"][0] == "Liuchang JING" and len(jing["authors"]) == 5  # nested parentheses removed
+
+
+def test_official_page_linklings_program():
+    """Excerpt of https://sc26.conference-program.com/ (author names run together)."""
+    recs = update.parse_official_page((FIX / "sc26-program-excerpt.txt").read_text(), "SC", 2026, CFG)
+    assert [r["title"][:7] for r in recs] == ["RT-HiSS", "PIMCQG:"]
+    assert recs[0]["authors"] == ["Revanth Reddy Munugala", "Michael Gowanlock"]
+    assert recs[1]["authors"][-1] == "Amelie Chi Zhou" and len(recs[1]["authors"]) == 6
+
+
+def test_official_page_micro_program():
+    """Excerpt of https://www.microarch.org/micro59/program/ (authors grouped by affiliation)."""
+    recs = update.parse_official_page((FIX / "micro2026-program-excerpt.txt").read_text(), "MICRO", 2026, CFG)
+    assert [r["title"].split(":")[0] for r in recs] == ["AMG", "NiF", "MFNNS", "WiFlash", "D-NOVA"]
+    amg = recs[0]["authors"]
+    assert amg[4:7] == ["Sungju Kim", "Hyunkyun Shin", "Daehoon Kim"] and len(amg) == 8
+    assert recs[-1]["authors"][-1] == "Mingu Kang"  # nested parentheses in the affiliation
+    assert update.expand("https://www.microarch.org/micro{year-1967}/program/", 2026).endswith("micro59/program/")
